@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        font-family: sans-serif;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25em;
+        color: #333;
+        padding: 2em;
+      }
+      .hero {
+        display: grid;
+        grid-gap: 2em;
+        align-items: center;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      @media (min-width: 960px) {
+        .hero {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        MEDIA ELEMENTS
+            - <img>
+                * src               -> attribute wajib
+                * alt               -> alternative text (digunakan ketika gambar tidak bisa ditampilkan)
+                * width & height    -> menetukan ukuran gambar(tidak disarankan)
+                * title             -> informasi tambahan mengenai gambar,ketika dihover mengeluarkan nulisan
+                * srcset            -> untuk membuat halaman web responsif
+                * sizes             -> untuk mengatur ukuran gambar yang berbeda
+                * loading           -> menentukan bagaimana gambar diload oleh browser
+
+            - <figure>
+                * mempresentasikan konten yang berdiri sendiri tanpa mempengaruhi flow halaman
+                * bisa gambar,ilustrasi,diagram,code snippet
+                * biasanya gambar yang memiliki caption menggunakan <figcaption>
+
+            - <picture>
+                * bertujuan untuk optimasi halaman agar menghemat banwidth dan mempercepat load time
+                * bisa digunakan juga sebagai art direction,untuk menampilkan gambar yang berbeda pada display device yang berbeda
+                * hampir sama dengan menggunakan attribute srcset tapi ini lebih gampang dibaca
+
+            - <audio>
+                * elemen audio merepresentasikan suara atau aliran audio
+                * file yang didukung: .mp3 .mav .ogg
+                * bisa menggunakan tag <source> untuk memilih audio
+                    -controls   -> untuk setting nya seperti pause dan tingkat suara
+                    -src        -> attribute wajib
+                    -preload    -> untuk diload dulu baru dijalankan
+                    -autoplay   -> untuk langsung memulai lagunya
+                    -loop       -> untuk mengulang lagunya ketika lagunya berakhir
+                    -muted      -> untuk audionya tidak ada suaranya
+            - <video>
+                * element yang digunakan untuk menampilkan video,film ataupun audio
+                    -controls   -> untuk setting nya seperti pause dan tingkat suara
+                    -src        -> attribute wajib
+                    -preload    -> untuk diload dulu baru dijalankan
+                    -autoplay   -> untuk langsung memulai lagunya
+                    -loop       -> untuk mengulang lagunya ketika lagunya berakhir 
+                    -poster     -> untuk menggantikan video nya ketika videonya tidak bisa jalan
+                    -muted      -> untuk audionya tidak ada suaranya
+                    -width/height -> untuk mengatur videonya
+
+            - <track>
+            *menampilkan teks berdasarkan waktu putar media
+            *cara mudahnya agar kita tidak menulis manual subtitle nya pakai cara dibawah ini
+            *upload ke youtube terus link nya salin lalu buka website yang bernama downsub.com lalu download subtitle nya abis itu ganti ekstensi nya menjadi vtt dan didalam file nya jangan lupa tambahkan WEBVTT dipaling atas,lalu ganti di detik nya menggunakan titik(.) bukan koma(,)
+                    -src        -> attribute wajib
+                    -kind       -> menunjukan jenis track.teks track yang ditulis dalam .vtt
+                    -title      -> 
+                    -srclang    -> menetukan kode bahasa yang menunjukan bahasa yang digunaakn pada teks track
+     -->
+
+    <!-- CONTOH SRCSET -->
+    <img src="img/IMG_0005.JPG" alt="foto saya" srcset="img/IMG_0005.JPG 500w, img/cut.png 700w" />
+
+    <!-- CONTOH SIZES -->
+    <img src="img/IMG_0005.JPG" alt="foto saya" srcset="img/IMG_0005.JPG 500w, img/cut.png 700w" sizes="(mix-width: 1200px) 500px" />
+
+    <!-- contoh loading ini bagus ketika gambar tidak mau load ketika user belom sampai pada gambarnya -->
+    <img src="img/IMG_0005.JPG" alt="foto saya" srcset="img/IMG_0005.JPG 500w, img/cut.png 700w" sizes="(mix-width: 1200px) 500px" loading="lazy" />
+
+    <!-- contoh figure -->
+    <figure>
+      <img src="img/IMG_0005.JPG" alt="foto saya" srcset="img/IMG_0005.JPG 500w, img/cut.png 700w" sizes="(mix-width: 1200px) 500px" loading="lazy" />
+      <figcaption>Foto ijazah saya</figcaption>
+    </figure>
+
+    <!-- CONTOH PICTURES -->
+    <div class="container">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Hello Jangs</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum veritatis voluptatibus cum nobis dolor autem.</p>
+        </div>
+        <picture>
+          <source media="(min-width: 960px) " srcset="img/cut.png" sizes="50vw" />
+          <img src="img/IMG_0005.JPG" alt="Foto saya" width="300" />
+        </picture>
+      </div>
+    </div>
+
+    <!-- CONTOH AUDIO -->
+    <figure>
+      <figcaption>Dengarkan ASMR keyboard typing</figcaption>
+      <audio preload src="audio/mixkit-keyboard-typing-1386.wav" controls>Audio tidak di support oleh browser</audio>
+      <!-- atau bisa menggunakan seperti ini untuk lebih spesifik agar semua browser bisa -->
+      <audio controls loop>
+        <source src="audio/mixkit-keyboard-typing-1386.wav" type="audio/ogg" />
+        <source src="audio/mixkit-keyboard-typing-1386.mp3" type="audio/mpeg" />
+      </audio>
+    </figure>
+
+    <br />
+
+    <!-- CONTOH VIDEO -->
+    <figure>
+      <figcaption>Tonton secara gratis</figcaption>
+      <video src="video/Menari - 46012.mp4" controls width="200" poster="img/cut.png">Video tidak disupport</video>
+      <!-- atau bisa menggunakan seperti ini untuk lebih spesifik agar semua browser bisa -->
+      <video controls width="500" muted loop>
+        <source src="video/Menari - 46012.mp4" type="video/webm" />
+        <source src="video/Menari - 46012.mp4" type="video/mp4" />
+        browser tidak mendukung tag <code>Video</code>
+      </video>
+    </figure>
+
+    <video controls width="400">
+      <source src="video/4. Audio & Video _ Belajar HTML5.mp4" type="video/webm" />
+      <track src="captions/caption2.vtt" kind="captions" title="English" srclang="en" />
+      <track src="captions/caption2.vtt" kind="captions" title="Bahasa Indonesia" srclang="id" />
+    </video>
+  </body>
+</html>

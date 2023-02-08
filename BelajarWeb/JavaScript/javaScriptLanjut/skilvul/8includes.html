@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //INCLUDES
+        /*
+            includes digunakan untuk memeriksa apakah terdapat salah satu data yang kita inginkan dalam element array yang kita terima (boolean) true or false
+        */
+
+        const foods = ["pizza","dimsum","pecel","nasi"];
+        const pecel = foods.includes("pecel");
+        console.log(pecel); //true karena pecel ada didalam foods
+
+        const nasduk = foods.includes("nasi uduk");
+        console.log(nasduk); //false karena nasi uduk tidak ada dalam array foods
+        
+        console.log(!!foods.find(data => data === "nasi")); //true
+        console.log(!!foods.find(data => data === "ayam")); //false
+        console.log(!foods.find(data => data === "nasi")); //false
+        console.log(!foods.find(data => data === "ayam")); //true
+
+        //CATATAN
+            /*SEBAGAI INFO TAMBAHAN,DARI KODE DIATAS KITA DAPAT MELIHAT TANDA DOUBLE NAGASI !!,INI ADALAH TRIK PENULISAN KODE JAVASCRIPT YANG ARTINYA 
+            TANDA SERU YANG PERTAMA MENGUBAH TIPE DATA APAPUN KEDALAM BOOLEAN
+            TANDA SERU YANG KEDUA MENGUBAH BOOLEAN MENJADI NILAI BOOLEAN YANG KITA HARAPKAN
+            */
+
+        console.log(typeof(!foods)); //boolean...karena dia akan mengubah tipe data apapun menjadi boolean
+        const nasgor = foods.find(item => item ==="nasi goreng");
+        console.log(nasgor); //undefined...karena nasi goreng tidak ada didalam array foods
+        console.log(!nasgor) //true...karena mengembalikan nilai menjadi boolean
+        console.log(!!nasgor) //false...karena nasi goreng tidak ada dalam foods
+
+        console.log("LATIHAN!!!")
+        let minuman = ["CocaCola","teh sosro","teh botol","anggur","inek"];
+        function cekMinuman(cek){
+            let ubah = cek !== ""; //argument cek bukan string kosong
+            let numan = minuman.includes(cek);  //numan mengecek 
+            if( ubah === numan){    //jika ubah sama dengan numan maka tampilkan dibawah ini
+                console.log("Makanan sudah tersedia");
+                console.table(minuman);
+            }else{
+                minuman.push(cek);
+                console.table(minuman);
+            }
+        }
+
+        cekMinuman("sosro");
+
+
+        const foods2 = ['siomay', 'dimsum', 'gyoza', 'pangsit'];
+
+// Buat kode kamu di bawah ini
+
+function checkFood(foodName){
+    let isNotEmptyString = foodName !== "";
+    let foodIsIncluded = foods.includes(foodName);
+
+    if(isNotEmptyString && foodIsIncluded){
+        console.log("Makanan sudah tersedia");
+        console.log(foods)
+    }else{
+        foods.push(foodName);
+        console.log(foods);
+    }
+}
+
+checkFood("Kwetiaw");
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+// for(pertanyaan1,pertanyaan2,pertanyaan3){
+//     //kode yang akan di jalankan
+// }
+    //-pertanyaan 1 digunakan untuk menentukan nilai awal berjalannya dari loop
+    //-pertanyaan 2 digunakan untuk mendefinisikan kondisi berjalan nya dari sebuah loop,apabila kondisi false,maka program akan berhenti
+    //-pertanyaan 3 digunakan untuk menambah atau mengurangi nilai awal pada pernyataan 1 setiap loop dijalankan
+for (let i=0;i<10;i++){
+    console.log(i+1);
+}
+
+//untuk memasukan angka genap yang berada didalam array angka;
+let angka = [1,46,75,12,89,54,101]
+let genap = [];
+let ganjil = [];
+
+for (let i=0;i<angka.length;i++){
+    if(angka[i] % 2 ==0){
+        genap.push(angka[i])
+    }else{
+        ganjil.push(angka[i]);
+    }
+}
+console.table(ganjil)
+console.table(genap)
+
+    //      FOR/IN LOOP
+//-Berbeda dengan for loop dari topik sebelumnya,for ... in digunakan untuk mengulang setiap properti dari sebuah object
+
+//Perbedaan foor loop digunakan untuk mengulang suatu operasi hingga batas yang kita tentukan,sedangkan for in loop digunakan untuk mengulang properti dari suatu object
+        //CONTOH
+const buku = {
+    judul : "Petani",
+    tahunRilis: 2000,
+    pengarang: "muammar rizal"
+}
+for( x in buku ){
+    console.log(x,'=',buku[x]);//fungsi x adalah untuk menampilkan properti yang ada di object buku
+    document.writeln([x]) //ini akan menampikan variable dari nya
+    document.writeln(buku[x]); //dan ini akan menampilkan isi dari properti nya
+}
+
+    //FOR/OF LOOP
+//-FOR/OF DIGUNAKAN UNTUK MENGULANG SETIAP ELEMENT DARI OBJECT YANG BISA DIULANG CONTOH (STRING DAN ARRAY);
+const buku2 = ["jange","jangs","ijal","topet","rizal","ijang"]
+for (let x of buku2){
+    console.table(x);
+}
+    //mencari angka genap pada for of
+const angkaNgka = [21,22,72,38,99,76,55]
+const ambilGanjil = [];
+const ambilGenap = [];
+for(let x of angkaNgka){
+    if ( x % 2 == 0){
+        ambilGenap.push(x)
+    }else{
+        ambilGanjil.push(x);
+    }
+}
+
+console.table(ambilGenap);
+console.table(ambilGanjil);
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //REKURSIF
+    //REKURSIF ADALAH SUATU TEKNIK PEMROGRAMAN YANG MENGGUNAKAN FUNCTION ATAU FUNGSI
+        //SEDERHANA NYA ADALAH FUNSI YANG MEMANGGIL FUNGSI ITU SENDIRI
+
+        /*
+        ADA 3 HAL YANG HARUS KAMU PERHATIKAN UNTUK MEMUTUSKAN KAPAN MENGGUNAKAN REKURSIF DAN KAPAN MENGGUNAKAN ITERATIF
+        1.JIKA FOKUS KAMU ADALAH KECEPATAN PADA APLIKASI DAN MENGHEMAT MEMORI,KAMU HARUS MENGGUNAKAN ITERATIF
+        2.JIKA DATA YANG DIUJI TIDAK BANYAK,KAMU DAPAT MENGGUNAKAN REKURSIF
+        3.BEBERAPA ALGORITMA SECARA NATURAL LEBIH COCOK MENGGUNAKAN REKURSIF
+
+        FOKUS DARI TEKNIK INI ADALAH MEMUDAHKAN KAMU MEMECAHKAN SUATU MASALAH MENJADI SUATU PERMASALAHAN BESAR MENJADI BAGIAN BAGIAN KECIL
+
+        1.BASE CASE
+        KASUS DASAR UNTUK MENYELESAIKAN PERMASALAHAN.BASE CASE AKAN DIKUNJUNGI JIKA REKURSIF BERAKHIR(KONDISI UNTUK BERHENTI TERPENUHI),SERTA MENGEMBALIKAN NILAI TANPA MELAKUKAN REKURSIF KEMBALI
+
+        2.RECURSION CALL 
+        PERMASALAHAN YANG ADA TENTUNYA AKAN DIPERKECIL DENGAN MELAKUKAN PEMANGGILAN FUNCTION ITU SENDIRI.PERMASALAHAN DAPAT DIDPERKECIL DENGAN MENGURANGI ATAU MEMECAHKAN DATA INPUT PADA SETIAP PEMANGGILAN NYA HINGGA MENCAPAI BASE CASE
+
+        */
+
+        function faktorial(n){
+            if (n == 1){
+                return 1;
+            }else{
+                return n * faktorial(n-1);
+            }
+        }
+        console.log(faktorial(4));
+
+        //LATIHAN
+        // Buat kode kamu di bawah ini
+const balikKata = (str => {
+    if (str== ("")){
+    return str
+}else {
+    return balikKata(str.substr(1))+str[0];
+}
+});
+console.log(balikKata("Skilvul"))
+    </script>
+</body>
+</html>

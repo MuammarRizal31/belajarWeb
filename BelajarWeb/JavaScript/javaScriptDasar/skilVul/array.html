@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+let jangeArray = [];
+jangeArray.push("hoi","Hai","Hey")
+alert(jangeArray);
+
+//      MENGGUNAKAN KATA KUNCI NEW
+let jangeLagi = new Array("hei broh");
+alert(jangeLagi)
+
+console.table(jangeArray);
+console.table(jangeLagi);
+
+//CARA MENGETAHUI ARRAY DARI BELAKANG/ARRAY PALING TERAKHIR
+// CATATAN : KALAU MAKE SIKU ITU UNTUK MENGAMBIL ISI ARRAY NYA
+const contoh = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+console.log(contoh[contoh.length -1]);  //ini untuk memberi tahu array terakhir
+console.log(contoh.length) // ini akan memberitahu kalau isi array
+
+for ( i=0; i<contoh.length; i++ ){
+    console.table(contoh[contoh.length -1 ]);
+}
+
+//      ARRAY METHOD
+//METHOD ADALAH SEBUAH FUNGSI YANG MENJADI PROPERTI DISEBUAH OBJECT
+//hampir semua tipe data yang non primitive adalah object,jadi karena array bukan tipe data primitive,array termasuk object dan bisa mempuyai properti dengan nilai fungsi yang kita kenal sebagai method
+        
+
+        //TIPE DATA PRIMITIVE DAN NON PRIMITIVE 
+//TIPE DATA PRIMITIVE ITU HANYA PUNYA VALUE TIDAK PUNYA PROPERTI ATAU METHOD CONTOH
+    //-number,boolean,string,null,long,double
+//TIPE DATA NON PRIMITIVE ARTINYA TIDAK DIDEFINISIKAN SECARA DEFAULT HARUS DI ISI SENDIRI SEPERTI ARRAY,DAN CLASS LAINNYA DIMANA DIDALAM NYA TERDAPAT STRING INT DLL
+
+
+
+//MERUBAH ELEMENT ARRAY MENJADI STRING MENGGUNAKAN TO STRING
+    //method toString() akan menggabungkan semua element array dan merubah nya menjadi string  dengan penghubung tanda ,(koma) diantara element array
+let array = [1,'dua',3,false,true];
+console.table(array.toString());
+console.table(array)
+console.log(typeof array[4]);
+
+//MENGGABUNGKAN ELEMENT ARRAY DENGAN JOIN()
+    //method join() menggabungkan semua element array,kemudian mengubahnya menjadi string .konsepnya hampir sama dengan method toString()
+console.log(array.join("-"));
+
+//MENAMBAHKAN DAN MENGHAPUS ELEMENT ARRAY DENGAN POP() PUSH() SHIFT() UNSHIFT()
+        //POP MENGELUARKAN ELEMENT TERAKHIR DARI SEBUAH ARRAY
+array.pop();
+console.table(array);
+
+        //push() MENAMBAHKAN ELEMENT DIAKHIR SEBUAH ARRAY
+array.push("jange");
+console.table(array)
+
+        //shift() MENGELUARKAN ELEMENT PERTAMA DARI SEBUAH ARRAY
+array.shift();
+console.table(array);
+
+        //unshift() MENAMBAHKAN ELEMENT PERTAMA DARI SEBUAH ARRAY
+array.unshift("pertama")
+console.table(array);
+
+//MENAMBAH MENGHAPUS DAN MENGGANTI ELEMENT ARRAY DENGAN SPLICE();
+    //array(index,jumlah,item1,...,itemTerakhir)
+let buah = ["nanas","sawo","rambutan"];
+buah.splice(2,0,"lemon","jeruk");
+    //-parameter pertama bernilai 2 mendefinisikan posisi dimana element baru harus ditambahkan,yaitu index 2 dan 3
+    //-parameter kedua bernilai 0 mendefinisikan jumlah element yang harus dihapus,yaitu berjumlah 0(tidak ada yang dihapus);
+
+//MENGGABUNGKAN LEBIH DARI SATU ARRAY DENGAN concat
+    //method concat digunakan untuk menggabungkan 2 array atau lebih
+let sayur = ["tomat","timun","popohan"]
+let batang = ["jati","minang","manis"]
+let biji = ["biji salah","biji rambutan"]
+
+let makanan = sayur.concat(batang,biji)
+console.table(makanan);
+
+//MENGAMBIL ELEMENT ARRAY DENGAN SLICE()
+    //method slice() digunakan untuk mengambil beberapa element pada array dan menaruhnya pada array baru
+const namaBrow = ["jange","topet","brow","brok","woi"]
+const ambil = namaBrow.slice(1,3) //output : TOPET,BROW
+console.table(ambil);
+const ambilLagi = namaBrow.slice(2) //output : brow,brok,woi
+
+//MENGURUTKAN ARRAY DENGAN SORT()
+const abjad = ['a','c','v','d','w','e','b','c'];
+let sudahTerurut = abjad.sort();
+console.table(sudahTerurut);
+
+//untuk mengurutkan angka dari 1 sampai 100;
+let bilangan = [1,30,20,41,100,3.5,2]
+let urutanKecil = (a,b) =>{
+    return a - b
+}
+let urutanBesar = (a,b) =>{
+    return b-a;
+}
+
+console.table(bilangan.sort(urutanKecil));
+console.table(bilangan.sort(urutanBesar));
+
+//MENGURUTKAN ARRAY DENGAN REVERSE()
+    //method reverse() akan mengurutlan array dari INDEX besar ke kecil
+const balik = ["muammar","rizal","wakwaw"];
+console.log(balik.reverse())
+
+//mengurutkan nilai element pada array dari terbesar hingga terkecil
+let mhs = ["muammarRizal","muhammad rifai","ahmad amirul hasyim","abdul malik","zaini zidan"];
+let urutanMhs = mhs.sort().reverse();
+console.log(urutanMhs)
+    </script>
+</body>
+</html>

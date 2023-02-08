@@ -1,0 +1,63 @@
+<!--CSS adalah untuk menghiasi-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+                Muammar Rizal
+        </title>
+        <link href="style.css" rel="stylesheet">
+       <style>
+        /*
+        -Selector untuk memilih objek yang ingin dirubah
+        -property contoh nya seperti color
+        -value  adalah isi dari property
+        */
+        
+        /* ada beberapa kata kunci yang bisa dipakai untuk nilai css */
+        /*keyword,heksa desimal,rgba,hsla...
+        
+        contoh*/
+        /*internal CSS*/
+        h1{
+            @import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&display=swap');
+            font-family:'Edu QLD Beginner', cursive;
+            font-size:66px;
+            color:red; /*keyword red */
+            background:black;
+            display:inline;
+            margin:111px;
+        }
+        #nge{
+            color : blue;
+        }
+        #nj{
+            color:green;
+        }
+        #nk{
+            color:yellow;
+        }
+        h2{
+           color:#4287f5; /*hexadecimal*/
+        }
+        h3{
+            color:rgba(153, 245, 66,0.5 ) /*RGB,untuk 1 untuk terang,0 redup,0.5 setengah terang */
+        }
+        h4{
+            color:hsl(91°, 90%, 61%) ;
+        }
+       </style>
+    </head>
+    <body>
+        <!--Inline CSS,internal CSS,eksternal CSS-->
+        
+        <!--inline CSS-->
+        <h1>Muammar Rizal</h1>
+        <h1 id="nj">Muammar Rizal</h1>
+        <h1 id="nk">Muammar Rizal</h1>
+        <h1 id="nge">Jangss</h1>
+        <h2 id="yo">Muammar rizal</h2>
+        <h3>Muammar rizal</h3>
+        <h4>Muammar rizal</h4>
+    </body>
+</html>

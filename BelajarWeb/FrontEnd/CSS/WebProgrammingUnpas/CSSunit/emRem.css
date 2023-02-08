@@ -1,0 +1,70 @@
+/* :root{
+    font-size: 25px;
+} */
+
+.container{
+    width:80%;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.typograph{
+    width: 800px;
+    text-align: center;
+    margin: auto;
+}
+
+h2{
+    text-align: center;
+}
+
+.col1{
+    width: 300px;
+    float: left;
+}
+
+/* .col1 h2{
+    font-size: 2em;
+}
+
+.col1 p{
+    font-size: 1.5em;
+} */
+
+/* .col2 h2{
+    font-size: 2rem;
+}
+
+.col2 p{
+    font-size: 1.5rem;
+} */
+
+
+
+.col2{
+    width: 300px;
+    float:right;
+}
+
+.clear{
+    clear: both;
+}
+
+.btn{
+    display: inline-block;
+    background: #333;
+    font-weight:700;
+    color:white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1em 3em;
+}
+
+.btn-sm{
+    font-size:0.5em
+}
+
+.btn-large{
+    font-size: 2em;
+}

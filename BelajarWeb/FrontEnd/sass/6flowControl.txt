@@ -1,0 +1,6 @@
+FLOW CONTROL (Mengatur alur kendali dari script SASS)
+ini sama seperti bahasa bahasa pemrograman,kita bisa menggunakan beberapa pengkondisian
+    @if else
+    @for
+    @while
+    @each

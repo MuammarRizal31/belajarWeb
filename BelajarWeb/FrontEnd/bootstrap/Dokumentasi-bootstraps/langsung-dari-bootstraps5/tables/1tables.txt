@@ -1,0 +1,58 @@
+table{
+    documentasi dan contoh untuk gaya opt-in tabel(pengingat penggunaan nya yang lazim dalam plugin javascript)
+}
+
+overview / ringkasan{
+    karena meluasnya penggunaan <table>
+}
+
+kelas untuk warna table{
+    table-primary
+    table-secondary
+    table-danger
+    table-info
+    table-success
+    table-warning
+    table-dark
+    table-light
+
+    penggunaan warna untuk menambah makna 
+}
+
+table bergaris / striped rows{
+    .table-stiped untuk membuat table seperti zebra
+
+    dan menggunakan class ini bisa dikombinasikan memakai table dark contohnya
+    .table .table-striped .table-dark
+}
+
+table yang ketika dihover memberikan warna / table hover{
+    .table-hover
+}
+
+.table-active / menyorot yang ingin ditampilkan{
+    .table-active
+    <tr class="table-active">
+}
+
+.table-bordered untuk memberikan border pembatasnya{
+    .table-bordered untuk membuat border disekeliling item
+
+    .border-primary untuk memberi warna pada bordernya
+}
+
+.table-borderless untuk tidak memberikan pembatas{
+    .table-borderless
+}
+
+text / caption table{
+    fungsi caption seperti heading untuk tabel.ini membantu pengguna untuk maksud dari table tersebut
+}
+
+.table-responsif{
+    untuk membuat table nya responsif
+
+    <div class="table-responsif-md">
+        <table class="table"> </table>
+    </div>
+}

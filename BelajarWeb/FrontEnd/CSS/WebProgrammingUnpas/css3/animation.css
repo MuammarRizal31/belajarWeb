@@ -1,0 +1,137 @@
+/*animation sama seperi transisi,hanya saja ketika kita menggunakan animation kita bisa mengisi value nya
+
+cara pakai nya
+@keyframes [namanya] {
+    from {
+        [properti-css]
+    }
+
+    to{
+        [properti-css]
+    }
+}
+
+
+    yang bisa kita masukan kedalam animation 
+    -[name]             (nama dari yang kita buat tadi]
+    -[duration]         (berapa lama pergerakan yang akan kita buat}
+    -[timing-function]  (seperti apa pergerakan yang ingin kita buat}
+    -[delay]            (nunggu beberapa detik sebelum jalan}
+    -[iteration-count]  (ingin berapa kali diulang nya}
+        -<angka>
+        -infinite
+    -[direction] {pengulangan}
+        -normal
+        -reverse {ini dimulai dari akhir dulu}
+        -alternate  {ini bolak balik,dari awal keakhir dan dari akhir ke awal}
+        -alternate-reverse  {sama seperti alternate hanya saja di dari akhir ke awal}
+    -[fill-mode] {akhir dari transisinya}
+        -none   
+        -forwards   {akan berhenti pada keadaan terakhir}
+        -backwards
+        -both
+    -[play-state]
+        -running {animasinya akan berjalan saja}
+        -paused  {animasinya akan berhenti}
+*/
+
+body{
+    height : 2000px;    
+}
+
+.nge3{
+    width : 99px;
+    height : 99px;
+    background-color : red;
+    margin :99px;
+    
+    /*ketika halaman di refres akan muncul*/
+    animation-name : nge3;
+    /*berapa detik dia durasi dia bergerak*/
+    animation-duration: 2s;
+    /*nama berputar nya*/
+    animation-timing-function: ease;
+    /*ingin berapa banyak dia mengulang*/
+    animation-iteration-count: 5;
+    /*mengulang dari awal ke akhir dan dari akhir ke awal*/
+    animation-direction: alternate;
+    /*berhenti pada keadaan akhir nya */
+    animation-fill-mode: forwards;
+}
+
+@keyframes nge3{
+    0%{
+        width : 99px;
+        height : 99px;
+    }
+
+    50%{
+        width : 500px;
+        height : 500px;
+        background-color : blue;
+    }
+
+    100%{
+        width : 1200px;
+        height : 600px;
+        background-color :green;
+    }
+}
+
+.nge{
+    width : 111px;
+    height : 111px;
+    background-color : salmon;
+    transition : 3s;
+}
+
+.nge:hover{
+    width : 511px;
+}
+
+.nge1{
+    width : 99px;
+    height : 99px;
+    background-color : black;
+    margin : 31px;
+}
+
+@keyframes Jange{
+    from {
+        width : 99px;
+    }
+    to {
+        width : 511px;
+    }
+}
+
+.nge1:hover{
+    animation:Jange 2s ease;
+}
+
+.nge2{
+    width : 99px;
+    height : 99px;
+    background-color : blueviolet;
+    margin : 41px;
+}
+
+@keyframes nge2{
+    0%{
+        width : 99px;
+    }
+
+    50%{
+        width : 500px;
+        height : 500px;
+    }
+
+    100%{
+        width : 1000px;
+        height : 500px;
+    }
+}
+
+.nge2:hover{
+    animation : nge2 2s ease;
+}

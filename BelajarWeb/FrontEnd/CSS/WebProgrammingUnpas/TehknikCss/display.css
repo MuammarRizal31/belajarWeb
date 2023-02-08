@@ -1,0 +1,73 @@
+/*span untuk mengelompokan teks sedangkan div untuk mengelompokan kelas nya */
+/* setiap tag pada html berada didalam sebuah kotak.Properti display pada CSS mengatur prilaku dari kotak tersebut */
+/* setiap tag pada HTML memiliki nilai default untuk properti display.Tetapi kita juga dapat mengubah prilaku dari tag tersebut
+    dengan mengganti value nya */
+
+    /*value display
+    -inline
+    -block
+    -inline-block
+    none
+    */
+
+/*INLINE
+    -Element HTML yang secara default tidak menambahkan baris baru ketika dibuat
+    -Lebar dan tinggi element sebesar konten yang ada didalam nya
+    -kita tidak dapat mengatur tinggi dan lebar dari elemen inline
+    -MARGIN dan Padding hanya mempengaruhi elemen secara horizontal ,tidak vertikal
+
+            /*ELEMENT INLNE*\
+        -B,STRONG,I,EM,A,SPAN,SUB,SUP,BUTTON,INPUT,LABEL,SELECT,TEXTAREA
+*/
+
+/*INLINE-BLOCK
+    -Tidak ada elemen yang secara default memiliki properti display :inline-block;
+    -kita harus ubah secara manual properti tersebut
+    -perilaku dasarnya sama dengan elemen inline
+    -perbedaannya,elemen inline-block dapat kita atur tinggi dan lebarnya
+*/
+
+/*BLOCK 
+    -Element HTML yang secara default menambahkan garis baru ketika dibuat
+    -Jika tidak diatur lebarnya,maka lebar default dari elemen block akan memenuhi lebar dari browser /parent nya
+    -Kita dapat mengatur tinggi dan lebar dari element block
+    -didalam elemen block ,kita dapat menyimpan tag dengan elemen inline ,inline-block ,atau bahkan element block lagi
+                //element block\\
+            -h1-h6,p,ol,ul,li,form,hr,div
+*/
+
+/*NONE 
+    -DIGUNAKAN UNTUK MENGHILANGKAN SEBUAH ELEMEN
+*/
+.teks{
+    background-color :black;
+    width : 611px;
+}
+p{
+    color :white;
+}
+.teks h2{
+    background-color : brown;
+    color : orange;
+}
+div span{
+    color :blue;
+}
+
+/*gaakan berubah karena display inline tidak dapat dirubah,kecuali pakai inline-bock; */
+a{
+    width : 18px;
+    height : 222px;
+}
+/*pakai inline-block */
+a{
+    display : inline-block;
+    background-image : url(../HTML/1.jpeg);
+    width : 111px;
+    height : 111px;
+}
+
+h1,h2{
+    background-color :aqua;
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //menurut mozila arrow function adalah bentuk lain yang lebih ringkas dari function expression
+
+        //menggunakan function biasa
+        let jange = function(nama){
+            return `halo nama saya ${nama}`
+        }
+        console.log(jange('topet'))
+
+        //menggunakan arrow function
+        let jange1 = (nama) => {return `halo nama saya ${nama}`}
+        console.log(jange1('rizal'));
+        
+        //menggunakan 2 parameter
+        let jange2 = (nama,waktu) => {return `halo ${nama},selamat ${waktu}`};
+        console.log(jange2('jange','pagi'));
+
+        //kalau satu parameter tidak perlu memakai kurung juga bisa
+        let jange3 = nama => {return `halo,${nama}`};
+        console.log(jange3('jangs'));
+
+        //kalau hanya menggunakan satu baris bisa lebih ringkas
+        //atau disebut implisit return
+        let jange4 = nama => `halo,${nama}`;
+        console.log(jange4('muammar'));
+
+        //tanpa parameter harus tetap menggunakan kurung
+        let jange5 = () => `hello world`;
+        console.log(jange5());
+
+        //mencari nilai dari tiap nama
+        let mahasiswa = ['muammar','rizal','wakwaw'];
+        const jumlah = mahasiswa.map(function(nama){
+            return nama.length;
+        })
+        console.log(jumlah);
+
+        //membuat lebih ringkas menggunakan arrow function
+        let jumlah2 = mahasiswa.map(nama => nama.length);
+        console.log(jumlah2)
+
+        //membuat array menjadi objek
+        const jumalah3 = mahasiswa.map(nama => ({nama:nama,jumlah:nama.length}));
+        console.table(jumalah3);
+    </script>
+</body>
+</html>

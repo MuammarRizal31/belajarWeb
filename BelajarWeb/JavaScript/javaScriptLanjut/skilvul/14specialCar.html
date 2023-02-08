@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        special karakter digunakan untuk mencocokan sebuah pola yang tidak biasa dari suatu string,
+        misalnya ketika kita mencari nilai true dari kata skill pada text skilvul.kita bisa menggunakan special carakter dari regex
+        */
+       const kata = "skilvul";
+       const hasil = /skil*l/;
+       console.log(hasil.test(kata)); //hasil true
+
+       const skil = "Saya belajar di skilvul.com";
+       const skil2 = /belajar/;
+       console.log(skil2.exec(skil)); //hasil belajar 
+       console.log(skil2.test(skil)); //hasil true
+
+       const ski3 = "Saya belajar di skilvul.com";
+       const Ski3 = /Belajar/;
+       console.log(Ski3.exec(ski3)); //hasil null karena b nya berbeda
+       console.log(Ski3.test(ski3)); //hasil false
+
+
+       //notasi * setelah kata skil berfungsi untuk menggantikan karakter apa saja yang muncul setelahnya..* termasuk ke dalam special karakter dari regex
+
+       /*
+        ada beberapa kategori didalam special charakter regex : 
+        1.ASSERTIONS
+        assertions melakukan pencocokan karakter diawal,diakhir,serta batasan akhir dan awal(tengah) dari suatu kata
+        -contoh : ^,$,\b
+
+        2.ShortHand charakter classes
+        membedakan berbagai jenis karakter.contoh: membedakan huruf,simbol,angka
+        contoh: \d, \w , \s , \
+
+        3.Quantifiers
+        menunjukan jumlah karakter atau ekspresi yang cocok
+        contoh: *,+,?
+
+        4.Group and rangers
+        menunjukan grup dan range dari suatu ekspresi.
+        contoh: x|y, [x,y], [^xyz]
+
+        5.Unicode properti escapes
+        membedakan berdasarkan karakter unicode,misalnya huruf besar dan kecil,simbol matematika,dan tanda baca
+        contoh: \p, \P
+       */
+
+
+       //MATCH & FLAGS
+
+       //MATCH 
+       /*
+       .match sama seperti .exec yaitu sebuah method bawaan dari javascript.namun jika disisipkan suatu flag maka akan menghasilkan hasil yang berbeda .exec()
+       */
+
+       const regex = /i/
+       const wor = "Indonesia";
+       console.log(wor.match(regex));
+        //pada hasil diatas ada lebih dari 1 karakter,tetapi match hanya mengambil 1 huruf 
+
+
+        //untuk menjadikan regex lebih spesifikasi sesuai kebutuhan kita maka dapat menggunakan flags
+        //special karakter yang sering digunakan untuk flags adalah 
+        //-g,untuk mencari ke dalam seluruh string yang ingin dicari
+        //-i,untuk mengabaikan aturan case sensitif.tidak mempersalahkan besar kecilnya sebuah karakter
+
+        const regex2 = /n/g;
+        const word = "Indonesia";
+        console.log(word.match(regex2));
+        
+        //flags juga bisa digunakan dengan menggabungkan beberapa karakter special
+        const regex3 = /i/ig
+        const word2 = "Indonesia";
+        console.log(word2.match(regex3));
+        //kita sudah bisa mengatasi permasalahan case-sensitive dengan menggunakan flag i.maka program sudah bisa menggunakan karakter I dan i
+
+        /*
+            LATIHAN
+1.Kita akan membuat program pola regex untuk mencari kata Skilvul dalam kalimat Saya belajar coding di Skilvul setiap hari dengan flag i (case-sensitive).
+Buatlah sebuah variabel bernama myRegex dan assign sebuah pola regex berupa teks string skilvul menggunakan regex literal dan flag i ke dalam variabel myRegex.
+
+2.Buatlah sebuah variabel words yang menampung data string kalimat "Saya belajar coding di Skilvul setiap hari"
+
+3.Buatlah sebuah variabel bernama result.
+Lalu lakukan string matching pada variabel wordsdengan sebuah pola regex dalam variabel myRegex sebelumnya menggunakan method .match().
+
+4.Lakukan console.log() pada variabel result. Cek pada tab Console untuk melihat data.
+        */
+       const regex11 = /Skilvul/i;
+       const words = "Saya belajar di Skilvul setiap hari";
+       console.log(words.match(regex11));
+    </script>
+</body>
+</html>

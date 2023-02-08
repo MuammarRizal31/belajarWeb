@@ -1,0 +1,23 @@
+reboot untuk menstyle ulang apa yang sudah bootstraps buat
+page default{
+    -box-sizing ditetapkan secara global/semua element
+    -font-size pada body,html adalah 1 rem(16px)
+    -font-default body,html adalah times new roman
+
+    heading dan p{
+        margin-top dihapus dan margin-top nya 5rem
+        -h-1
+        -h-2
+        -h-3
+        -h-4
+        -h-5
+    }
+
+    ul ol dan dl{
+        telah dihapus margin-top nya dan margin-bottom: 1rem
+    }
+
+    blockquote{
+        default margin pada blockquote adalah 1rem 4Opx,jadi kami meresetnya 0 0 1rem untuk sesuatu yang lebih konsisten dengan element lain
+    }
+}

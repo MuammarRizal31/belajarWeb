@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function kali(nilai1,nilai2){
+        //     hasil = nilai1 * nilai2;
+        //     return hasil;
+        // }
+        // function bagi(nilai1,nilai2){
+        //     return nilai1 / nilai2;
+        // }
+        // function kurang(nilai1,nilai2){
+        //     return nilai1 - nilai2;
+        // }
+        // function tambah(nilai1,nilai2){
+        //     return nilai1 + nilai2;
+        // }
+
+        // let input = confirm("Anda ingin melakukan operator calculator ? ")
+        // while(input){
+        //     let jange = parseInt(prompt("Masukan nilai 1 : "))
+        //     let jange2 = parseInt(prompt("Masukan nilai 2 : "))
+        //     let jange3 = prompt("Ingin di kali bagi kurang atau tambah ? ");
+
+        //     function kalkulator(nilai1,operasi,nilai2){
+        //         switch(operasi){
+        //             case "tambah":
+        //                 return tambah(nilai1,nilai2);
+        //             case "kurang":
+        //                 return kurang(nilai1,nilai2);
+        //             case "bagi":
+        //                 return bagi(nilai1,nilai2);
+        //             case "kali":
+        //                 return kali(nilai1,nilai2);
+        //         }
+        //     }
+        //     alert(`per${jange3}an ${jange} dan ${jange2} adalah : ${kalkulator(jange,jange3,jange2)}`)
+        //     input = confirm("Ingin lagi ? ")
+        // }
+
+        const kalkulator ={
+            perkalian: function(nilai1,nilai2){
+                const hasil = nilai1 * nilai2;
+                return hasil;
+            },
+            pertambahan : function (nilai1,nilai2){
+                return nilai1+nilai2;
+            },
+            pembagian : function(nilai1,nilai2){
+                return nilai1 / nilai2;
+            },
+            pengurangan : function(nilai1,nilai2){
+                return nilai1 - nilai2;
+            }
+        }
+
+        const a = 2;
+        const b = 5;
+        console.log(kalkulator.pertambahan(a,b));
+    </script>
+</body>
+</html>

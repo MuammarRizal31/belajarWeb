@@ -1,0 +1,19 @@
+.jumbotron {
+  background-color: #e2edff;
+}
+
+#project {
+  background-color: #e2edff;
+}
+
+section {
+  padding-top: 4rem;
+}
+
+footer {
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: brown;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            background-color: lightblue;
+            color: blueviolet;
+            font-size: 25px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrap"></div>
+    <script>
+        //deklarasi variable
+        const jange = "Belajar Ngoding bersama jange"
+        
+        //tipeData number/angka
+        let angka1 = 22;
+        let angka2 = 34.2415315352;
+        let angka3 = 12
+
+        //operasi matematika + * / % -
+        let hasil = angka1 + angka2;
+
+        //angka1 ++ //increment //menambahkan 1
+        //angka1 -- //decrement //mengurangi 1
+
+        //penulisan singkat
+        //angka1 = angka1 + angka2
+        //angka1 += angka2
+
+        //------------>METODE NUMBER<------------
+        //toFixed(n)-untuk menentukan ingin berapa angka dibelakang double
+        var angkaBaru = angka2.toFixed(2); + angka1;//34.24
+        //toString()-untuk membuat bilangan number menjadi string
+        var angkaBaru1 = angka1.toString() + angka2//2234
+        //random()-untuk mendapatkan angka secara acak
+        var ngenge = Math.random().toFixed(2)//random.2
+        //Math.min(a,b,c)untuk mencari nilai terkecil bilangan
+        const cari = Math.min(angka1,angka2,angka3)// angka3(12)
+        //Math.max()-untuk mencari nilai terbesar
+        const gede = Math.max(angka1,angka2,angka3).toFixed(2); // angka2(34)
+        //Math.round()-untuk membulatkan angka ke angka terdekatnya
+        var rond = Math.round(245.723);//246 //karna dia akan mencari nilai terdekatnya kedalam integer dan menjadikan sebuah bilangan bulat/tanpa koma
+        //Math.ceil()-untuk membulatkan angka ke angka terbesar nya,tidak peduli walaupun koma 1
+        var cel = Math.ceil(287.121)// 288
+        //Math.floor() - untuk membulatkan angka ke angka terkecil nya
+        var flor = Math.floor(231.213)//231
+
+        //-------------->TIPS UNTUK MENCARI NILAI RANDOM BERAPAPUN
+        var x = 15; //range,jarak
+        var y = 5; //batas minimal
+        //batas max = x+y;
+        let angka_baru = Math.floor(Math.random() * x) +y; //+1 disini untuk mentukan nilai terkecil yang di inginkan.jadi tidak akan lebih kecil dari +1
+
+
+        //------------->METODE STRING<--------------
+        //length-untuk mengetahui ada berapa panjang dari variable yang kita buat
+        let nama = "Muammarrizal"
+        let nama1 = nama.length; //12
+        //indexOf-untuk mencari text tententu dari suaru string //dia akan mencari nilai yang lebih dulu di temui
+        let ndexOf = nama.indexOf("r"); //6
+        //lastIndexOf-untuk mencari text tertentu dari suatu string // dia akan mencari nilai yang paling akhir ditemui
+        let lastNdexOf = nama.lastIndexOf('r'); //7
+        //search()- hampir sama seperti LastIndexOf namun dia lebih spesifik
+        let serch = nama.search("rizal"); //7
+        //charAt-untuk mencari huruf berdasarkan angka nya
+        let carAt = nama.charAt(0); //M
+        //toUpperCase()- untuk mengubah huruf menjadi huruf besar
+        let apperCes = nama.toUpperCase(); //MUAMMARRIZAL
+        //toLowerCase()- untuk mengubah huruf menjadi huruf kecil
+        let lowerCes = nama.toLowerCase(); //muammarrizal
+        //replace-mengubah atau menggantikan
+        let riples = nama.replace("rizal","jange"); //MuammarJange
+        //subString-untuk mengambil bagian tertentu
+        let sustring = nama.substring(0,7)//Muammar
+        //subStr()-untuk mengambil bagian tertentu ingin berapa kata yang akan diambil
+        let subStr = nama.substr(7,5); //rizal
+        //parseInt()-untuk mengubah string menjadi angka
+        let parse = "150.827";
+        let paseInt = parseInt(parse) + 50; //200 (dia mengabaikan koma nya)
+        //parseFloat()-untuk mengubah string menjadi bilangan float
+        let flot = "125.32";
+        let paseFlot = parseFloat(flot) + 21.9;
+        //1.memilih id wrap
+        //2.metode innerHTML = nulis konten
+        const ambil = document.getElementById("wrap").innerHTML = paseFlot;
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+saat membuat web,kita pasti membutuhkan CSS tapi masalahnya ketika kode CSS-nya semakin besar dan kompleks,kodenya akan susah diatur karena itu hadirlah sass untuk mempermudah
+
+Sass merupakan singkatan dari Syntactically awesome style sheets.SASS adalah sebuah bahasa pra-posesor(preprocessor) untuk CSS
+
+CSS Pre Processor muncul karena dirasa ada kekurangan pada CSS
+Kekurangan CSS diantara lain :
+    -Dulu tidak ada variable function dan modularisasi
+    -tidak bisa melakukan operasi dan logika pemrograman
+    -banyak duplikasi kode
+
+Kelebihan menggunakan SASS
+    -variable
+    -Mixin                          (dipanggil 1 kali digunakan beberapa kali)
+    -import dan uses                (untuk membuat file css kita jadi modular)
+    -operator & built-in function
+    -Nested CSS                     (dibuat css nya jadi bersarang menjadi mudah untuk melakukan Styling)
+    -Mempermudah penulisan
+    -mempermudah pengelolaan
+    -memiliki banyak fungsi build-in
+    -kita dapat membuat fungsi sendiri
+    -kita dapat memodifikasi framework CSS
+
+cara install sass nya ada beberapa jenis :
+    1.aplikasi
+        -CodeKit(paid) Mac
+        -compass.app(paid,open source) Mac windows linux
+        -Koala(open source) mac windows linux
+        -scout-app(free,open source) windows linux mac
+    2.Command Linewhats
+        -npm install -g sass
+        -brew install sass/sass/sass
+
+    3.VSCode Extension
+        -live sass complier
+
+ALASAN TIDAK MENGGUNAKAN SASS
+    -banyak fitur sass yang sekarang sudah dimiliki oleh CSS
+    -tidak untuk project kecil
+    -Styled Components / CSS in JS

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const buah = [
+            ["Apel",5],
+            ["Semangka",15],
+            ["Sawo",25],
+        ];
+        console.table(buah);
+
+        //mengkases multidimensi array
+            //baris pada table menunjukan banyaknya array
+            //kolom pada table menunjukan banyaknya isi dari masing" array
+        console.log(buah[1][1]);
+        buah.push(["Melon",16]);
+        console.table(buah);
+        console.log(buah[3][1])
+
+        //menambahkan item pada array multi dimensi
+        let barang = [
+            ["Jaket",2],
+            ["Baju",19],
+            ["topi",12]
+        ]
+        let item;
+        let jumlah;
+
+        barang.splice(1,1); //menghapus index ke 1
+        console.log(barang[1]);
+        item = barang[1][0]; //memasukan topi
+        jumlah = barang[1][1]; //memasukan 12 jumlah
+
+        console.table(`${item} terjual sebanyak ${jumlah}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrap"><p>Lorem</p></div>
+    <div id="inputNama"></div>
+    <script>
+        //fungsi adalah block kode
+
+        //menuliskan fungsi
+        function printText(){
+            const wrap = document.getElementsByClassName("wrap")[0].innerHTML ="Jange";
+        }
+        
+        //memanggil fungsi
+        // printText();
+
+        //parameter adalah nilai yang akan kita taro didalam buka tutup,untuk diolah
+        function inputNama(nama,namaLengkap){
+            // const text = nama;
+            document.getElementById("inputNama").innerHTML = nama + namaLengkap;
+        }
+        const nama = "Muammar";
+        const namaLengkap = nama+" rizal"
+        inputNama("Nama saya adalah "+nama+" rizal"," Jadi nama lengkap saya adalah "+namaLengkap)
+
+        //return adalah simple nya ketika kita ingin memanggil 1 fungsi maka kita akan mengembalikan 1 nilai
+        //return bukan untuk ngeprint melaikan membalikan nilai
+        //jadi dia hanya mengambil bagian yang ada di return
+        //mau sebanyak apapun yang anda ingin buat ketika tidak panggil nilai return maka tdak akan mengembalikan nylai nya
+
+        function namalagi(){
+            const panggilan = "jange";
+            const jangan = " lu gausah so asik";
+            return "jange";
+        }
+
+        var text = "nama saya adalah " + namalagi() + " dan saya lahir dijakarta";
+        console.log(text);
+    </script>
+</body>
+</html>

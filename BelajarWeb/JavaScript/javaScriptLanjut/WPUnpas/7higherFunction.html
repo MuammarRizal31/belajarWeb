@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="click">click saya</button>
+
+    <script>
+        //higher order function adalah function yang beroperasi pada function lain baik digunakan dalam argument maupun sebagai return value
+        //javascript memperlakukan function sebagai object
+
+        function kerjakanTugas(mataKuliah,selesai){
+            console.log(`kerjakan tugas ${mataKuliah}`);
+            selesai()
+        }
+    
+        function selesaiAja(){
+            alert('selesai');
+        }
+        kerjakanTugas('matematika',selesaiAja);
+        //jika function memiliki argument yang berbentuk function itu namanya callback
+        //dan jika function memiliki sebuah callback itu disebut dengan higher order function
+
+        //contoh lain
+        // setTimeOut(function() { //ini memiliki 2 parameter,parameter pertama adalah function yang ingin kita buat,dan parameter kedua adalah integer untuk menentukan berapa lama waktu yang ingin kita tentukan
+        //    console.log('jange'); // maka dengan begini ini bisa disebut dengan higher order function,karena memiliki callback yang berupa function di parameter
+            
+        // },1111)
+
+
+        const tombol = document.getElementById('click');
+        tombol.addEventListener('click',function(){ //ini termasuk dengan higher order function karena meiliki function di argument
+            alert('helo')
+
+            setTimeout(function(){
+                alert('hai ini set time out')
+            },1111);
+        })
+
+        //atau ini juga bisa disebut karena memiliki return function
+        function ucapkan(waktu){
+            console.log('jange')
+            return function(nama){
+                console.log(`hai ${nama} selamat ${waktu}`);
+            };
+        }
+
+        let selamatMalam = new ucapkan('malam');
+        selamatMalam('jangs');
+
+        //ALASAN PERTAMA KENAPA KITA MENGGUNAKAN HIGHER ORDER FUNCTION
+            //ABSTRAKSI UNTUK MEMBUAT AGAR CODE YANG KITA BUAT ITU LEBIH SEDERHANA,KARENA MENGGUNAKAN FUNCTION UNTUK MEMBUAT MENYEDERHANAKAN KERUMITAN
+
+        //SEMAKIN BESAR SEBUAH PROGRAM,SEMAKIN TINGGI KOMPLEKSITAS NYA,SEMAKIN MEMBINGUNGKAN PROGRAMMER NYA
+        //SEMAKIN SIMPLE PROGRAM NYA SEMAKIN KECIL KESALAHAN NYA
+        //ADA DUA CARA UNTUK MERANCANG SOFTWARE :
+            //CARA PERTAMA ADALAH UNTUK MEMBUAT PROGRAM NYA SESEDERHANA MUNGKIN SEHINGGA JELAS JELAS TIDAK ADA KEKURANGAN NYA,
+            //DAN CARA KEDUA ADALAH UNTUK MEMBUAT PROGRAM NYA ,SEKOMPLEX MUNGKIN SEHINGGA TIDAK ADA KEKURANGAN YANG JELAS
+
+        let total = 0,count = 1;
+        while (count <= 10){
+            total+=count;
+            count++;
+        }
+        console.log(total);
+        console.log(count)
+
+        //contoh lain
+            //Melakukan looping tanpa higher order function
+            for (let i=0; i<10; i++){
+                console.log(i+1);
+            }
+
+            //menggunakan higher order function
+            function repeatLog(n){ //tinggal nambahkan angka yang ingin kita lakukan looping
+                for(let i=0;i<n;i++){
+                    console.log(i+1);
+                }
+            }
+            repeatLog(15);
+
+            //contoh lain
+            function repeat(n,action){ //n untuk berapa kali kita ingin melakukan looping dan action ingin ditampilkan sebagai apa
+                for(let i=0;i<n;i++){
+                    action(i)
+                }
+            }
+            repeat(10,alert);
+            repeat(10,console.log)
+    </script>
+</body>
+</html>

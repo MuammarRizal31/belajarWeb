@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            -APA ITU ABSTRACTION ?
+        abstraction adalah konsep untuk menyembunyikan suatu details proses
+
+        abstraction mengatur kompleksitas sistem dengan menyembunyikan detail dari internal sistem dan membuatnya ke dalam beberapa sistem kecil.sehingga pengguna hanya perlu memberi suatu inputan
+        untuk mendapat output yang diinginkan
+        
+        sebenarnya kita telah menggunakan konsep ini,seperti ketika kamu menggunakan built in method pada javascript misalnya pada array,kamu menggunakan method .map() untuk iterasi atau pada string.
+        kamu menggunakan method idexOf() untuk mengetahui index pada sebuah string.kamu tidak tahu kode seperti apa dibalik method tersebut yang kamu lakukan hanya menggunakan nya untuk mendapatkan
+        hasil yang diinginkan.
+        */
+
+        class Person{
+            constructor({fName,lName,job}){
+                this.firstName = fName;
+                this.lastName = lName;
+                this.job = job;
+            }
+
+            fullName(){
+                return `${this.firstName + this.lastName} ini adalah nama panjang saya`;
+            }
+        }
+
+        class Pekerjaan{
+            constructor(per,pos,gaj){
+                this.perusahaan = per;
+                this.position = pos;
+                this.gaji = gaj;
+            }
+        }
+
+        const mhs1 = new Person({fName:"Muammar ",lName:"Rizal",job:new Pekerjaan('TokoPedia','Front-end dev',6000000)});
+        const mhs2 = new Person({
+            firstName: "Ardhian",
+            lastName: "Nur rifqi",
+            job: new Pekerjaan('Management','Manager',5000000)
+        })
+
+        console.log(mhs1.fullName());
+        console.log(mhs1.job.position);
+        /*
+        dari contoh diatas dapat kita lihat bahwa detil properti pada job disembunyikan kedalam class pekerjaan.dari sisi programmer,hal ini dilakukan agar kode terlihat rapih dan terstruktur karena
+        properti pada job dipisahkan kedalam sistem yang lebih kecil,yaitu class pekerjaan.namun dari sisi pengguna,pengguna tidak dapat melihat dan tidak perlu mengetahui properti apa saja yang 
+        terdapat pada class perkerjaan
+        */
+
+       /*
+            //PENGERTIAN LAIN DARI ABSTRACTION
+        selain itu,abstraction dalam konteks yang berbeda memiliki arti lain yaitu tidak mendefinisikan isi dari suatu method.ini berarti method tersebut masih bersifat abstrak(tidak jelas).
+        konsep ini sering digunakan pada bahasa pemrograman yang kental OOP-nya
+
+                        |HEWAN|
+                           /\
+                          /  \
+                    |KUCING| |ANJING|
+                        |        |
+                suara(){        suara(){
+                return `miaww`  return `gukguk`
+                }               }
+        seperti gambar contoh diatas,class hewan memiliki method suara() yang mana masih belum jelas suara hewan dari hewan apa,setelah diturunkan ke class kucing dan anjing,method tersebut sudah
+        dapat didefinisikan berdasarkan suara dari hewan yang diturunkan
+
+        CATATAN: JAVASCRIPT TIDAK MEMILIKI FITUR KHUSUS UNTUK MEMBUAT CLASS ATAU METHOD MENJADI ABSTRAK.
+        */
+
+                //LATIHAN
+        /*
+1.Buatlah class bernama PersegiPanjangdan buatlah sebuah constructor yang memiliki parameter panjang dan lebar di dalam class.
+Di dalam constructor, assign parameter panjang ke dalam properti this.panjang. Lalu assign parameter lebar ke dalam properti this.lebar.
+
+2.Buatlah sebuah method luas() di dalam class untuk menghitung luas dari persegi panjang.
+Di dalamnya tambahkan variabel baru bernama hasil yang menerima nilai dari perkalian menghitung luas persegi panjang (luas = panjang * lebar) dari properti panjang dan lebar.
+Lalu di bawah kode tersebut lakukan return pada variabel hasil.
+
+3.Di luar blok kode constructor, buatlah sebuah method keliling() di dalam class untuk menghitung keliling dari persegi panjang.
+Di dalamnya tambahkan variabel baru bernama hasilyang menerima nilai dari perkalian menghitung keliling persegi panjang (keliling = 2 * (panjang + lebar)) dari properti panjang dan lebar.
+Lalu di bawah kode tersebut lakukan return pada variabel hasil.
+
+4.Di luar blok kode class, buat sebuah instance objek bernama persegiPanjang dari class PersegiPanjang dengan argumen panjang bernilai 4 dan lebar bernilai 3.
+Lakukan console.log() pada instance objek persergiPanjang yang sudah dibuat dengan memanggil method luas() dan keliling().
+        */
+
+        class PersegiPanjang{
+            constructor(panjang,lebar){
+                this.panjang = panjang;
+                this.lebar = lebar;
+                this.luas = () => {
+                    let hasil = this.panjang * this.lebar;
+                    return hasil;
+                }
+            }
+            keliling(){
+                let hasil = 2 * (this.panjang + this.lebar);
+                return hasil;
+            }
+        }
+
+        const hasil1 = new PersegiPanjang(4,3);
+        console.log(`luas dari persegi panjang adalah ${hasil1.luas()}`);
+        console.log(`keliling dari persegi panjang adalah ${hasil1.keliling()}`);
+    </script>
+</body>
+</html>

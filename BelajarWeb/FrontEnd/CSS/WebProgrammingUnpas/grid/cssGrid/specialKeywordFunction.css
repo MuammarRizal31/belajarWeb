@@ -1,0 +1,107 @@
+/* 
+    ada beberapa properti yang bisa kita pakai
+    1.repeat()
+        -grid-template-column: repeat(5,1fr)
+    2.min-content & max-content
+        -grid-template-column: 1fr min-content 1fr;
+    3.minmax()
+        -grid-template-column: minmax(200px,300px]        
+    4.auto-fill & auto-fit
+        -grid-template-column: repeat(auto-fit,151px)
+
+    -minmax untuk menentukan minimal dan maximal dari grid track
+
+    -MIN CONTENT UNTUK MENENTUKAN KECIL DARI GRID TRACK NYA/SESUAI DARI CONTENT NYA 
+
+    -auto-fill dan auto-fit menentukan jumlah item untuk berada pada grid track
+     jadi maksudnya dia akan mengisi ruang kosong jika bisa diisi namun jika tidak dia akan kebawah,dan ini sudah responsive     
+ */     
+
+body{
+    text-align: center;
+}
+ .container{
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(4,1fr) repeat(5,2fr); /*kotak yang pertama sampai 4 yaitu 1 fr dan sisanya 2fr*/
+    border: 5px solid black;
+    padding: 5px;
+ }
+ 
+.item{
+    display: flex;
+    justify-content: center;
+    background-color: salmon;
+ }
+ 
+.item:nth-child(even){
+    background-color: blue;
+ }
+
+/* LATIHAN 2 MIN DAN MAX CONTENT */
+/* MIN CONTENT UNTUK MENENTUKAN KECIL DARI GRID TRACK NYA/SESUAI DARI CONTENT NYA */
+.container2{
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: 1fr min-content 1fr;
+    border: 5px solid black;
+    padding: 5px;
+    margin-top: 50px;
+ }
+
+.item2{
+    display: flex;
+    justify-content: center;
+    background-color: salmon;
+ }
+
+.item2:nth-child(even){
+    background-color: blue;
+ }
+
+ /* LATIHAN 3 AUTO-FILL AUTO-FIT */
+ /* menentukan jumlah item untuk berada pada grid track */
+ /* jadi maksudnya dia akan mengisi ruang kosong jika bisa diisi namun jika tidak dia akan kebawah,dan ini sudah responsive */
+ .container3{
+    display: grid;
+    width: 60%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit,100px);
+    border: 5px solid black;
+    padding: 5px;
+    margin-top: 50px;
+ }
+
+.item3{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    background-color: salmon;
+ }
+
+.item3:nth-child(even){
+    background-color: blue;
+ }
+
+ /* MINMAX */
+ .container4{
+    display: grid;
+    width: 60%;
+    margin: auto;
+    grid-template-columns: 1fr minmax(200px,400px) 1fr;
+    border: 5px solid black;
+    padding: 5px;
+    margin-top: 50px;
+ }
+
+.item4{
+    display: flex;
+    justify-content: center;
+    background-color: salmon;
+ }
+
+.item4:nth-child(even){
+    background-color: blue;
+ }

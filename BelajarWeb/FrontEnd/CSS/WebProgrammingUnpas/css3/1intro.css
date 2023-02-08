@@ -1,0 +1,37 @@
+/*kenapa kita menggunakan css3 ?
+    -membuat lebih fleksibel
+    -membuat morkup dengan cepat tanpa bantuan bahasa script
+    -mengurangi penggunaan gambar = kecepatan load halaman...semakin besar gambar maka loading nya semakin lama
+    -penggunaan selector untuk menghindari penggunaan markup yang boros
+*/
+
+/* yang akan dipelajari
+    -border-radius
+    -opacity
+    -rgba-hsla
+    -box-sizing
+    -box-shadow
+    -text-shadow
+    -CSS gradient
+    -background
+    -pseudo-element
+    -selector-lanjut
+    -webfont
+    -media queries
+    -transform (2D - 3D]
+    -CSS transition
+    -CSS animation
+    -CSS filter
+    -flexbox
+    -CSS columns
+*/
+
+/*ada beberapa properti yang hanya berjalan pada browser tertentu saja
+nanti akan berkaitan dengan BROWSER SUPPORT
+UNTUK MENGATASINYA KITA HARUS MENGGUNAKAN VENDOR-PREFIXES
+    -properti VENDOR-PREFIXES
+        -webkit
+        -moz
+        -ie
+        -o
+*/

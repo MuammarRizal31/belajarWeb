@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+/*
+OPERATOR            ||          HASIL
+    &&              ||          KEDUA NILAI HARUS TRUE UNTUK MENGEMBALIKAN NIAI TRUE
+    ||              ||          SALAH SATU HARUS ADA BERNILAI TRUE
+    !               ||          KEBALIKAN
+*/
+
+let nilaiU = 75;
+let nilaiA = 75;
+let hasil = nilaiU > 85;
+let hasil2 = nilaiA >= 75;
+
+document.writeln(hasil && hasil2); //nilai false karena salah satu ada yang false
+document.writeln(hasil || hasil2); //nilai akan true karena salah satu bernilai true;
+document.writeln(!hasil) //nilai akan true,karena nilai aslinya false;
+    </script>
+</body>
+</html>

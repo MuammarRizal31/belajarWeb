@@ -1,0 +1,15 @@
+body {
+  font-size: 16px;
+}
+
+.logo {
+  font-family: "Dancing Script";
+}
+
+.bg-darkblue {
+  background-color: darkblue !important;
+}
+
+.hero-section {
+  height: 92vh;
+}

@@ -1,0 +1,81 @@
+/*bisa juga memakai properti didalam html jika sudah terinstal bootstrap
+    -text-center
+    -text-left
+    -text-right
+
+    untuk warna
+    -text-primary [untuk biru]
+    -dll,referensi ada di getbootstrap
+    
+    untuk margin
+    -ms{margin start}
+    -m {margin}
+    -me{margin ends}
+    -mb{margin bottom}
+    -mt{margin-top}
+    -untuk nilai nya dari 1 sampai 6
+
+    untuk background
+    -bg-primary
+    -bg-success
+
+    untuk shadow    
+    -shadow-none {tidak ada bayangan}
+    -shadow-sm   {bayangan kecil}
+    -shadow      {bayangan sedang}
+    -shadow-lg   {bayangan besar}
+
+    sama seperti border-radius/membuat foto menjadi lingkaran
+    -class='rounded-circle';
+
+    untuk membuat border
+    -img-thumbnail
+
+    untuk membuat box berada ditengah
+    -justify-content-center
+    -justify-content-between{diantara}
+    -justify-content-evenly {spasi kiri kanan nya sama semua}
+
+    untuk mengubah font
+    -fs-5
+
+    untuk membuat layar nya menjadi responsive,agar di handphone tidak rusak panjang dan lebar nya
+    -Bootstrap includes six default breakpoints, sometimes referred to as grid tiers, for building responsively. These breakpoints can be customized if you’re using our source Sass files.
+            -Breakpoint	    Class infix	    -Dimensions
+            -Extra small	    None	    -<576px
+            -Small	            sm	        -≥576px
+            -Medium	            md	        -≥768px
+            -Large	            lg	        -≥992px
+            -Extra large	    xl	        -≥1200px
+            -Extra extra     large xxl	    -≥1400px
+
+*/
+
+body{
+    padding:0;
+    margin: 0;
+}
+
+nav{
+    position: relative;
+}
+
+.jumbotron{
+    padding-top: 6rem;
+    background-color: #0099ff;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+
+}
+
+footer{
+    margin: 0;
+    background-color: #00cba9;
+}
+
+section{
+    padding-top: 4rem;
+} 

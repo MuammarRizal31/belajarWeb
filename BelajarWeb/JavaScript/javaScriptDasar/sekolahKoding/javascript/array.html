@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //tipe data array
+        //array dimulai dari angka 0
+        let jange = ["Rizal","jange","ijal"];
+        let tes = "Nama saya adalah "+jange[2];
+        // document.body.innerHTML = tes;
+
+        //method array
+        //sort,reverse,concat,length,join
+        //splice-->add,splice-->remove
+        //pop,push,shift,unshift
+        let namaOrang = ["aku","ijang","topet","belajar","muammar","bla"];
+        let namaOrang2 = ["jangs","jx"];
+        let namaOrang3 = ["sekolah koding"]
+
+        //sort...untuk mengurutkan abjad,mulai dari a sampai z
+        console.log(namaOrang.sort()); //aku,belajar,bla,ijang,muammar,topet
+
+        //reverse...dia akan mengurutkan dari belakang,bukan berdasarkan abjad tetapi dari array yang paling akhir sampai awal
+        console.log(namaOrang.reverse()) //topet,muammar,ijang,bla,belajar,aku;
+
+        //concat...untuk menggabungkan array
+        let gabung = namaOrang.concat(namaOrang2);
+        let gabung2 = namaOrang.concat(namaOrang2,namaOrang3)
+        console.log(gabung); // topet,muammar,ijang,bla,belajar,aku,jangs,jx
+        console.log(gabung2);// topet,muammar,ijang,bla,belajar,aku,jangs,jx,sekolah koding
+
+        //length...untuk mengetahui ada berapa value didalam array
+        console.log(gabung2.length);
+
+        //join...ingin memisahkan pake tanda apa
+        document.body.innerHTML = gabung2.join("-"); //// topet-muammar-ijang-bla-belajar-aku-jangs-jx-sekolah koding
+
+        //splice...bisa digunakan untuk menambahkan dan menghapus dan ada minimal 3 parameter yang harus diisi
+        //add(mulai,ingin berapa yg dihapus?,isi) diisi dengan 0 jika tidak ada yang ingin dihapus
+        let nama = ["jange","rizal","muamar"]
+        nama.splice(1,0,"isi baru");
+        console.log(nama); //jange,isi baru,rizal,muamar
+
+        let nama2 = ["jange","rizal","muamar","topet","anisa"];
+        nama2.splice(2,1,"Ijang","muhammad");
+        console.log(nama2); //jange,rizal,ijang,topet,anisa
+    </script>
+</body>
+</html>

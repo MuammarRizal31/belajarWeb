@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        /*
+        DEFINISI SINGKAT DARI CALLBACK
+        "function yang parameter nya juga function"
+        "function yang dieksekusi setelah function lain selesai dijalankan"
+        */
+
+        //CALLBACK
+        //SYNCHRONOUS CALLBACK
+
+        // function halo(nama){
+        //     alert(`halo ${nama}`);
+        // }
+
+        // function tampilkanPesan(callback){
+        //     const nama = prompt("Masukan nama : ");
+        //     callback(nama);
+        // }
+        // tampilkanPesan(halo);
+ 
+                   //atau bisa juga seperti ini
+        // tampilkanPesan((nama) => {
+        //     alert(`halo ${nama}`);
+        // })
+
+        //ASYNCHRONOUS CALLBACK
+        //bedanya dengan diatas ini sudah asynchronous...
+        // const mhs = [
+        //     {
+        //         "Nama" : "Muammar Rizal",
+        //         "email" : "wakwaw@gmail.com",
+        //         "npm"   : "123",
+        //         "noTelp"  : "2123131231",
+        //         "idDosen" : 1
+        //     },
+        //     {
+        //         "Nama" : "Muammar topet",
+        //         "email" : "jsangw@gmail.com",
+        //         "npm"   : "2312131",
+        //         "noTelp"  : "2123131231",
+        //         "idDosen" : 2
+        //     },
+        //     {
+        //         "Nama" : "Muammar nge",
+        //         "email" : "kwaw@gmail.com",
+        //         "npm"   : "2312131",
+        //         "noTelp"  : "2123131231",
+        //         "idDosen" : 3
+        //     }
+        // ]
+        // console.log("Mulai");
+        // mhs.forEach(m => {
+        //     for(let i=1; i<1111111;i++){
+        //         const date = new Date();
+        //     }
+        //     console.log(m.Nama)
+        // })
+        // console.log("Selesai")
+        
+        // function getDataMhs(url,succes,error){
+        //     let xhr = new XMLHttpRequest();
+
+        //     xhr.onreadystatechange = function() {  //jika state nya sudah siap,jalankan fungsi ini
+        //         if(xhr.readyState === 4){ //ini adalah ketika kita mau melakukan request secara ascynchronous menggunakan ajax
+        //             if(xhr.status === 200){
+        //                 succes(xhr.response);   //kalo sudah succes jalankan callback succes
+        //             }else if(xhr.status === 404){
+        //                 error();
+        //             }
+        //         }
+        //     }       
+        //    xhr.open('get',url); //open ini ada beberapa parameter...1.method nya mau apa 2.lalu url nya mau kemana
+        //    xhr.send();
+        // }
+
+        // function succes(){
+
+        // }
+
+        // function error(){
+
+        // }                                                
+        // getDataMhs('data/mhs.json',succes,error);    //kalau nulis seperti ini bisa tapi kita harus membuat function succes dan error...contoh diatas
+
+
+        // console.log("Mulai");
+        // getDataMhs('data/mhs.json',result => { //parameter kedua untuk succes dan parameter ketiga unruk error
+        //     // console.log(JSON.parse(result)) //untuk membuat menjadi objek kita harus menggunakan method parse
+        //     const mhs = JSON.parse(result);
+        //     mhs.forEach(m => {
+        //         console.log(m.Nama);
+        //     })
+        // },error => {
+        //     console.log(error);
+        // });    
+        // console.log("Selesai")  
+
+
+
+        //JQUERY
+        //menjadi lebih simple
+        console.log("Mulai");
+        $.ajax({
+            url : 'data/mhs.json',
+            success: (result) => { //keren nya dia langsung mengembalikan nilai json
+                result.forEach( m => {
+                    console.log(m.Nama);
+                })
+            },
+            error: (e) => {
+                console.log(e);
+            }
+        })
+        console.log("Selesai");
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello world</p>
+    <button id="contoh">Click me</button>
+    <img src="https://i.pinimg.com/736x/9a/c7/c0/9ac7c0146c73708b9032593d13f85a9d.jpg" alt="bukan jange" class="age">
+    <img class="jan" src="https://www.99.co/blog/indonesia/wp-content/uploads/2021/10/pemandangan-alam-matahari.jpg" alt="Bukan matahari biasa">
+    <script>
+    //event ON CLICK
+const ambilButton = document.getElementById("contoh");
+function tampilkan(){
+    alert("Hello world");
+}
+ambilButton.onclick = tampilkan;
+
+    //element.innerHTML
+//KITA BISA MENGGUNAKAN DOM PROPERTI INNER HTML UNTUK MENGAMBIL/MENGUBAH ISI HTML DARI SEBUAH ELEMENT
+const ubah = document.getElementsByTagName("p")[0];
+ubah.innerHTML="Hello jangs";
+
+    //ELEMENT ATTRIBUTE
+const img = document.getElementsByClassName("age")[0];
+img.width="400"
+img.height="400"
+img.alt="jange";
+console.log(img.alt)
+console.log(img.width)
+console.log(img.height)
+
+    //ELEMENT.setAttribute(atribute,nilai)
+//fungsinya hampir sama saja seperti element attribute hanya saja setAttribute itu termasuk dom method sedangkan elementAttribute itu dom Property
+const img2 = document.getElementsByClassName("jan")[0];
+img2.setAttribute("width","400")
+img2.setAttribute("height","400")
+
+    //ELEMENT STYLE PROPERTY
+//kegunaan dari element.style.property adalah untuk mengambil/mengubah/menambah CSS dari element HTML
+const ambilP = document.getElementsByTagName("p")[0];
+ambilP.style.color="green"
+ambilP.style.fontSize="51px"
+    </script>
+</body>
+</html>

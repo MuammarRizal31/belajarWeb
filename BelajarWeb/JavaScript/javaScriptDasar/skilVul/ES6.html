@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+//PERBEDAAN  EMMA SCRIPT DAN JAVASCRIPT
+//EMMA SCRIPT ADALAH SEBUAH SPESIFIKASI ATAU STANDAR
+//JAVASCRIPT ADALAH SUATU BAHASA PEMROGRAMAN YANG MENGIKUTI STANDAR EMMA SCRIPT
+
+//template literal
+const saya = 21;
+
+function nama(){
+    return "Muammar Rizal"
+}
+console.log(`Hallo nama saya ${nama()} Umur saya ${saya} apakah tahun besok saya boleh ikut pemilu ? ${saya+1 >= 91 ? "Bisa": "Tidak bisa" }`)
+
+//function arrow
+const pertambahan = (nilai1,nilai2) => {
+    const pertambahan2 = nilai1+nilai2;
+    return pertambahan2;
+}
+let tambah1 = parseInt(prompt("Masukan angka yang ingin ditambahkan : "))
+let tambah2 = parseInt(prompt("Masukan nilai 2 : "));
+alert(`Pertambahan dari ${tambah1} dan ${tambah2} adalah : `+pertambahan(tambah1,tambah2))
+
+const namaJenisAnjing = () => {
+  const anjing = ["Pug", "Bulldog", "Poodle"];
+  return anjing[Math.floor(Math.random()*(anjing.length))];
+}
+
+console.log(namaJenisAnjing()); 
+
+//apa itu parameter,parameter adalah syarat input yang harus dimasukan kedalam suatu fungsi sesuai dengan persyaratan parameter,dimana argument diituliskan bersamaan dengan pemanggilan fungsi
+
+function bakar(bahan,durasi,suhu){
+    return `panggang ${bahan} selama ${durasi} pada suhu ${suhu}`;
+}
+console.log(bakar("paku","3 jam","15 px"))
+
+//      REST PARAMETER DAN SPREAD OPERATOR
+    //-rest parameter dan spread operator itu bisa dibilang kembar:mirip tapi tidak sama.sebab kedua duanya sama menggunakan ... (elipsis atau titik tiga) sebagai bagian dari synaxnya,namun fungsinya snagat berbeda
+
+    //  REST PARAMETER ADALAH PARAMETER YANG MEWAKILI NILAI DARI SEMUA(ATAU SISA) ARGUMENT YANG DIBERIKAN KEPADA SUATU FUNGSI
+const foo = (...params)=>{ //akan mengembalikan nilai array
+    console.log(params);   
+};
+foo('j','a','a')
+
+    //rest parameter sebagai parameter terakhir
+//rest parameter juga bisa digunakan saat ada parameter lain pada fungsi yang sama.dalam kasus ini,rest parameter akan mewakili sisa argument yang belum dipetakan ke parameter parameter sebelumnya,
+const bar = (param1,param2, ...params) =>{
+    console.log("argument satu : "+param1);
+    console.log("Argument dua : "+param2);
+    console.log("Argument tiga : "+params)
+}
+console.log(bar("jange","junge","jonge","jangss"))
+
+    //SPREAD OPERATOR
+//berlawanan dengan rest parameter,sifat dari spread operator yaitu memisahkan/.ia memcahkan sebuah array menjadi element elementnya (atau dalam kasusu object ,memcahkan object menjadi pasangan properti nilai yang membentuknya)
+let contoh = [1,2,3,4,5]
+//tanpa spread operator
+console.log(contoh);
+//pakai spread operator
+console.log(...contoh) // langsung mencetak
+//saat menggunakan spread operator outputnya bukan lagi array,melainkan nilai secara individu
+
+        //SPREAD OPERATOR MEMILIKI BEBERAPA KEGUNAAN
+//membuat array duplikast
+let d = [5,4,3,2,1]
+let arrayDuplikat= [...d];
+console.log(arrayDuplikat)
+
+//menggabungkan array (contenate)
+let gabung =["muammar","rizal"];
+let gabung2 = ["jangs","agate"];
+let contenate = [...gabung,...gabung2]
+console.log(contenate)
+
+    //spread operand dengan object
+//mirip dengan array,spread operator memecahkan object menjadi pasangan properti-nilai yang membentuknya,hal ini memiliki beberapa kegunaan;
+//-MENAMBAH BEBERAPA PROPERTI SEKALIGUS
+let orang = {
+    nama: "jange",
+    umur: 32
+};
+//untuk menambahkan properti lainnya kita harus menggunakan ini
+orang.pekerjaan ="Mahasiswa";
+orang.lahir = "Jakarta";
+//atau bisa juga disingkat seperti ini dengan menggunakan spread opeator
+orang = {...orang,jurusan: "Informatika",pendidikan: "S1"};
+console.log(orang);
+
+    //MENGGABUNGKAN OBJECT 
+//spread operator memungkinkan kita untuk menggabungkan 2 object atau lebih
+const object1 = {a:1,b:2};
+const object2 = {c:3,d:4};
+const objectGabungan = {...object1,...object2};
+console.log(objectGabungan);
+
+    </script>
+</body>
+</html>

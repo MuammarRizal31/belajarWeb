@@ -1,0 +1,26 @@
+/* grid template-column & rows
+    -mendefinisikan kolom/baris dengan cara menuliskan nilai dipisahkan oleh spasi.nilai mempresentasikan ukuran grid track
+    dan spasi merepresentasikan grid line
+     */
+
+     /* CARA PAKAI NYA */
+     /* .container{
+        display: grid;
+        grid-template-column: <track-size>...| <line-name> <track-size>...;
+        grid-template-rows: <track-size>...| <line-name> <track-size>...; */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    background-color: blue;
+    width: 70%;
+    margin: 50px auto;
+}
+
+.items{
+    background-color: #eaeaea;
+    margin: 0 auto;
+}

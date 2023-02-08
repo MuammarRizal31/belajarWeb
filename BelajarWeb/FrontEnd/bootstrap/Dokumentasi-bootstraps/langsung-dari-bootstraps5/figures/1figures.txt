@@ -1,0 +1,18 @@
+figures{
+    documentasi dan contoh untuk menampilkan gambar dan teks terkait dengan komponen gambar di bootstraps
+
+    gunakan include .figure ,.figure-img dam figure-caption untuk menyediakan gambar beberapa gaya dasar untuk HTML 5
+    
+    pastikan menambahkan .img-fluid agar menjadi responsif
+}
+
+untuk membuat caption pada gambar{
+    .figure-caption
+
+    <figcaption class="figure-caption">lorem lorem </figcaption>
+    
+    tambahkan kelas untuk teks nya
+        .text-end
+        .text-center
+        .text-start
+}

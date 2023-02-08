@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+//kita sudah tahu bahwa untuk menambahkan string dengan data lain,kita bisa menggunakan operator +;
+//namun pada kasus tertentu,penggunaan operator plus sangat menyulitkan ,apalagi jika dalam jumlah yang banyak
+//javascript memiliki fitur yang bernama string template.dimana kita bisa mensubtusi data dari luar string ke dalam string,seperti mengambil data variable,atau bahkan
+//atau bahkan melakukan operasi matematika
+//-untuk menggunakan string template,cara pembuatan string nya harus menggunakan ` (backtick),bukan '(petik satu) atau " (petik dua);
+
+//contoh
+const nama = "jange";
+let namaLengkap = `nama panggilan saya adalah ${nama}`;
+console.info(namaLengkap);
+console.log(namaLengkap);
+
+
+
+//kode : expresion di string template
+const name = 'muammar rizal';
+const nilai = 86;
+
+const input = `name ${name} lulus: ${nilai > 75}`;
+console.log(input)
+
+
+//MULTILINE STRING
+//-STRING TEMPLATE JUGA ISA DIGUNAKAN UNTUK MEMBUAT STRING MULTI LINE
+//-KITA CUKUP TAMBAHKAN ENTER DI TEXT NYA
+//hasilnya akan sama seperti kita menulis didalam javascript nya seperti tab dan lainnya
+let multiLineString = `
+nama saya adalah muammar rizal
+hello world
+ahahhahahah
+text ah
+`;
+console.log(multiLineString);
+
+
+    </script>
+</body>
+</html>
+

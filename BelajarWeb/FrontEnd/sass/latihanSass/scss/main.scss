@@ -1,0 +1,103 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+
+// Variables
+$primaryColor: #2e3089;
+$buttonColor: #f037a4;
+$navColor: #f7fafb;
+$navHoverColor: #4b46a5;
+$textColor: #747576;
+$bgColor: #58849441;
+
+// Styles
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 75vmax;
+  overflow: hidden;
+  background-color: $navColor;
+}
+
+header {
+  width: 90%;
+  margin: auto;
+}
+// navigation
+.navigation {
+  position: fixed;
+  width: inherit;
+  margin-top: 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    .logo-item {
+      height: 30px;
+      width: 30px;
+      background-color: salmon;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    color: $primaryColor;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: $navHoverColor;
+  }
+}
+.buttonColor {
+  background-color: $buttonColor;
+}
+.button {
+  border-radius: 15px;
+  border: none;
+  background-color: $buttonColor;
+  color: white;
+  padding: 5px;
+}
+.button-register {
+  border-radius: 25px;
+  border: none;
+  background-color: $buttonColor;
+  color: white;
+  padding: 10px 25px;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  flex-direction: column;
+  .span {
+    font-size: 3em;
+    color: $primaryColor;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .text-box > p {
+    color: $textColor;
+    font-size: 0.8em;
+  }
+}
+// akhir navigation
+// akhir styles
+@media screen and (max-width: 400px) {
+  body {
+    display: none;
+  }
+}

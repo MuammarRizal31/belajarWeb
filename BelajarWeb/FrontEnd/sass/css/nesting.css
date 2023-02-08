@@ -1,0 +1,46 @@
+.main {
+  background-color: salmon;
+}
+.main .main-heading {
+  font-size: 2em;
+}
+.main .main-paragraph {
+  font-size: 2em;
+}
+
+.main p,
+.main h1,
+.footer p,
+.footer h1 {
+  letter-spacing: 2px;
+}
+
+.main {
+  transition: 1s;
+}
+.container .main {
+  background-color: blue;
+}
+.main .main-heading {
+  font-size: 2em;
+}
+.main:hover {
+  background-color: white;
+}
+
+.main .main-heading {
+  color: red;
+}
+.main .main-paragraph {
+  color: green;
+}
+
+footer .footer {
+  background-color: brown;
+}
+.footer .footer-paragraph {
+  font-size: 2em;
+}
+.footer .simbol {
+  font-size: 3em;
+}/*# sourceMappingURL=nesting.css.map */

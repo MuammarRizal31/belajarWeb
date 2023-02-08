@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const angka = [1,4,8,31,23,55,-21,22,-1,-2];
+        const angka2 = [];
+        //mencari angka yang lebih besar dari 3
+        //menggunakan for
+        for(let i=0;i<angka.length;i++){
+            if (angka[i] >= 3){
+                angka2.push(angka[i]);
+            }
+        }
+        console.log(angka2)
+
+        //menggunakan filter
+        //filter membuat array baru dan array lama tetap disimpan
+        const newAngka = angka.filter(a => a >= 3);
+        console.log(newAngka)
+
+        //menggunakan map
+        //kalikan semua angka dengan 2
+        const newAngka2 = angka.map(a => a*2);
+        console.log(newAngka2);
+
+        //menggunakan reduce
+        // 1 + 4 + 8 + 31 + 23 + 55 + -21 + 22 + -1 + -2
+        //reduce adalah untuk melakukan sesuatu pada array nya;
+        const newAngka3 = angka.reduce((accumulator,curentValue) => accumulator + curentValue); //dia memiliki 2 parameter,parameter pertama untuk angka yang sedang di eksekusi dan yang kedua untuk mengeksekusi nilainya
+        //dan perlu diperhatikan bahwa ada parameter ketiga yang untuk menentukan nilai awal nya berapa,misalnya kita tulis 5,maka akan dari 5
+        // 5 + 1 + 4 + 8 + 31 + 23 + 55 + -21 + 22 + -1 + -2
+        console.log(newAngka3);
+
+        //method chaining
+        //cari angka > 5
+        //kalikan 3
+        //jumlahkan hasilnya
+
+        const angkaBaru = angka.filter(a => a > 5)
+        .map(a => a * 3)
+        .reduce((cur,mer) => cur + mer);
+
+        console.log(angkaBaru);
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.box {
+  border-radius: 15px;
+  background-color: blue;
+  width: 100px;
+  padding: 10px 20px;
+  color: white;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+                APA ITU GROUP?
+            -grup adalah pengelompokan karakter yang di capture ke dalam regex menggunakan tanda kurung ()
+            -grup memiliki 2 hasil,yaitu
+                -1.menghasikan suatu bagian dari fungsi .match() menjadi item terpisah.
+                -2.ketika kita menambahkan quantifier seperti tanda + setelah tanda kurung(),maka semua yang didalam kurung akan dianggap satu bagian 
+
+            pada umumnya kita menggunakan grup saat kita ingin mengelompokan suatu kata yang kita inginkan dengan pola regex..seperti mengelompokan domain email atau mengelompokan kata tertentu
+            yang kita harapkan tampil pada ui(User interface)
+
+            beberapa karakter yang sering digunakan dalam group adalah:
+            -(x)        : digunakan untuk mencocokan karakter dalam () menjadi beberapa grup.
+            -(?<Name>x) : digunakan untuk mencocokan karakter dalam () menjadi beberapa grup yang diberi nama
+        */
+
+        //contoh penggunaan(x);
+        const regex = /First_Name: (\w+),Last_Name: (\w+)/;
+        const word = "First_Name: Rizal,Last_Name: Jange First_Name: jangs,Last_Name: topet";
+
+        let match =word.match(regex);   
+        console.log(match); //hasil : ["First_Name: rizal, Last_name: Jange","Rizal","Jange"];
+        console.log(`Hello perkenalkan nama saya adalah ${match[1]} dan panggilan saya adalah ${match[2]}`);
+        //dari contoh diatas,kita dapat lihat bahwa hasil dari console.log(match) adalah ["First_Name: rizal, Last_name: Jange","Rizal","Jange"],dimana index ke-0 adalah hasil yang match sepenuhnya
+        //hasil dari tanda kurung pertama (grup-1), index ke-2 adalah hasil dari tanda kurung kedua (grup-2), dan akan begitu selanjutnya mengikuti jumlah tanda kurung yang kita pakai.
+        
+        //contoh penggunaan (?<Name>x);
+        const regex2 = /First_Name: (?<firstname>\w+),Last_Name: (?<lastname>\w+)/g;
+        const word2 = "First_Name: John, Last_Name: Doe First_Name: Jane, Last_Name: Smith";
+
+        let match2 = regex2.exec(word2);
+        console.log(match2.groups);
+    </script>           
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* 
+    definisi dari flexbox adalah model layout 1 dimensi yang dapat mengatur jarak dan penjajaran antar item dalam sebuah container
+        -di0mensi? maksudnya adalah hanya dapat mengatur 1 dimensi pada saat tertentu,antara baris atau kolom tidak bisa keduanya sekali gus
+    
+    main axis adalah ketika kita set elemen sejajar horizontal
+    ^main axis adalah sumbu utama dari sebuah container yang menentukan urutan dari penempatan item secara horizontal
+        -main-star | main-end adalah mulai dan berakhir nya items yag disimpan didalam container
+        -main size ukuran {width/length} dari container yang akan membuat dimensi dari items nya relative terhadap main size
+
+
+    -display flex adalah untuk membuat sebuah elemen parent menjadi flebox dan membuat elemen elemen didalam nya bisa berprilaku flex juga
+    -flex-direction adalah untuk menentukan arah dari mana elemen akan berakhir dari kiri ke kanan atau kanan ke kiri
+        -row dari kiri ke kanan
+        -row-reverse dari kanan ke kiri
+        -column dari atas ke bawah
+        -column-reverse dari bawah ke atas
+    -flex-wrap
+        -secara default semua items di dalam container akan berada pada satu baris meskipun ukuran nya sudah tidak cukup wrap memungkinkan
+        untuk memindahkan kebawah nya
+    -justify-content
+        -flex-star untuk memulai dari awalnya {default}
+        -flex-end untuk memulai dari akhir
+        -center untuk membuat content berada di tengah
+        -space-beetwen untuk membuat kiri kanan tengah dengan sangat pas
+        -space-arround untuk mebuat seperti beetwen namun dia ada margin nya
+    -align-items
+        -flex-start default
+        -flex-end untuk dari bawah ke atas
+        -center untuk rata tengah
+        -stretch  untuk penuh elemen
+        -baseline
+    -align-content untuk mengatur jarak antar items terhadap cross axis {hanya berfungsi ketika items lebih dari satu baris}
+        -flex-star untuk memulai dari awalnya {default}
+        -flex-end untuk memulai dari akhir
+        -center untuk membuat content berada di tengah
+        -space-beetwen untuk membuat kiri kanan tengah dengan sangat pas
+        -space-arround untuk mebuat seperti beetwen namun dia ada margin nya
+
+    -order untuk menentukan urutan pada elemen
+        -.satu{ order: 3}
+    
+    -flex-grow:1 untuk memenuhi elemen parent nya
+
+    -align-self untuk mengatur prilaku penjajaran sebuah item yang spesifik terhadap cross axis
+    
+    -flex-start default
+        -flex-end untuk dari bawah ke atas
+        -center untuk rata tengah
+        -stretch  untuk penuh elemen
+        -baseline untuk dibawah
+*/
+
+.container{
+    width:600px;
+    margin: 50px auto;
+    border:5px solid #333;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    /* flex-wrap:wrap; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+/* .container::after{
+    content:'';
+    display: block;
+} */
+
+.container div{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin: 3px;
+    flex: 1;
+}
+
+.container div.dua{
+    flex: 3;
+}
+

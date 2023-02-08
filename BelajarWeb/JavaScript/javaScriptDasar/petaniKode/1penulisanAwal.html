@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .penulisanJs{
+            padding: 15px;
+            width: 300px;
+            border: 5px solid black;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="penulisanJs">
+        <textarea onkeyup="document.getElementById('counter').innerText = this.value.length" cols="30" rows="10"></textarea>
+        <p>Panjang : <span id="counter">0</span>Karakter</p>
+        <a href="javascript:alert('hellow')">Jngas</a>
+    </div>
+
+    <!-- penulisan javascript pada atribut -->
+    <button onclick="alert('Hellobrow')">klik</button>
+
+    <script>
+        console.log('Hello world');
+        document.writeln('Hello world')
+    </script>
+</body>
+</html>

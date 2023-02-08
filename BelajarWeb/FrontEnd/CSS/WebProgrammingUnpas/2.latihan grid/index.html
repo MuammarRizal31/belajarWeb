@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <div class="hero">
+                <h2>Mountain</h2>
+                <p>Gunung dan bukit</p>
+            </div>
+            <div class="features feature-1">
+                <h4>Gunung Salak</h4>
+                <p>Mountain Salak</p>
+            </div>
+            <div class="features feature-2">
+                <h4>Gunung Gede Pangrango</h4>
+                <p>Mountain Gede Pangrango</p>
+            </div>
+        </header>
+        
+        <nav>
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="brand">
+                <h1>Mountain</h1>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="services">
+                <div class="service">
+                    <div class="icon"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/563/645/small/teach-school-and-education-tutorial-presentation-board-line-style-icon-free-vector.jpg" alt=""></div>
+                    <h3>Tutorial</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, fugit est tempore quibusdam commodi dolor.</p>
+                </div>
+                <div class="service">
+                    <div class="icon"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/563/645/small/teach-school-and-education-tutorial-presentation-board-line-style-icon-free-vector.jpg" alt=""></div>
+                    <h3>Tutorial</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, fugit est tempore quibusdam commodi dolor.</p>
+                </div>
+                <div class="service">
+                    <div class="icon"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/563/645/small/teach-school-and-education-tutorial-presentation-board-line-style-icon-free-vector.jpg" alt=""></div>
+                    <h3>Tutorial</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, fugit est tempore quibusdam commodi dolor.</p>
+                </div>
+                <div class="service">
+                    <div class="icon"><img src="https://static.vecteezy.com/system/resources/thumbnails/002/563/645/small/teach-school-and-education-tutorial-presentation-board-line-style-icon-free-vector.jpg" alt=""></div>
+                    <h3>Tutorial</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, fugit est tempore quibusdam commodi dolor.</p>
+                </div>
+            </div>
+        </section>
+        <section id="galery">
+            <h2>Gallery</h2>
+            <img src="https://source.unsplash.com/random/201x201" alt="">
+            <img src="https://source.unsplash.com/random/202x202" alt="">
+            <img src="https://source.unsplash.com/random/203x203" alt="">
+            <img src="https://source.unsplash.com/random/204x204" alt="">
+            <img src="https://source.unsplash.com/random/205x205" alt="">
+            <img src="https://source.unsplash.com/random/206x206" alt="">
+            <img src="https://source.unsplash.com/random/207x207" alt="">
+            <img src="https://source.unsplash.com/random/208x208" alt="">
+            <img src="https://source.unsplash.com/random/209x209" alt="">
+        </section>
+    </div>
+
+    <script>
+        const slide = document.querySelector('.menu-toggle');
+        slide.addEventListener('click',() => {
+            const ul = document.querySelector('ul')
+            ul.classList.toggle("slide");
+        })
+    </script>
+</body>
+</html>

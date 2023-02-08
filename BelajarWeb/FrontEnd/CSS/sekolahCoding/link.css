@@ -1,0 +1,20 @@
+/* KONDISI SEBELUM DI CLICK */
+a:link{
+    color:brown;
+    background: aquamarine;
+}
+
+/* KONDISI SETELAH DI CLICK */
+a:active{
+    font-weight: bold;
+}
+
+/* KONDISI HOVER/MOUSE DIATAS LINK */
+a:hover{
+    font-size: 31px
+}
+
+/* KONDISI SETELAH DIKUNJUNGI */
+a:visited{
+    color:yellow;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //1. membuat html fragment
+        const mhs ={
+            nama: "Muammar rizal",
+            npm: "23444",
+            jurusan: "Informatika",
+            sastra : "S1"
+        }
+        
+        const el = `
+        <div class="mhs">
+            <h2>${mhs.nama}</h2>
+            <span class="jrs">Jurusan </span>
+        </div>
+        `;
+        document.body.innerHTML=el;
+
+        //2. looping
+        const mhs2 = [
+            {
+                nama: "jange",
+                npm: "2312",
+                jurusan: "IT"
+        },
+        {
+            nama: "Topet",
+            npm: "1234",
+            jurusan: "dkv"
+        }
+    ]
+
+    const el2 = `
+    <div class="el2"> 
+        ${mhs2.map(m => `
+            <ul>
+                <li>${m.nama}</li>
+                <li>${m.npm}</li>
+            </ul>
+            `).join('')}
+    </div>
+    `
+    document.body.innerHTML=el2;
+    
+    //3.conditional
+    //ternary 
+    const lagu = {
+        judul: "Malaikat",
+        penyanyi: "jangs",
+        feat: "jange"
+    }
+
+    const el3 = `
+    <div class="lagu">
+        <ul>
+            <li>Penyanyi : ${lagu.penyanyi}</li>
+            <li>Judul : ${lagu.judul} ${lagu.feat ? `feat ${lagu.feat}` : ""}</li>
+            </ul>
+        </div>`
+        document.body.innerHTML=el3;
+
+    //4.Nested
+    //html fragment bersarang
+    const mhs4 ={
+        nama: "Muammar rizal",
+        semester: 5,
+        jurusan: "Informatika",
+        mk : [
+            'statistika',
+            'pemrograman4',
+            'pemrograman1',
+            'web dasar',
+            'javascript'
+        ]
+    }
+
+    function cetakMatakuliah(mataKuliah){
+        return `
+        <ol>
+            ${mataKuliah.map(mk => `<li>${mk} </li>`).join('')};
+        </ol>
+        `
+    }
+
+    const el4 = `
+    <div class="rizal">
+        <h2>${mhs4.nama}</h2>
+        <span class="semester">Semester : ${mhs4.semester} </span>
+        <h4>Mata Kuliah : </h4>
+        ${cetakMatakuliah(mhs4.mk)}
+    </div>
+    `
+    document.body.innerHTML=el4;
+        </script>
+</body>
+</html>

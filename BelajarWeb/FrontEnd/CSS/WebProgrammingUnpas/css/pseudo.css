@@ -1,0 +1,96 @@
+/* PSEUDO CLASS adalah kelas semu yang dimiliki sebuah elemen HTML,yang membuat kita dapat mendefinisikan style pada keaddaan tertentu dari elemen tersebut */
+
+/*  -:link
+        -style default pada sebuah link(a yang memiliki href)
+            -color
+            -font-family
+            -dll
+    -:hover
+        -style ketika kursor mouse berada diatas sebuah link /elemen
+        -font-family 
+        -dll
+    -:active
+        -style ketika sebuah link di-klik(keadaan aktif)
+    -:visited
+        -style ketika sebuah link sudah pernah dikunjungi sebelumnya (menggunakan browser yang sama)
+*/
+
+/*  PSEUDO CLASS 2
+    -:first-child
+        -memilih element pertama dari sebuah parent (elemen pembungkusnya)
+    -:last-child
+        -memilih element terakhir dari sebuah parent (elemen pembungkusnya)
+    -:nth-child(n)
+        -memilih elemen ke-n dari sebuah parent (elemen pembungkusnya)
+
+        n bisa berarti urutan (1),(2) .. atau pola (2n),(3n+2),(4n-1) atau ganjil dan genap (even & (odd)
+*/
+
+/*   PSEUDO CLASS PARAGRAF
+    -:first-of-type
+        -memilih elemen pertama dari sebuah jenis/tipe tag
+    -:last-of-type
+        -memilih elemen terakhir dari sebuah jenis/tipe tag
+*/
+.jangs:link {
+  color: red;
+  font-family: impact;
+}
+
+.jangs:hover {
+  font-size: 30px;
+}
+
+.jangs:active {
+  font-style: italic;
+}
+
+.jangs:visited {
+  color: green;
+}
+
+li:last-child a {
+  color: magenta;
+}
+
+li:nth-child(8) a {
+  color: black;
+}
+
+li:nth-child(even) a {
+  color: brown;
+}
+
+li:nth-child(even) a:hover {
+  color: black;
+}
+
+p:first-of-type {
+  color: blue;
+}
+
+.nge {
+  width: 511px;
+  height: 99x;
+  margin: auto;
+  background-color: blueviolet;
+}
+
+.nge p {
+  height: 41px;
+  background-color: yellow;
+  line-height: 41px;
+}
+
+/*sebuah pseudo-class yang memperesentasikan sebuah elemen unik dengan id yang sama dengan penggalan idetifier pada url */
+.p1:target {
+  background-color: blue;
+}
+
+.p2:target {
+  background-color: green;
+}
+
+.p3:target {
+  background-color: red;
+}

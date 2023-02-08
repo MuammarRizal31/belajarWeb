@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    nama: <span id="nama"></span>
+    <br>
+    umur: <span id="umur"></span>
+    <br>
+    kota: <span id="kota"></span>
+
+    <br>
+    <br>
+    <div id="box"></div>
+    <script>
+        const programmer = {
+            nama: "Muammar rizal",
+            umur: 21,
+            kota: "Jakarta",
+            getData : function(){
+                return `nama ${this.nama}  umur ${this.umur} `;
+            },
+            setData: function(nama){
+                this.nama = nama;
+            }
+        }
+
+        document.getElementById("nama").innerHTML = programmer.nama;
+        document.getElementById("umur").innerHTML = programmer.umur;
+        document.getElementById("kota").innerHTML = programmer.kota;
+
+
+        // const desainer = {
+        //     umur : 24
+        // }
+        var jange = new Object();
+        jange.nama="Topet"
+        document.getElementById("nama").innerHTML = jange.nama;
+        
+        programmer.setData("Jangs");
+        document.getElementById("box").innerHTML = programmer.getData();
+
+        //prototype
+        function pemainBola(nama,umur){
+            this.nama = nama;
+            this.umur = umur;
+        }
+
+        pemainBola.prototype.negara = "Jamica";
+        const ronaldo = new pemainBola("Ronaldo",33)
+        const messi = new pemainBola("Lionel messi",23)
+        document.getElementById("box").innerHTML = ronaldo.negara;
+
+
+
+        
+    </script>
+</body>
+</html>

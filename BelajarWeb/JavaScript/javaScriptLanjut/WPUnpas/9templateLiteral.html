@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //template literal adalah string literal yang memungkinkan adanya expresion didalam nya ini menurut mdn
+
+        //kegunaan memakai template literal
+            //menggunakan `` backtick
+            //multi-line string
+            //embedded expression
+            //HTML fragments
+            //expresion interpolation
+            //tagged template
+
+        /*
+        contoh penggunaan template literal
+        `String text`
+        `String text 1
+        string text 2
+        string text 3`
+
+        `String text ${expression} string text`
+
+        tag `string text ${expression} string text`
+        */
+
+
+                     //HTML FRAGMENTS
+        const mahasiswa = {
+            nama : "Muammar rizal",
+            contoh : "biasa",
+            npm : 202043502004,
+            email : "Muammarrizalwakwaw@gmail.com",
+            jurusan : "Informatika"
+        }
+
+        //MENGGUNAKAN BIASA
+        let el ='';
+        el += '<div class=mhs>';
+        el += '<h1>' + mahasiswa.contoh + '</h1>';
+        el += '<span class=npm>'+ mahasiswa.npm + '</span>';
+        el += '</div>';
+        document.body.innerHTML = el;
+
+        //MENGGUNAKAN TEMPLATE LITERAL
+        const mahasiswa2 = {
+            nama: 'Muammar rizal',
+            contoh : 'Menggunakan template literal',
+            npm : '202043502004',
+            jurusan : 'Informatika'
+        }
+
+        let masukan =`<div class=mhs2> 
+            <h2> ${mahasiswa2.contoh} </h2>
+            <span class="npm">${mahasiswa2.npm} </span>
+            </div>`;
+            
+                //EMBEDDED EXPRESION
+        const nama ="jange";
+        const umur = 21;
+        let masukan2 = `<br><h2>INI MENGGUNAAKN EMBEDDED EXPRESSION </h2><br>Nama saya adalah ${nama} dan umur saya adalah ${umur}<br>`;
+        console.log(masukan2)
+
+                //EXPRESSION INTERPOLATION(1)
+        let a = 11;
+        let b = 12;
+        let hasil = `<h1>ini menggunakan expression interpolation </h1>Jika a = ${a} dan b = ${b},maka hasil dari pertambahan berikut adalah ${a+b} bukan ${2*a+b}<br>`;
+
+        document.body.innerHTML = el + masukan + hasil;
+        const x = 15;
+        const y = 24
+        console.log(`${(x % 2 == 0) ? "Genap" : "Ganjil"}`);
+
+    </script>
+</body>
+</html>

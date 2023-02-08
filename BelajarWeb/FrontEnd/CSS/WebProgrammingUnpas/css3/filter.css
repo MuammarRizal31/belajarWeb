@@ -1,0 +1,36 @@
+/*filter adalah properti css3 yang digunakan untuk memberikan efek visual pada gambar,background atau border
+    -cara penggunaan nya filter :<tipe-filter>;
+    -efek ini adalah termasuk properti css3 yang perlu menggunakan vendor prefix
+    -ini bisa lebih dari satu value filter : opacity(12px] blur (41px] dll ;
+    -efek filter yang bisa digunakan
+            -blur           efek blur           (51px)
+            -brightness     tingkat cahaya      (51%)
+            -contrast       keterangan          (51%)
+            -saturate       warna               (51%)
+            -grayscale      abu-abu             (51%)
+            -sepia          efek warna kuning   (51%)
+            -hue-rotate     merotasi roda warna (-51deg)
+            -invert         membuat efek negatif(51%)
+            -opacity        membuat transfaran  (.5)
+            -drop-shadow    (11px 11px 11px black)sama seperti box shadow
+                -ini lebih keren dibanding properti css3
+                -bisa membuat text dan gambar nya berfungsi,dibanding nulis satu satu di css3nya
+                -ketika ada text yang transfaran pada gambar,dia akan membuat bayangan text nya bukan box nya
+            -web untuk mengedit nya agar lebih mudah
+                -http://github.khronos.org/siggraph2012course/CanvasCSSAndWebGL/demos/CSS_Filters.htm
+*/
+body{
+    text-align : center;
+}
+
+img{
+    /*
+    filter : blur(15px);
+    -webkit-filter : blur(15px);
+    */
+    filter : brightness(1%);
+}
+
+img:hover{
+    filter : brightness(211%);
+}

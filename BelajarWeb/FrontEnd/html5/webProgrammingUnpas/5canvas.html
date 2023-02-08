@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        ELEMENT CANVAS DAPAT DIGUNAKAN UNTUK MENAMPILKAN GRAFIS,SENI,ATAU GAMBAR SECARA LANGSUNG MENGGUNAKAN SCRIPT
+
+        <canvas>
+            - digunakan untuk menggambar grafis menggunakan javascript
+            - biasa digunakan untuk membuat : animasi, game ,visulisasi data,manipulasi foto dan pemrosesan video secara real time
+            - dapat berisi object 2D atau 3D
+            - menggunakan canvas API atau webGL API
+
+            CANVAS ATTRIBUTE
+                -WIDTH
+                -HEIGHT
+
+        CANVAS API
+            - canvas api menyediakan cara untuk menggambar grafis 2D menggunakan javascript
+        
+        CANVAS API SHAPES
+        *bentuk apa saja yang bisa dibuat dengan menggunakan canva API
+            - rectangle                     -> kotak
+            - arc / circle                  -> lingkaran
+            - path                          -> bentuk nya bebas tergantung dari yang kita buat
+            - bezier & quadratic curve      -> mau membikin curva
+
+        RECTANGLE   (KOTAK)
+            c.fillRect(25, 25, 100, 100);
+            25  -> sumbu x
+            25  -> sumbu y
+            100 -> ukuran lebar nya
+            100 -> ukuran tinggi nya
+        
+        CIRCLE / ART (LINGKARAN)
+            c.fillStyle ="blue      /warna"
+            c.strokeStyle ="#000    /warna border"
+            c.lineWidth = 2; ukuran /ketebalan border
+
+            c.arc(300,300,150,0,2 * Math.PI)
+                - (sumbuX,sumbuY,radius,sudutAwal,sudutAkhir)
+            c.fill()
+            c.stroke()
+        
+        PATH
+            c.fillStyle ="blue      /warna"
+            c.strokeStyle = "#000   /garisnya"
+            c.lineWidth = 2         /ketebalan"
+
+            c.beginPath();      /ini wajib karna untuk memulai path nya
+            c.moveTo(300,50);
+            c.lineTo(450,350);
+            c.lineTo(150, 350);
+            c.lineTo(300,50);
+            c.fill();
+            c.stroke();
+            c.closePath();
+        
+        CANVAS 3RD PARTY LIBRARY
+            - D3.js          3 dibawah ini biasanya untuk memvisualisasi data
+            - three.js      
+            - p5.js          
+
+            - matter.js      2 ini biasa digunakan untuk membuat game
+            - phaser        
+
+            - babylon.js    
+     -->
+    <canvas id="canvas"></canvas>
+    <script src="script/scriptCanvas.js"></script>
+  </body>
+</html>

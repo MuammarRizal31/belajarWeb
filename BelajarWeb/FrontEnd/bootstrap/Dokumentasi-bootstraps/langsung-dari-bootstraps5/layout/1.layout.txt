@@ -1,0 +1,89 @@
+-Breakpoints adalah lebar yang dapat disesuaikan disemua device / responsif{
+        Breakpoints               Class infix                 Dimensions
+            X-small                 none                        <  576px
+            small                   sm                          >= 576px  
+            Medium                  md                          >= 768px
+            large                   lg                          >= 992px
+            extra large             xl                          >= 12OOpx
+            extra large large       xxl                         >= 14OOpx
+}
+
+-container  adalah blok/wadah   {
+    .container
+    .container-sm
+    .container-md
+    .container-lg;
+    .container-xl;
+    .container-xx;
+    .container-fluid
+}
+
+-grid system{
+    kalau ingin menggunakan grid harus memakai container agar lebih baik dan setelah nya tambahkan kelas
+    -row dan didalam kelas row tambahkan kelas col
+    
+    dan ketika kita tidak menambahkan berapa colom didalam nya,maka bootstraps akan menerapkan nya secara otomatis
+    dan setiap kolom sudah diberi padding pada bootstraps sebesar 1.75rem
+
+    GUTTER/GAP berfungsi untuk memberi jarak pada setiap isi dari row nya
+        -g-6
+        -gx-6
+        -gy-6
+
+    gunakan -col-{breakpoints}-auto untuk mengatur kolom berdasarkan lebar alami content nya
+
+    gunakan kelas row-cols-3 untuk menentukan ingin berapa baris untuk semua kolom nya
+    kelas row-cols-auto untuk membuat tergantung dari isi content nya
+}
+
+-column{
+    align items untuk mengatur content secara vertikan/atas kebawah yang didalam container tergantung dari tinggi container nya ya
+        -align-items-end
+        -align-items-start
+        -align-items-center
+        -align-items-stretch
+
+    align self untuk menetukan posisi content yang didalam container nya...ini langsung di isi didalam column nya
+        -align-self-start
+        -align-self-end
+        -align-self-center
+
+    justify content untuk mengatur content secara horizontal/kiri kekanan
+        -justify-content-between
+        -justify-content-around
+        -justify-content-center
+        -justify-content-end
+        -justify-content-start
+
+    order untuk menentukan tempat dimana dia akan diletakkan semakin besar angkanya maka dia akan semakin di akhir
+        -order-1
+        -order-2
+        -order-3
+        -order-first
+        -order-last
+        -order:-1
+        
+    offset adalah cara mendorong sebuah kolom agak kekanan sesuai dengan grid yang ditentukan
+        -offset-1
+        -offset-2
+        -offset-3
+        -offset-4
+        -offset-5
+
+    ms(margin-start) memaksa kolom kiri kanan nya menjauh/agar berada ditengah
+        -ms-auto
+        -m-auto
+    
+    .col juga dapat digunakan tanpa menggunakan .row
+        .col-3 lebarnya 25%
+        .col-9 lebarnya 75%
+    
+    yang diatas ini juga bisa digunakan bersama dengan utilitas untuk membuat gambar menjadi melayang yang responsif
+    dan pastikan untuk membungkus content dengan .clearfix untuk membersihkan float nya
+
+    - .clearfix untuk memberhentikan float
+}
+
+overflow-hidden{
+    untuk menyembunyikan area yang telah melewati batas
+}

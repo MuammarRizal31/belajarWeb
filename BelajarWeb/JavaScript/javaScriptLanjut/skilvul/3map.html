@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+                    //MAP()
+        //selain .forEach() ada juga metode perulangan pada array yang lain,yaitu map() berbeda dengan forEach()...map() digunakan untuk melakukan perulangan sambil mengecek/melakukan operasi terhadap setiap element array
+        //lalu.memberikan nilai balik berupa array baru tanpa mengubah nilai pada array yang sama 
+        //CALLBACK FUNCTION PADA MAP()
+        //1.Value yaitu isi dari tiap elemen yang di proses
+        //2.index(optional) yaitu nomor pada index tiap element
+        //3.array(optional) yaitu array itu sendiri
+
+
+        // arr.map((value,index,array)=>{
+        //     //code program
+        // })
+
+        //kapan harus menggunakan forEach dan menggunakan map...lihat kasus dibawah
+        //Diberikan data input,dan output berikut
+        //input = [100,60,50,10]
+        //expected = [10,6,5,1]
+        let input = [100,60,50,10];
+        const output = input.map(value =>{
+            return value/10;
+        })
+
+        console.log(input);
+        console.log(output)
+    </script>
+</body>
+</html>

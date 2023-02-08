@@ -1,0 +1,86 @@
+// base
+$warna-dasar: lightblue;
+h1 {
+  color: $warna-dasar;
+  font-weight: arial;
+  font-style: 3em;
+  text-align: center;
+}
+
+// COLOR : adjust-color()
+/*
+    adjust-color($color,$red: null,$green: null,$blue: null,$hue: null,$saturation: null,$lightness: null,$whiteness: null,$blackness: null,$alpha: null) 
+
+    -hue (roda warna)
+    -saturation (warna nya makin muncul/kepudaran)
+    -lightness (warnanya makin terang)
+    -whiteness (warnanya makin putih)
+    -blackness (warnanya makin hitam)
+    -alpha (tingkat kepudaran)
+
+    // adobe color...situs untuk melihat roda warna
+*/
+h1 {
+  //   color: adjust-color($color: $warna-dasar, $green: 100,$red: -50, $blue: 90);
+}
+
+// adjust-hue($color,$derajat)
+// adjust-hue untuk melihat posisi pada roda warna
+h1 {
+  // color: adjust-hue($color: $warna-dasar, 30deg);
+}
+
+// complement($color)
+// ketika kita memberi sebuah warna maka akan dikasih warna yang berlawanan
+h1 {
+  // color: complement($color: $warna-dasar);
+}
+
+// darken($color,$amount)
+// parameter yang pertama warna dan yang kedua membuat tambah gelap
+h1 {
+  // color: darken($color: $warna-dasar, $amount: 50%);
+}
+
+// lighten($color,$amount)
+// parameter yang pertama warna dan yang kedua membuat tambah terang
+h1 {
+  // color: lighten($color: $warna-dasar, $amount: 50%);
+}
+
+// saturate($color,$amount)
+// tingkat kemurnian sebuah warna
+h1 {
+  // color: saturate($color: $warna-dasar, $amount: 40%);
+}
+
+// desaturate($color,$amount)
+// warna nya akan semakin menghilang
+h1 {
+  // color: desaturate($color: $warna-dasar, $amount: 40%);
+}
+
+// greyscale($color)
+// ini sama aja kaya ngasih desaturate 100%
+h1 {
+  // color: grayscale($color: $warna-dasar);
+}
+
+// mix($color1,$color2,$weight: 80%);
+// ini untuk mencampurkan warna
+h1 {
+  color: mix($warna-dasar, blue, $weight: 0.5);
+}
+
+// fade-in ($color,$amount);
+// ini untuk membuat warna yang transparan menjadi solid(terang)
+h1 {
+  color: fade-in($color: $warna-dasar, $amount: 0);
+}
+
+// fade-out($color,$amount)
+// ini untuk membuat warna yang terang menjadi transparan
+h1 {
+  color: fade-out($warna-dasar, 0.5);
+}
+// yang tadinya opacity nya 1 jadi dikurangi 0.5 jadi hasilnya 0.5

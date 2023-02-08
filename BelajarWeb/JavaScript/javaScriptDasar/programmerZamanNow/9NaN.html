@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+//INI LANJUTAN DARI KONVERSI STRING YANG TO NUMBER
+//bagaimana jika ternyata data string yang kita coba konversi ke number bukanlah data yang valid ?
+//jika data string yang kita coba lakukan bukanlah data valid,maka hasil dari konversi tersebut adalah NaN (not a number)
+//nan adalah number special yang menyebutkan bahwa ini bukanlah number
+//jika nan dioperasikan dengan data number lainnya,maka hasilnya akan menjadi nan lagi
+
+document.writeln(`<p> ${parseInt("salah")}</p>`)//NaN
+document.writeln(`<p> ${parseFloat("1.12text")}</p>`);// 1.12
+
+//number()  tidak akan mentolelir kesalahan pada data
+document.writeln(`<p>${Number("1.1ups")}</p>`)  //NaN
+document.writeln(`<p>${Number("1x")}</p>`)//Nan
+document.writeln(`<p>${Number("Bukan number")}</p>`)//Nan
+document.writeln(`<p>${parseFloat('21jangs')}</p>`)//dia akan mengeksekusi depan nya dulu,jika angka maka akan langsung ditampilkan beda dengan number;
+document.writeln(`${parseFloat("jangs21")}`);//dan ini akan nan karena ketika di cek dari awal dia bukan sebuah angka;
+document.writeln(`<br>${parseInt('21jangs')}`);//ini akan bernilai 21 karena sama seperti float;
+
+//isNan() function
+//-kadang kita ingin mengecek apakah sebuah number itu Nan atau bukan
+//-untuk melakukan pengecekan tersebut.kita bisa menggunakan function isNaN(Number)
+//-hasilnya adalah berupa data boolean,true jika NaN,dan false jika bukan
+//contoh
+let a = "not number";
+console.log(isNaN(a));//NILAI AKAN TRUE
+
+a = 14;
+console.log(isNaN(a))//NILAI AKAN FALSE
+
+
+    </script>
+</body>
+</html>

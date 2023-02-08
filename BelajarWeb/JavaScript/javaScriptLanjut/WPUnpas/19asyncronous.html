@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        YANG DIMAKSUD DENGAN JAVASCRIPT 
+        "IS A SINGLE-THREADED,NON-BLOCKING,ASYNCHRONOUS,AND CONCURRENT LANGUAGE"
+
+        SINGLE TREAD ITU APA ?
+        URUTAN EKSEKUSI KODE YANG DAPAT DILAKUKAN SECARA BEBAS/INDEPENDENT SATU SAMA LAIN...INTINYA JAVASCRIPT HANYA BISA MELAKUKAN SATU HAL PADA SATU WAKTU TERTENTU KARENA DIA SINGLE TREADED
+        */
+
+        /*
+        KESIMPULAN
+        -SINGLE VS MULTI THREAD
+            LINGKUNGAN EKSEKUSI 'TASK'
+        -BLOCKING VS NON-BLOCKING
+            TEKNIK 'NGODING' (IO RELATED)
+        -SYNCHRONOUS VS ASYNCRONOUS
+            TEKNIK 'NGODING' (HTTP REQUEST RELATED)
+        -CONCURENT VS PARALLEL
+            LINGKUNGAN EKSEKUSI 'TASK'
+        */
+
+        function kalikan(a,b){
+            return a*b;
+        }
+        function hitungLuas(sisi){
+            return kalikan(sisi,sisi);
+        }
+        function cetak(sisi){
+            const luas = hitungLuas(sisi);
+            console.log(luas);
+        }
+        cetak(5)
+    </script>
+</body>
+</html>

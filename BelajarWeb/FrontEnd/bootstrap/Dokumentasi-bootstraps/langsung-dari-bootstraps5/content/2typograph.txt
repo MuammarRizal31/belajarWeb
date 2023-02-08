@@ -1,0 +1,58 @@
+typograph adalah domentasi pengaturan global,judul,text,isi,daftar dan lainnya
+default global{
+    bootstraps mengatur tampilan global dasar tipografi,dan gaya tautan,ketika lebih banyak kontrol diperlukan
+    -default font-size pada bootstraps 1rem(16px)
+    -gunakan attribute font-family,font-size dan line-height untuk diterapkan kepada body
+    -gunakan body-bg untuk menyetel ulang background pada body
+}
+
+judul / heading{
+    - .h1
+    - .h2
+    - .h3
+    - .h4
+    - .h5
+    - .h6
+}
+
+-membuat text menjadi pudar{
+    .text-muted untuk membuat text menjadi pudar
+}
+
+display heading untuk mengatur ukuran font-weight dan font-size nya{
+    .display-1
+    .display-2
+    .display-3
+    .display-4
+    .display-5
+    .display-6
+}
+
+membuat text menjadi menonjol{
+    .lead
+}
+
+element text{
+    <mark>  untuk menyorot text
+    <del>   untuk mencoret text
+    <u>     untuk mengasih underline
+    <small> untuk mengecilkan font
+    <strong>untuk membesarkan font
+    <em>    untuk membuat font miring
+}
+
+blockquote{
+    untuk membuat quotes
+    .blockquote
+
+    untuk membuat caption
+    .blockquote-footer untuk
+}
+
+
+ul {
+    hapus margin default list-style dan margin kiri pada item daftar
+
+    - .list-unstyled
+    - .list-inline
+}

@@ -1,0 +1,21 @@
+[{
+    "Nama" : "Muammar Rizal",
+    "email" : "wakwaw@gmail.com",
+    "npm"   : "123",
+    "noTelp"  : "2123131231",
+    "idDosen" : 1
+},
+{
+    "Nama" : "Muammar topet",
+    "email" : "jsangw@gmail.com",
+    "npm"   : "2312131",
+    "noTelp"  : "2123131231",
+    "idDosen" : 2
+},
+{
+    "Nama" : "Muammar nge",
+    "email" : "kwaw@gmail.com",
+    "npm"   : "2312131",
+    "noTelp"  : "2123131231",
+    "idDosen" : 3
+}]

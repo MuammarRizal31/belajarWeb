@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //mengakses array biasa
+        let array = ['jange','jangs','rizal'];
+        for( let i=0; i<array.length; i++ ){
+            console.log((i+1)+"."+array[i])
+        }
+        //namun array memiliki build in method atau method bawaan sendiri yang dapat kita gunakan untuk melakukan perulangan.berikut kelebihan build in method yang akan dipelajari:
+            //-kode lebih mudah dibaca
+            //-mengurangi kesalahan ketika menggunakan banyak tanda operator seperti pada perulangan konvensional
+            //-menjaga variabel yang dimiliki tetap pada block kodenya
+
+            //CATATAN
+            //-beberapa method yang akan dipelajari menggunakan argumen berupa callback function
+            //-mudahnya kamu akan memberikan sebuah function sebagai argumen pada method
+
+            let data =["jange","jangs","brow","ada"];
+            data.forEach((data,i,array) =>{  
+                if (i % 2 == 0){
+                    console.log (`${data} ini adalah data genap`);
+                }else{
+                    console.log(`${data} ini adalah data ganjil`);
+                }
+            })
+            console.log(data);
+
+            let data2 = data.map(item => item+"Jange");
+            console.log(data2);
+
+            let nilai = [100, 80, 80, 70, 90];
+
+            // Buat kode kamu di bawah ini
+            let jumlahNilai = nilai.reduce((total,item) => total + nilai)
+    </script>
+</body>
+</html>

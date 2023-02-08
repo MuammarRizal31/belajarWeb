@@ -1,0 +1,23 @@
+/*  -padding mempengaruhi box yang telah dibuat
+    -Padding juga mempengaruhi ukuran dari box nya,jika ditambahkan padding,maka margin akan berubah
+ */
+
+ /* STYLE PADA BORDER
+    -SOLID UNTUK GARIS KOTAK
+    -DOTTED UNTUK TITIK TITIK
+    -DASHED UNTUK TITIK TITIK TEBAL
+    -DOUBLE UNTUK DOUBEL GARIS
+ */
+
+ /*BOX SIZING
+    BOX SIZING INI SANGAT BERGUNA UNTUK MEMBUAT SEBUAH BOX TETAP KOTAK WALAUPUN MARGIN NYA DIUBAH
+ */
+
+div{
+    width : 311px;
+    height :311px;
+    background-color :blue;
+    margin : auto;
+    padding : 12px;
+    border : 5px dashed black;
+}

@@ -1,0 +1,194 @@
+/* 
+    -Grid-column-start
+    -Grid-column-end
+    -Grid-row-start
+    -Grid-row-end
+    Menentukan tempat dari grid item dengan mengacu pada nomer atau nama grid line yang spesifik
+
+    .item{
+        grid-column-start: <nomor> | <nama> | span<nomor> | span<nama> | auto;
+    }
+
+    -<nomor> | <nama> mengacu pada nomer atau nama yang kita beri pada grid line
+    -span<nomor> item akan memanjang/melebar sampai sejauh nomor
+    -span<nama> item akan memanjang/melebar sampai sejauh nama
+
+        GRID COLUMN & GRID ROWS 
+    sorthand untuk start dan end pada grid-column dan grid-rows
+    grid-column: <start-line> / <end-line> <start-line> / span <value>
+    grid-row: <start-line> / <end-line> <start-line> / span <value>
+
+        GRID AREA
+    Menentukan nama area pada item sesuai dengan template yang sudah dibuat sebelumnya melalui properti grid-template-areas
+    dan bisa digunakan sebagai shorthand untuk grid-column-start,grid-column-end dan grid-row-start,grid-row-end
+    .item{
+      grid-area: <nama> | <row-start> / <column-start> / <row-end> / <column-end
+    }
+
+                Justify-self
+    mengatur posisi item pada sebuah cell terhadap sumbu horizontal
+    .item{
+      justify-self: start - end - stretch - center
+    }
+
+                ALIGN-SELF
+    mengatur posisi item pada sebuah cell terhadap sumbu vertikal
+
+                SHORTHAND PLACE-SELF
+    Shorthand posisi item pada sebuah cell terhadap sumbu vertikal dan sumbu horizontal dalam satu deklarasi
+    .item{
+      place-self: <align-self> <justify-self>
+    }
+*/
+
+
+
+/* GRID COLUMN START-END & GRID ROW START-END */
+
+body{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  text-align: center;
+}
+.container {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  /* grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+  grid-template-rows: repeat(3, 100px); */
+
+  grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+  grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4];
+  border: 1px solid black;
+
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-item {
+  grid-column-start: -3;
+  grid-column-end: -1;
+  grid-row-start: -3;
+  grid-row-end:-1;
+
+  /* grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row-start: 1;
+  grid-row-end: span 2; */
+
+  /* grid-column-start: satu;
+  grid-column-end: empat;
+  grid-row-start: baris1;
+  grid-row-end: b4; */
+
+  /* grid-column-start: -1;
+  grid-column-end: -2;
+  grid-row-start: -4;
+  grid-row-end: -1; */
+
+  background-color: lightblue;
+}
+
+/* SHORTHAND GRID-COLUMN & GRID-ROWS */
+.container2 {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+  grid-template-rows: repeat(3, 100px);
+  border: 1px solid black;
+}
+
+.item2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-item2 {
+  /* grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4; */
+  grid-column: 2/4;
+  grid-row: 2/4;
+
+  /* grid-column-start: 1;
+  grid-column-end: span 2;
+  grid-row-start: 1;
+  grid-row-end: span 2; */
+
+  /* grid-column: 1 / span 2;
+  grid-row: 1 / span 2; */
+
+  /* grid-column-start: -1;
+  grid-column-end: -2;
+  grid-row-start: -4;
+  grid-row-end: -1; */
+
+  background-color: lightblue;
+}
+
+
+  /* JUSTIFY-SELF */
+  .container3 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+
+    /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+    grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+    border: 1px solid black;
+  }
+
+  .item3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .my-item3 {
+    /*justify-self: start;          /*DIA AKAN MEMENUHI CONTENT NYA DAN BERADA DISEBELAH KIRI POJOK*/
+    /*justify-self: end;            /*DIA AKAN MEMENUHI CONTENT NYA DAN BERADA DISEBELAH KANAN POJOK*/
+    /*justify-self: center;         /*DIA AKAN MEMENUHI CONTENT NYA DAN BERADA DITENGAH*/  
+    justify-self: stretch;          /*Dan ini adalah nilai default nya dia akan memenuhi elemen nya*/  
+    background-color: lightblue;
+  }
+
+
+  /* ALIGN-SELF */
+  .container4 {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+    grid-template-rows: repeat(3, 100px);
+
+    /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+    grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+    border: 1px solid black;
+  }
+
+  .item4 {
+    display: flex;
+    /* place-content: center; */
+    justify-content: center;
+    align-items: center;
+    /* place-self: center; */
+  }
+
+  .my-item4 {
+    /*align-self: start;          /*TINGGI DIA SEBESAR CONTENT NYA DAN BERADA PALING ATAS*/
+    /*align-self: end;            /*TINGGI DIA SEBESAR CONTENT NYA DAN BERADA PALING BAWAH*/
+    /*align-self: center;         /*TINGGI DIA SEBESAR CONTENT NYA DAN BERADA DITENGAH*/  
+     align-self: stretch;       /*Dan ini adalah nilai default nya dia akan memenuhi elemen nya*/
+    background-color: lightblue;
+  }   

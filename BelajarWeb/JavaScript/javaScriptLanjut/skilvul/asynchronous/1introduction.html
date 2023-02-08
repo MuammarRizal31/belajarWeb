@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        bahasa pemrograman javascript termasuk kedalam single thread language atau synchronoues yang artinya haya dapat mengeksekusi satu perintah pada satu waktu dan harus menunggu
+        satu perintah tersebut selesai sebelum melanjutkan perintah selanjutnya
+
+        untuk bisa mengeksekusi urutan perintah dari kode yang kita tulis ada 2 istilah yang digunakan pada javascript yaitu synchronous dan asyncrhonous
+
+            //APA ITU SYNCHRONOUS?
+        Synchronous adalah saat kita mengeksekusi perintah akan satu persatu dan berurutan.
+        contoh seperti dibawah
+        */
+       console.log("Antrian 1");
+       console.log("Antrian 2");
+       console.log("Antrian 3");
+        //kode diatas bersifat syncrhonous yaitu kode dijalankan baris per baris
+
+        /*
+            //APA ITU ASYNCHRONOUS ?
+        asynchronous yang biasa dikenal dengan sebutan non blocking mengizinkan komputer kita untuk memproses perintah lain sambil menunggu perintah itu selesai dijalankan
+        */
+
+        /*
+        MENJALANKAN ASYNCHRONOUS PADA JAVASCRIPT 
+        jika javascript secara default bersifat synscronous,maka bagaimana jika ingin menerapkan proses asyncronous ada 2 cara
+        1.setTimeOut(function,miliseconds) digunakan untuk pemanggilan kembali proses asynchronous yang sedang/sudah selesai dijalankan
+
+        2.setInterval(function,miliSeconds) digunakan untuk simulasi pemanggilan proses asynchronous yang sedang / sudah dijalankan dalam interval waktu tertentu.
+        pemanggilan dilakukan berkali kali sesuai interval waktu yang ditentukan.
+        */
+
+        //CONTOH ASYNCHRONOUS MENGGUNAKAN settimeOut();
+        setTimeout(() => {
+            console.log("cuci baju");
+        },2222);
+
+        //CONTOH ASYNCHRONOUS MENGGUNAKAN setInterval();
+        setInterval(() => {
+            console.log("Cuci baju");
+        },3000)
+        console.log("NYAPU")
+        console.log("NGEPEL")
+        console.log("MASAK")
+
+        /*
+        MENERAPKAN ASYNCHRONOUS PADA APLIKASI JAVASCRIPT 
+        Dari contoh dimulasi diatas
+        */ 
+    </script>
+</body>
+</html>

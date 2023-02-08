@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+//dijavascript,object bisa digambarkan sebagai sesuatu yang memiliki properti dan nilai
+//object literal
+let namaSaya = {
+    nama: "muammar rizal",
+    lahir: "Jakarta",
+    tanggalLhr: 2002,
+    apa: ['jange','jangs','rizal']
+};
+console.log(namaSaya.nama);
+console.table(namaSaya)
+console.log(namaSaya.apa[1])
+
+//menggunakan kata kunci new
+let panggilSaya = new Object();
+panggilSaya.nama ='jange';
+panggilSaya.appan = 'jangs';
+console.log(panggilSaya.nama);
+
+
+//do notation
+let apasaja ={
+    bracek : 'Hallo ini namanya bracek'
+}
+
+//bracet notation
+console.info(apasaja.bracek)
+
+//bisa juga menggunakan singel quote
+console.log(apasaja['bracek'])
+
+//CATATAN : perlu kita perhatikan yang berikut ini ketika kita mau mengakses objek secara dynamis
+//yang dimaksud dengan mengakses properti objek secara dimanis adalah kita mengunakan nama dari suatu variable sebagai nama properti saat mengakses properti objek tersebut
+
+
+//      CARA MENAMBAHKAN PROPERTI BARU KE DALAM OBJEK
+let jangeDah = {
+    "name" : "jangee brow"
+}
+jangeDah.name2="rizal deh";
+console.log(jangeDah.name2); 
+console.table(jangeDah)
+//variable tipe objek dan array yang di deklarasi dengan menggunakan const bisa diubah atau di tambah nilai properti/elemen nya,,tetapi variable nya sendiri tetap tidak bisa dibah
+
+//      MENGHAPUS PROPERTI DALAM OBJECK
+delete jangeDah["name"];
+console.log(jangeDah)
+console.table(jangeDah)
+
+//      MEMBUAT FUNGSI DIDALAM OBJECT
+const weey = {
+    nama : "Muammar rizal",
+    umur : 21,
+    jangs : function(value1,value2){
+        return value1 * value2;
+    }
+}
+
+console.log(weey.jangs(5,2));
+
+
+    </script>
+</body>
+</html>

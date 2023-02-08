@@ -1,0 +1,7 @@
+EXTEND/ INHERITANCE PADA SASS
+inheritance artinya pewarisan
+
+fitur ini memungkinkan kita untuk berbagi beberapa properti dengan selector lain
+
+kita harus menggunakan direktif @extend untuk mengambil properti dari selector yang membagikan
+

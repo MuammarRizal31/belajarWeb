@@ -1,0 +1,57 @@
+/*  TEXT
+    -color
+        -memberi warna pada tulisan
+            -nama warna
+                -red,blue dll
+            -hexadecimal
+                -#ff0000,#20b2aa,@4169el dll
+            -rgb
+                -rgb(255,0,0),rgb(32,178,170) dll
+    -text-align
+        -mengatur format pada paragraf/text
+            -left       (rata kiri)
+            -right      (rata kanan)
+            -center     (tengah)
+            -justify    (kiri kanan)
+    -text-indent
+        -memberi indentasi pada paragraf/text
+            -px
+            -%
+    -text-decoration    (biasa digunakan untuk menghilangkan garis pada link)
+        -mengatur dekorasi pada text
+            -none
+            -underline      (garis bawah)
+            -overline       (garis atas)
+            -line-through   (mencoret)
+    -text-transform
+        -mengubah huruf menjadi huruf besar,kecil / kapital
+            -none
+            -lowercase      (huruf kecil semua)
+            -uppercase      (huruf besar semua)
+            -capitalize     (awal tiap kata besar semua)
+    -letter-spacing
+        -mengatur jarak antar huruf
+            -normal
+            -px
+    word-spacing
+        -mengatur jarak antar kata
+            -normal
+            -px
+*/
+
+h1{
+    font-size : 60px;
+    color : skyblue;
+    text-align : center;
+    text-decoration : underline;
+    text-transform : uppercase;
+}
+
+p{
+    text-align : justify;
+    text-indent : 50px;
+}
+
+.m{
+    text-decoration : none;
+}

@@ -1,0 +1,43 @@
+/* FONT
+    -font-family
+        -mengatur jenis font yang akan digunakan
+    -font-size
+        -mengatur ukuran font :
+            -px
+            -%
+            -em           
+    -font-weight
+        -mengatur ketebalan font :
+            -lighter
+            -normal
+            -100-900
+            -bold
+            -bolder
+    -font-variant
+        -mengubah font menjadi small caps :
+            -normal
+            -small-caps     
+    -font-syle
+        -mengubah font menjadi bercetak miring
+            -normal
+            -italic
+            -oblique
+    -line height
+        -mengatur spasi antar baris :
+            -normal
+            -px
+            -em
+*/
+
+h1 {
+  font-family: georgia, serif;
+  font-size: 50px;
+  font-variant: small-caps;
+  font-style: italic;
+}
+.nge {
+  font-family: "Times new roman";
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 50px;
+}

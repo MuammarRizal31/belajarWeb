@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //INDEX OF()
+            /*
+            melakukan iterasi element array dari kiri ke kanan kemudian memberikan nilai balik berupa nomor index dari element yang dicari atau mengembalikan -1jika tidak ditemukan 
+
+            index of memiliki 2 argument pada callback function yang dapat digunakan sesuai kebutuhan: 
+            1.Value yaitu nilai element pada array yang ingin dicari
+            2.startIndex(optional)yaitu awal titik pencarian    
+
+            sebenernya forEach() bisa digunakan untuk mendapatkan nomor index dari element yang dicari,tapi .indexOf() menghadirkan solusi yang lebih simple dan lebih unggul pada kasus tertentu
+            */
+
+            //misalnya kita ingin mendapatkan nomor index pada kasus berikut
+            const buah = ["mangga","jeruk","apel","apel"]
+            let input = 0;
+            buah.forEach((item,index) => {
+                if(item == "apel"){
+                    input = index;
+                }
+            })
+            console.log(input)
+
+            //kode diatas terdapat 2 string apel hasil nomor index yang didapat akan yang terakhir
+            //karena forEach() akan melakukan iterasi pada seluruh data
+
+            //sekarang kita akan mengubah dari forEach menjadi yang indexOf
+            let buah2 = ["jeruk","mangga","apel","jeruk","melon","apel"];
+            let input2 = buah2.indexOf("alpukat");
+            console.log(input2);
+
+
+            let input3 = buah2.indexOf("jeruk",1)
+            console.log(input3);
+            //semua element yang berada pada nomor index yang lebih kecil dari 2 akan dilewatkan begitu saja,maka yang didapatkan akan berada di index lebih besar dari 2
+
+
+            //LAST INDEX OF
+                /*
+                MELAKUKAN ITERASI ELEMENT ARRAY DARI ELEMEN YANG DICARI ATAU MENGEMBALIKAN NILAI -1 JIKA TIDAK DITEMUKAN
+
+                1.VALUE YAITU NILAI ELEMENT PADA ARRAY YANG INGIN DICARI
+                2.START INDEX (OPTIONAL) YAITU TITIK AWAL PENCARIAN
+                */
+            let arr = ["pisang","mangga","sawo","durian"]
+            let cari = arr.lastIndexOf("pisang");
+            console.log("ini last index of")
+            console.log(cari);
+
+            //mencari awalan huruf
+            let hewan = ["gajah","jerapah","harimau"];
+
+
+            //FIND INDEX ();
+            /*
+                find index yang digunakan untuk mendapatkan nomor index pada element yang dicari
+                callback function pada .findIndex() ada 3
+                1.value yaitu isi dari tiap element yang diproses
+                2.index(optional) yaitu nomor index tiap element
+                3.array(optional) yaitu array itu sendiri   
+            */
+            
+    </script>
+</body>
+</html>

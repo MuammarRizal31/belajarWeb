@@ -1,0 +1,29 @@
+            <!--CSS VALUE-->
+-integer        {bilangan bulat}
+-Number         {Bilangan pecahan}
+-percentege     {persen}
+-dimension      {number yang memiliki satuan angka dibelakang nya}
+    -kategori dari dimension
+    -angle  {sudut}
+        -deg    {derajat}
+        -turn   {berapa putaran}
+    -time
+        -s      {detik}
+    -resolution 
+        -dpi    {dot per inc}
+        -dpcm   {dot per centimeter}
+        -dppx   {dot per pixel}
+    -length
+        -absolute
+        -relative
+            ^%      {presentase ukuran relatif terhadap ukuran elemen parent}
+            ^em     {relatif terhadap ukuran font yang sedang digunakan atau dikali}
+            ^rem    {relatif terhadap ukuran font "root" / <html> atau utama nya/parent}
+            ^ch     {relatif terhadap lebar karakter '0' dari font yang sedang digunakan}   {untuk membuat berapa baris karakter yang kita inginkan}
+            ^vh     {relatif terhadap tinggi dari viewport}                                 {viewport height}
+            ^vw     {relatif terhadap lebar dari viewport}                                  {viewport width}
+            ^vmin   {relatif terhadap dimensi terkecil sebuah viewport}                     {viewport minimal}
+            ^vmax   {relatif terhadap dimensi terbesar sebuah viewport}                     {viewport maximal}
+    #note
+        -VIEWPORT ITU ADALAH UKURAN DARI LAYAR YANG KITA BUAT/disemua device ::CONTOH
+            -100vh {viewport height maka 100persen dari layar kita}

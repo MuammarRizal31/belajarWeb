@@ -1,0 +1,12 @@
+gutters adalah digunakan untuk memberi jarak secara responsif
+bagaimana cara mereka bekerja ? {
+    -gutters adalah celah antara konten kolom yang dibuat secara horizontal...kami menetapkan padding-right dan left pada setiap kolom
+    -default gutters 1.5rem/24px
+    -gunakan kelas gutters khusus untuk breakpoint untuk memodifikasi
+
+    -g  untuk menentukan jarak antar baris dan kolom
+    -gx untuk menentukan jarak antar baris
+    -gy untuk menentukan jarak antar kolom
+
+    g-O untuk menghilangkan margin kiri kanan nya...karena gutters secara default memiliki margin untuk keduanya
+}

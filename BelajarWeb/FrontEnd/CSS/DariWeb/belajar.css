@@ -1,0 +1,81 @@
+p{
+    color:blue;
+}
+
+        /*
+        jika kita ingin memberikan style pada semua element di website,maka kita bisa menggunakan * sebagai selector kita*/
+        /* CONTOH
+* {
+    background-color : green;
+}
+    maka semua akan background nya berwarna hijau
+*/
+div *{
+    color:red;
+}
+p{
+    /* memberi style pada semua element tertentu */
+    font-size:20px;
+}
+#nge{
+/*
+    memberi style di element dengan nama id tertentu
+    element bisa kita beri id atau tanda pengenal.
+    kita bisa memberikan style pada element dengan id tersebut dengan sebuah tanda pagar # yang diikuti id dari element tersebut
+        
+CATATAN:Satu element hanya bisa mempunyai satu buah id.dan sebuah id tidak digunakan lebih dari satu elemnt tiap halaman
+*/
+    color:black;
+}
+#ja{
+    border:solid yellow;
+}
+.kon{
+        /*
+        MEMBERI STYLE DI ELEMENT DENGAN NAMA CLASS TERTENTU
+        Kali ini seelector untuk class dari sebuah element adalah tanda titik. yang diikuti dengan nama class dari element tersebut
+        */
+        background-color:darkmagenta;
+        color :black;
+        /*CATATAN : class bisa digunakan dalam lebih dari satu element.serta sebuah element bisa memiliki lebih dari satu class */
+}
+.jangs{
+    background-color:blueviolet;
+}
+.you{
+    font-size:15px;
+    background-color:aqua;
+}
+a[href]{
+    /*memberikan style di element dengan attribute tertentu*/
+    background-color:brown;
+}
+a[download='search-engine.txt']{
+    /*selain itu,kita juga bisa memberikan style pada element yang memiliki nilai tertentu pada attribut*/
+    background-color:pink;
+}
+#container p{
+    /* ini akan membuat semua element <p> didalam div berubah warna */
+    background-color:pink;
+}
+
+#container > p{
+    /*ini hanya menunjuk pada <p> didalam div yang sudah diberi ID */
+    background-color:maroon;
+}
+h2,h3{
+    /*untuk memberikan style yang sama dilebih dari satu element sekaligus */
+    color:black;
+}
+
+a[href='#beranda']:hover{
+    background : blue;
+    color :red;
+}
+a[href='#Contact']:hover{
+/*PSEUDO-CLASS
+:HOVER digunakan untuk memberikan style pada element ketika kursor kalian melewati suatu element
+*/
+    background:red;
+    color:blue;
+}

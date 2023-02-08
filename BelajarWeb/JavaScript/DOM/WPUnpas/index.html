@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{
+            height: 100vh;
+        }
+        body{
+            text-align: center;
+        }
+        .container{
+            width: 800px;
+            padding: 15px;
+            margin: 15px auto;
+            border: 2px solid black;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .warna{
+            background-color: lightblue;
+        }
+        .kotak{
+            margin: 25px auto;
+            width: 25px;
+            height: 25px;
+        }
+        .merah{ background-color: red; }
+
+        .hijau{ 
+            width: 25px;
+            height: 25px;
+            margin: 25px auto;
+            background-color: green 
+        }
+        .blue{ 
+            width: 25px;
+            height: 25px;
+            margin: 25px auto;
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LATIHAN MENGGUNAKAN WARNA</h1>
+        <div class="kotak merah"></div>
+        <input type="range" name="red" min="0" max="255">
+        
+        <div class="hijau"></div>
+        <input type="range" name="gree" min="0" max="255">
+        
+        <div class="blue"></div>
+        <input type="range" name="blue" min="0" max="255">
+        <br>
+    </div>
+    <script src="javascript/latihan1.js"></script>
+</body>
+</html>

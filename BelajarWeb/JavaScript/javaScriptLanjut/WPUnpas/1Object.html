@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //membuat object dengan menggunakan object literal
+            //PROBLEM : TIDAK EFEKTIF UNTUK OBJEK YANG BANYAK
+        // const jange ={
+        //     nama: 'MuammarRizal',
+        //     energy: 10,
+        //     makan:function(berapa){
+        //         this.energy += berapa;
+        //         console.log(`halo ${this.nama},selamat makan`)
+        //         return this.energy;
+        //     }
+        // }
+        // console.log('energy kamu : '+jange.makan(5))
+        // const jange2 ={
+        //     nama: 'jange2',
+        //     energy: 10,
+        //     makan:function(berapa){
+        //         this.energy += berapa;
+        //         console.log(`halo ${this.nama},selamat makan`)
+        //         return this.energy;
+        //     }
+        // }
+        // console.log('energy kamu : '+jange2.makan(5))
+
+        //membuat object dengan function declaration
+    //kelebihan nya kamu tidak perlu memanggil 2 kali methodnya
+    //NAMUN INI MASIH SAMA DENGAN FUNCTION LITERAL KARENA DIA AKAN MENYIMPAN METHOD NYA DIDALAM MEMORI
+    //CARA UNTUK MEMBUAT LEBIH EFEKTIF DENGAN MENGGUNAKAN OBJEK BARU
+    const objekBaru = {
+        makan : function(porsi){
+            this.stamina += porsi;
+            console.log(`halo ${this.namaKamu},selamat makan again`)
+            return this.stamina;
+            },
+        main : function(jam){
+            this.stamina -= jam;
+            console.log(`Halo selamat bermain`)
+            return this.stamina;
+        },
+        tidur : function(jam){
+            this.stamina += jam * 2;
+            console.log(`Hallo ${this.namaKamu},selamat tidur,semoga mimpi indah`);
+            return this.stamina;
+        }
+    }
+    function Mahasiswa(nama,energy){
+        //cara membuat objekCreate()
+        let mahasiswa = Object.create(objekBaru); //ini sama seperti membuat objek biasa dengan menggunakan {}
+        mahasiswa.namaKamu = nama;
+        mahasiswa.stamina = energy;
+        //memanggil method baru
+        // mahasiswa.makan = objekBaru.makan;
+        // mahasiswa.main = objekBaru.main;
+        // mahasiswa.tidur = objekBaru.tidur;
+        return mahasiswa;
+    }
+    let jang = Mahasiswa('jangse',15)
+    console.log(jang)
+    // console.log(jang.makan(4));
+    console.log('stamina kamu : '+jang.stamina)
+
+    //     //constraktor function
+    // //menggunakan keyword NEW
+    //     function Mahasiswa2(nama,energy){
+    //         this.namaKamu = nama;
+    //         this.stamina = energy;
+
+    //         this.makan = function(porsi){
+    //             this.stamina += porsi;
+    //             console.log(`halo ${this.namaKamu},selamat makan again`)
+    //             return this.stamina;
+    //         }
+    //         this.main = function(berapaJam){
+    //             this.stamina -= berapaJam;
+    //             console.log('awas cape')
+    //             }
+    //         }
+    const mahasiswa1 =Mahasiswa('jange',91)
+    console.log(mahasiswa1);
+    </script>
+</body>
+</html>

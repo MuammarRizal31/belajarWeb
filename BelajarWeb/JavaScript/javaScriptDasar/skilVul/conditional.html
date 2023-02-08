@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+//conditional kalau diartikan dalam bahasa indonesia artinya adalah persyaratan 
+
+const jangs = 44;
+console.log(jangs % 3 ==1);
+
+const array = ["jange","muammar","rizal"];
+const jange = prompt("Masukan nama anda : ")
+if ( jange === "rizal"){
+    alert("yaa ini nama anda : "+jange);
+}else{
+    alert("Ini bukan nama anda!");
+}
+
+const masukan = parseInt(prompt("Masukan nilai rizal : "))
+if (masukan >= 80 && masukan <= 100){
+    alert("Selamat anda mendapatkan nilai A");
+}else if( masukan >= 60 && masukan <= 79  ){
+    alert("Selamat anda mendapatkan nilai B")
+}else if ( masukan >= 40 && masukan <= 59 ){
+    alert("Nilai anda C");
+}else if ( masukan <= 39 && masukan >= 0 ){
+    alert("Nilai anda E");
+    alert("silahkan ulang mata kuliah ini")
+}else{
+    alert("nilai yang anda masukan salah")
+}
+
+
+        //switch
+let seragam = prompt('Masukan baju hari : ');
+let baju;
+switch(seragam){
+    case "senin":
+        baju = "Putih putih"
+        break;
+    case "selasa":
+        baju = "Putih biru"
+        break;
+    case "rabu":
+        baju = "Pramuka";
+        break;
+    case "kamis":
+        baju = "putih abu abu";
+        break;
+    case "jumat":
+        baju = "Baju muslim";
+        break;
+    default:
+        alert('libur');
+}
+alert(baju)
+
+
+    </script>
+</body>
+</html>

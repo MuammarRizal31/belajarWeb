@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let jange = ['MuammarRizal','jangs','jangse','topet','ijal','ijang','brow'];
+        jange.forEach((ambil,panjang) =>{
+            if (panjang % 2 == 0){
+                console.log(`nama genap ${ambil}`);
+            }else{
+                console.log(`nama ganjil ${ambil}`)
+            }
+        })
+
+        jange.forEach((data,index) => {
+            console.log('Hasil : ',data)
+        })
+
+        //manggunakan for each
+        let rizal = [10,60,90,88];
+        let bagi = [];
+        rizal.forEach(data=> {
+            bagi.push(data/10);
+        })
+        console.log(bagi);
+
+        //menggunakan map
+        let bagiLagi = rizal.map(data => {
+            console.log(data/10);
+        })
+
+        const biodata = {
+            nama: "MuammarRizal",
+            lahir: "jakarta",
+            sapa : function(){
+                return this.nama + this.lahir;
+            }
+        }
+
+        const you ="ange";
+        console.log(biodata.sapa())
+
+        let nilai = [100, 80, 80, 70, 90];
+
+    // Buat kode kamu di bawah ini
+    let jumlahNilai = nilai.reduce((total,item) => {
+        return total + item;
+        });
+    let rataRata = jumlahNilai / nilai.length;
+    console.log(rataRata);
+
+
+    const foods = ["somay","jagung","ubi","singkong"];
+    function cek(namaMakanan){
+        let isNotString = namaMakanan !== "";
+        return  isNotString;
+    }
+
+    console.log(cek("nasi"))
+    console.log(typeof(cek("nasi")));
+
+    const makanan = ["somay","jagung","ubi","singkong"];
+    function cek(namaMakanan){
+        return namaMakanan;
+    }
+
+    console.log(cek("nasi"))
+    console.log(typeof(cek("nasi")));
+    </script>
+</body>
+</html>

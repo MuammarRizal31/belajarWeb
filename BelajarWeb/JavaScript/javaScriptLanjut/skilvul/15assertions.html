@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //ASSERTIONS 
+
+        /*
+        ASSERTIONS DIGUNAKAN UNTUK MENCOCOKAN KARAKTER SPECIAL YANG TERDAPAT DALAM SUATU KATA/KALIMAT
+
+        BEBERAPA KARAKTER SPECIAL YANG SERING DIGUNAKAN 
+        -^ : DIGUNAKAN UNTUK MENCOCOKAN AWAL DARI SUATU STRING 
+        -$ : Digunakan untuk mencocokan akhir dari suatu string
+        -\b : digunakan untuk memberi batasan dari suatu string...huruf karakter sesudah karakter special ini harus tidak diikuti oleh karakter lain 
+        -x(?=y) (lookahead) :Hasilnya akan berupa 'x' hanya jika setelah 'x' diikuti oleh 'y' tanpa spasi
+        -(?=y)x (lookbehind) :Hasilnya akan berupa 'x' hanya jika sebelum 'x' adalah 'y' tanpa spasi
+        */
+
+        //contoh penggunaan karakter special ^:
+        console.log("Contoh penggunaan karakter special ^");
+        const regex = /^I/g;
+        const word = "Indonesia";
+        console.log(word.match(regex)); //output ["I"]
+
+        const regex2 = /^i/g;
+        console.log(word.match(regex2)); //output null
+
+        console.log("Contoh penggunaan karakter special $");
+        const regexx = /a$/g;
+        const wordd = "Indonesia";
+        console.log(wordd.match(regexx)); //output ["a"];
+
+        const regexx2 = /A$/g;
+        console.log(wordd.match(regexx2)) //output null
+
+        console.log("Contoh penggunaan karakter special \b");
+        const regexxx = /ee\b/gi;
+        const worddd = "tree";
+        console.log(worddd.match(regexxx)); //output ["ee"];
+        //contoh diatas akan menghasilkan array ["ee"] karena tidak ada lagi kata setelah ee
+
+        /*
+        1.Buatlah variabel firstChar yang isinya merupakan pola regex untuk mencocokan huruf depan variabel word    
+        2.Buatlah variabel lastChar yang isinya merupakan pola regex untuk mencocokan huruf terakhir variabel word
+        3.Buatlah variabel lastTwoChars yang isinya merupakan pola regex untuk mencocokan 2 huruf terakhir variabel word
+        4.Lakukan console.log() untuk melihat string matching pada variabel word dengan masing-masing variabel firstChar, lastChar, dan lastTwoChars .Gunakan method .match().
+        */
+
+        const word2 = "Rizal";
+                //NOMER 1
+        console.log("Nomer 1");
+        let firstChar = /^R/;
+        console.log(word2.match(firstChar));
+
+                //NOMER 2
+        console.log("NOMER 2");
+        let lastChar = /l$/;
+        console.log(word2.match(lastChar));
+
+                //NOMER 3
+        console.log("NOMER 3");
+        let lastTwoChars = /al\b/;
+        console.log(word2.match(lastTwoChars));
+    </script>
+</body>
+</html>

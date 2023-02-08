@@ -1,0 +1,83 @@
+/*transform adalah properti yang memungkinkan kita dapat memanipulasi format visual dari elemen HTML...BISA DARI ELEMEN HTML TERSEBUT,UKURAN BENTUK ATAU POSISI
+ -TRASNFORMASI 2D-3D
+ -TRANSFORM:<FUNGSI>;
+ -PROPERTI INI MASIH EXPERIENTAL/MASIH PERLU MEMAKAI VENDOR PREFIX
+            FUNGSI TRANFORMASI
+                -SCALE
+                    MEMPERBESAR/MEMPERKECIL
+                -ROTATE
+                    MEMUTAR
+                -SKEW
+                    MEMBUAT CONDONG /MIRIP
+                -TRANSLATE
+                    MENGUBAH POSISI
+
+    CARA MENULIS TRANSFORMASI
+    -scale      (ANGKA)
+    -scaleX     (memperbesar secara horizontal)
+    -scaleY     (memperbesar secara vertikal)
+    -rotate     (deg)
+    -rotateX
+    -rotateY
+    -skew       (deg)
+    -skewX
+    -skewY
+    -translate  (px)
+    -translateX
+    -translateY
+*/
+body{
+    text-align : center;
+    font-size : 21px;
+}
+
+.scale{
+    width : 311px;
+    height : 311px;
+    background-color : blue;
+    margin : 51px auto;
+    transition : 1s;
+}
+
+.scale:hover{
+    transform : scale(2); /*lebarnya nol koma 5 dan tinggi nya 2x lipat*/
+    transition: 1s;
+}
+
+.rotate{
+    width : 311px;
+    height : 311px;
+    background-color : black;
+    margin : auto;
+    transition : 1s;
+}
+
+.rotate:hover{
+    transform : rotate(181deg) rotate(181deg) rotate(181deg); /*ini akan berputar */
+    transition : 1s;
+}
+
+.skew{
+    width : 311px;
+    height : 311px;
+    background-color :red;
+    margin : 31px auto;
+    transition : 1s;
+}
+.skew:hover{
+    transform : skew(31deg);
+    transition : 1s;
+}
+
+.translate{ /*memakai ini lebih bagus daripada position,karna yang berjalan hardware nya bukan software nya*/
+    width : 311px;
+    height : 311px;
+    background-color : green;
+    margin :31px auto;
+    transition : 1s;
+}
+
+.translate:hover{
+    transform :translate(211px);
+    transition : 1s;
+}

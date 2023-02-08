@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        jadi yang dimaksud dengan closure menurut mozila adalah closure merupakan kombinasi antara function dan lingkungan leksikal (leksikal scope) didalam function tersebut
+        */
+
+        /*
+        closure menurut w3schools adalah sebuah function ketika memiliki akses ke parent scope nya.meskipun parent scope nya sudah selesai dieksekusi
+        */
+
+        /*
+        closure menurut code fellow adalah sebuah function dikembalikan oleh function yang lain. yang memiliki akses ke lingkungan saat ia diciptakan.
+        */
+
+        /*
+        closure menurut techsit adalah sebuah function yang sebelumnya sudah memiliki data,hasil dari function yang lain
+        */
+
+        //kenapa menggunakan closure ? 
+        //  -untuk membuat function factories
+        //  -untuk membuat private method
+        function init() {
+            let nama = "Muammar rizal"; //local variable (variable yang dibuat didalam function init)
+            function tampilNama(){      //inner function/closure
+                console.log(nama);    //akses ke parent variable...dia akan mencari nama sampai ke global scope
+            }
+            tampilNama();
+        }
+        init();
+
+        function init2(){
+            return function(nama){
+                console.log(nama);
+            }
+        }
+
+        const jange = init2();
+        jange('jangs');
+
+
+        function panggil(waktu){
+            return function(nama){
+                console.log(`Halo ${nama} selamat malam ${waktu}`);
+            }
+        }
+
+        const jange1 = panggil('pagi');
+        const jange2 = panggil('siang');
+        jange1('MuammarRizal');
+        jange2('Jange')
+
+        let counter1 = function(){
+            let counter = 1;
+            return function(){
+                return ++counter;
+            }
+        }
+
+        let panggilCounter = counter1();
+        console.log(panggilCounter());
+        console.log(panggilCounter());
+
+        //TEHKNIK AGAR TIDAK MEMBUAT VARIABLE KEMBALI
+        let counter2 = (function(){
+            let counter = 1;
+            return function(){
+                return ++counter;
+            }
+        })();
+
+        console.log('Tehknik');
+        console.log(counter2())
+        console.log(counter2())
+    </script>
+</body>
+</html>

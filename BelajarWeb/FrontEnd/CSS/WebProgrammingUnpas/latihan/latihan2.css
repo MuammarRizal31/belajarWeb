@@ -1,0 +1,74 @@
+body{
+    height : 2000px;
+}
+
+.bungkus{
+    width : 450px;
+    height : 450px;
+    border : 10px solid black;
+    margin : 50px auto;
+    position : relative;
+}
+
+.kotak1,.kotak2,.kotak3{
+    width : 150px;
+    height : 150px;
+    margin : auto;
+    position : absolute;
+}
+
+.kotak1{
+    background-color : blueviolet;
+}
+
+.kotak2{
+    background-color :aquamarine;
+    top : 75px;
+    left : 75px;
+}
+
+.kotak3{
+    background-color :aqua;
+    top : 150px;
+    left : 150px;
+}
+
+.top-bar{
+    height : 40px;
+    background-color : blue;
+    width : 100%;
+    position : fixed;
+    top :0px;
+    left : 0px;
+    z-index : 9999;
+}
+
+
+/*iklan*/
+.iklan{
+    width : 250px;
+    height : 250px;
+    background-color :rgba(0,0,0,0.5);
+    margin : auto;
+    position : fixed;
+    left : 100px;
+    right : 100px;
+    top : 100px;
+    bottom : 100px;
+}
+
+.close{
+    width : 30px;
+    height : 30px;
+    background-color : white;
+    font-family : arial;
+    border : 3px solid black;
+    text-align : center;
+    margin : auto;
+    line-height : 30px;
+    font-weight : bold;
+    position : absolute;
+    top : -15px;
+    right : -15px;
+    border-radius : 50%;
+}

@@ -1,0 +1,24 @@
+/*vendor prefix adalah sintaks khusus yang harus ditambahkan untuk beberapa properti CSS3/Agar css bisa dibaca oleh semua browser
+    -sintaks spesifik untuk tiap browser/vendor
+        -vendor prefix properti :
+            -webkit- untuk(chrome,safari,opera versi terbaru]
+            -moz-    untuk(firefox]
+            -ms-     untuk(internet explorer]
+            -o-      untuk(opera versi lama]
+    kenapa harus memakai vendor prefix?karena tidak semua browser support css3
+
+    properti css3 yang butuh vendor prefix
+    
+    web untuk mengetahuinya properti mana saja yang belum didukung
+    -shoulddiprefix.com
+    -pleeease.io //ini lebih mudah tinggal copy semua cssnya
+*/
+
+body{
+    text-align : center;
+}
+
+img{
+    -webkit-filter:grayscale(98%);
+    filter :grayscale(98%);
+}

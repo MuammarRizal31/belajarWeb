@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+const jange = {
+    nama: "Muammar Rizal",
+    kelas: "R44",
+    fungsiKalkulator : function(input1,input2){
+        let perkalian = input1 * input2
+        return perkalian;
+    }
+}
+alert(jange.fungsiKalkulator(2,5))
+function suara(){
+    return "gukguk";
+}
+function suara(){
+    return "meow"
+}
+
+alert(suara());
+
+const anjing = {
+    suara1 : function(){
+        return "gukguk"
+    }
+}
+
+const kucing ={
+    suara1 : function(){
+        return "meow";
+    }
+}
+alert(anjing.suara1());
+alert(kucing.suara1())
+
+//MEMBUAT METHOD MEMPERKENALKAN DIRI
+const saya ={
+    nama: "Muammar Rizal",
+    umur: 21,
+    lahir: "Jakarta",
+    perkenalkan: () =>{
+        return (`Hallo semua perkenalkan nama saya ${this.nama} saya berumur ${this.umur} dan saya lahir di ${this.lahir}`)
+    }
+}
+
+function panggilan(){
+    console.log(saya.perkenalkan)
+}
+console.log(panggilan())
+
+alert(saya.perkenalkan())
+console.log(saya.perkenalkan())
+
+//      MENAMBAHKAN FUNCTION KEDALAM OBJECT
+saya.functionBaru = ()=>{
+    return "Haiii"
+}
+alert(saya.functionBaru());
+    </script>
+</body>
+</html>

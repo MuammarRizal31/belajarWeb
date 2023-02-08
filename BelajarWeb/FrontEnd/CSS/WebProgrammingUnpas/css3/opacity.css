@@ -1,0 +1,19 @@
+body{
+    background-image :url(https://images.unsplash.com/photo-1553095066-5014bc7b7f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2FsbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80);
+}
+
+.jangs{
+    width : 300px;
+    height : 300px;
+    background-color : red;
+
+    /*untuk membuat transfaran dan ini akan mewarisi ke anak" nya/parent*/
+    opacity : 0.25;
+}
+
+/*jika ingin membuat elemen 2 tidak transfaran itu tidak bisa,harus make properti rgba/hsla*/
+.jange{
+    width : 50px;
+    height : 50px;
+    background-color : green;
+}

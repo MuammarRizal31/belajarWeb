@@ -1,0 +1,64 @@
+/*box shadow berfungsi sebagai menambahkan bayangan pada box */
+/*  -angel berfungsi sebagai datang nya cahaya,jika angel nya dari kiri maka bayangan nya akan muncul pada kanan 
+    -distance berfungsi sebagai mengatur jarak bayangan,jika distance nya banyak maka jarak bayangan nya akan jauh
+    -size berfungsi sebagai ketebalan bayangan nya,jika size nya kecil maka bayangan akan tebal seperi punya dua buah kotak,begitupun sebaliknya
+    -spread berfungsi sebagai ukuran bayangan nya
+*/
+
+/*properti box shadow
+    -<x-offset> untuk mengatur jarak bayangan pada sumbu horizontal ini nilainya numerik dan nilai - untuk bayangan disebelah kiri
+    -<y-offset> untuk mengatur jarak bayangan pada sumbu vertikal ini nilainya adalah numerik
+    -<blur> ini mirip properti size pada photoshop tadi...seberapa besar blur yang ingin kita kasih kebayangan nya
+    -<color> untuk mengatur warna bayangan
+    ini value wajib yang harus ada
+
+    -<inset> ini membuat bayangan nya ada didalam kotak nya
+    -<spread> ini membuat ukuran bayangan nya
+    ini value opsional
+
+    /*kita bisa memberi lebih dari satu bayangan pada elemen dengan memakai multiple shadow*/
+*/
+
+.nge{
+    width : 300px;
+    height : 300px;
+    background-color :#39b54a;
+    margin :  80px auto;
+    /*  x-offset...50px pertama untuk mengatur bayangan disamping
+        y-offset...25px kedua untuk mengatur bayangan kebawah
+        blur...15px untuk mengatur tingkat blur nya
+        color...black warna bayangan nya
+        dan rgba diakhir untuk membuat transfaran
+    */
+    box-shadow : 50px 25px 15px rgba(0,0,0,0.15);
+}
+
+.ngee{
+    width : 300px;
+    height : 300px;
+    background-color : blue;
+    margin : 80px auto;
+    /*inset untuk membuat bayangan ada didalam elemen nya */
+    /*-20px yang disamping rgba adalah spread...itu untuk mengatur ukuran bayangan nya */
+    box-shadow : inset 10px 30px 10px -20px rgba(0,0,0,0.95);
+}
+
+.nge:hover{
+    box-shadow : 0px 60px 0px -40px rgba(0,0,0,0.54);
+    margin-top : 20px;
+    transition : 3s;
+}
+.multipleshadow{
+    width : 300px;
+    height : 300px;
+    margin : 80px auto;
+    background-color : red;
+
+    /*untuk membuat lebih darisatu bayangan /multiple shadow */
+    box-shadow : 5px 5px 5px rgba(0,0,0,0.2),
+    -5px -5px 5px rgba(0,0,255,0.4),
+    0 0 0 10px black,
+    0 0 0 20px green,
+    0 0 0 30px yellow;
+}
+

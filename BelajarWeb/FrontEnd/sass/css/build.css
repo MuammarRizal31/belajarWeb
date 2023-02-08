@@ -1,0 +1,30 @@
+h1 {
+  color: lightblue;
+  font-weight: arial;
+  font-style: 3em;
+  text-align: center;
+}
+
+/*
+    adjust-color($color,$red: null,$green: null,$blue: null,$hue: null,$saturation: null,$lightness: null,$whiteness: null,$blackness: null,$alpha: null) 
+
+    -hue (roda warna)
+    -saturation (warna nya makin muncul/kepudaran)
+    -lightness (warnanya makin terang)
+    -whiteness (warnanya makin putih)
+    -blackness (warnanya makin hitam)
+    -alpha (tingkat kepudaran)
+
+    // adobe color...situs untuk melihat roda warna
+*/
+h1 {
+  color: #0101ff;
+}
+
+h1 {
+  color: lightblue;
+}
+
+h1 {
+  color: rgba(173, 216, 230, 0.5);
+}/*# sourceMappingURL=build.css.map */

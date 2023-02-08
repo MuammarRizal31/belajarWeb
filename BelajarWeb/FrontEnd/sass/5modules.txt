@@ -1,0 +1,25 @@
+MODULES untuk membuat code sass kita modular/mudah untuk dikelola
+
+import sudah tidak disarankan sass akan pelan pelan tidak memakai import untuk beberapa tahun kedepan nanti kita akan menggunakan use
+karena
+    -dengan menggunaakn import semua variable dan mixins secara global dapat diakses disatu sisi memudahkan kita karena pemanggilan nya gampang,ini akan merepotkan jika kita sudah memiliki css yang makin banyak,dan kita akan susah untuk menggunakan tools/framework lainnya ini ada kemungkinan nama variable nya sama
+
+    -setiap kita membaut variable kita harus menambahkan prfix didepan nya untuk nandain bahwa itu punya kita,jadinya agak ribet
+
+    -jadi penyelesaian nya kita harus menggunakan @use
+    -jika kita sudah terlanjur menggunakan import,ada caranya migrasi secara otomatis
+
+PROBLEM MENGGUNAKAN @use
+    -sass yang kita gunakan menggunakan VScode itu namanya live sass
+    -dan yang kita gunakan dimesin kita namanya dart sass
+    -sayangnya @use itu hanya bisa kita gunakan oleh sass yang versi dart nya(versi mesin nya) dan di vscode tidak bisa
+    -cara menginstalnya kita harus menggunakan cara lain 
+    
+JIKA NAMA FOLDER KITA PANJANG KITA BISA MENGGUNAKAN ALIAS(as)
+
+partials dan import pada SASS
+fitur partials dan import memungkinkan kita untuk membuat file sass secara terpisah dan mengimportnya kedalam file sass yang lain
+
+nama yang ada underscore( _ )didepan nya sengaja diberi untuk menandakan ini adalah file partials
+
+untuk mengimport file nya kita hanya perlu menuliskan nama file nya saja,tidak perlu secara lengkap seperti (_partials.scss) kita hanya perlu menuliskan (import 'partials')

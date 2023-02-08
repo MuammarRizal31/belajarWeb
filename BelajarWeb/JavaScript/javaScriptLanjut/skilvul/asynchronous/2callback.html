@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+                //CALLBACK
+        analogi konsep dari callback adalah seperti ketika kita membeli dari seorang penjual rujak untuk membeli rujak,sambil penjual membuat rujaknya,kita membeli ketopraknya,ketika penjual sudah 
+        selesai,penjual akan memanggil kita kembali(kembali) untuk memberitahukan kita bahwa rujaknya sudah siap dan harus kita bayar
+
+        APA ITU CALLBACK DALAM JAVASCRIPT ?
+        callback adalah sebuah function,namun bedanya dengan function pada umumnya adalah pada cara eksekusinya.
+
+        jika function pada umumnya dieksekusi secara langsung,sedangkan callback dieksekusi didalam function melalui parameter
+
+        kita akan menemukan proses callback asyncronous pada proses ajax,komunikasi HTTP,operasi file,timer dan sebagainya
+
+                //Syncronous dan asyncronous pada javascript
+        kita akan sedikit membahas kembali topik sebelumnya tentang syncronous dan asyncronous pada syncronous output diproses berdasarkan urutan kode
+        contoh dibawah
+        */
+       function proses1(){
+        console.log("Perintah 1")
+       }
+       function proses2(){
+        console.log("Perintah 2")
+       }
+       function proses3(){
+        console.log("Perintah 3")
+       }
+       proses1();
+       proses2();
+       proses3();
+
+       /*
+       pada kode diatas kita bisa lihat bahwa proses1,proses2,proses3 berjalan berurutan seperti yang seharusnya
+
+       sedangkan pada asyncronous yang biasa dikenal juga dengan sebutan non-blocking mengizinkan komputer kita untuk memproses perintah lain sambil menunggu suatu proses lain yang sedang berlangsung
+       ini artinya adalah kita bisa melakukan lebih dari 1 proses sekaligus(multi-thread)
+
+       contoh proses asyncronous
+       */
+      function p1(){
+        console.log("p1 Berhasil dijalankan");
+      }
+
+      function p2(){
+        // setTimeOut or delay for *asyncronous* simulation
+        setTimeout(function(){
+            console.log("p2 Berhasil dijalankan");
+        },111)
+      }
+      function p3(){
+        console.log("p3 Berhasil dijalankan");
+      }
+      p1();
+      p2();
+      p3();
+      /*
+      bisa kita lihat bahwa proses3() selesai terlebih dahulu dibanding proses2().hal ini terjadi dikarenakan proses2() melakukan setTimeout() yang merupakan asyncronous sehingga 
+      proses3 selesai terlebih dibanding proses2
+      */
+
+                //MENGGUNAKAN CALLBACK
+    /*  
+    kita akan mencoba memperbaiki asyncronous diatas dengan memastikan output proses1,proses2 dan proses3 sesuai urutan dengan menggunakan callback
+    */
+      function jalankan1(){
+        console.log("Proses 1 selesai");
+      }
+      function jalankan2(callback){
+        setTimeout(function(){
+            console.log("Proses 2 selesai");
+            callback();
+        },111)
+      }
+      function jalankan3(){
+        console.log("Proses 3 selesai");
+      }
+      jalankan1();
+      jalankan2(jalankan3);
+     
+            //MEMBUAT CALLBACK FUNCTION
+      //kita dapat memanggil callback pada sebuah function dengan cara pemanggilan nya kedalam parameter dan digunakan dalam function
+      function tampilkan(cl){
+        const nama = prompt("Masukan nama : ");
+        cl(nama);
+      }
+
+      tampilkan(ama => alert(`halo ${ama}`));
+
+      
+      function hitung(){
+        console.log("1");
+      }
+
+      function hitung2(fn){
+        setTimeout(function(){
+          console.log("2");
+          fn();
+        },3000)
+      }
+      function hitung3(){
+        console.log("3");
+      }
+      hitung();
+      hitung2(hitung3);
+      
+          //LATIHAN
+      /*
+1.Buatlah function JavaScript bernama mandi lalu lakukan console.log() yang berisi nilai string "Mandi"
+
+2.Buatlah function JavaScript bernama sarapan.
+Di dalam function tersebut gunakan setTimeout() dengan argumen pertama function yang mengembalikan console.log() berisi nilai string "Sarapan tertunda 3 detik" dan argumen kedua berupa durasi waktunya sebesar 3000 (milidetik).
+Catatan: 1000 milidetik = 1 detik
+
+3.Buatlah function JavaScript bernama berangkatSekolah lalu lakukan console.log() yang berisi nilai string "Berangkat Sekolah".
+
+4.Jika kita memanggil ketiga function dengan urutan mandi, sarapan dan berangkatSekolah maka sarapan menjadi paling terakhir dieksekusi.
+Ubahlah function sarapan menjadi selesai dieksekusi sebelum berangkatSekolah menggunakan callback.
+
+5.Panggillah kembali ketiga function di atas dengan urutan mandi, sarapan, lalu berangkatSekolah.
+      */
+
+      function mandi(){
+        console.log("Mandi");
+      }
+      function sarapan(fn){
+        setTimeout(function(){
+          console.log("Sarapan tertunda 3 detik");
+          fn();
+        })
+      }
+      function berangkatSekolah(){
+        console.log("Berangkat sekolah");
+      }
+      
+      mandi();
+      sarapan(berangkatSekolah);
+    </script>
+</body>
+</html>

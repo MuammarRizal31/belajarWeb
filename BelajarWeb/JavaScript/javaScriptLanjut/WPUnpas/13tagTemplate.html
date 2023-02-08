@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+        tag templates adalah bentuk yang lebih komplex dari template literals,memungkinkan kita untuk membaca template literals melalui function
+        */
+
+        const nama = "Muammar rizal";
+        const umur = 33;
+
+        function string(nama,...ags){
+            // let result = '';
+            // nama.forEach((isi,i) => {
+            //     result += `${isi}${ags[i] || ''}`
+            // })
+            return nama.reduce((result,str,i) => `${result}${str}${ags[i] || ''}`,'')
+        }
+        const lengka = string`hallo nama saya ${nama} dan saya berumur ${umur}`;
+        console.log(lengka)
+
+        
+        const nama2 = "Jange";
+        const jurusan = "Informatika";
+        const lengkap = coba`nama saya adalah ${nama} dan saya jurusan ${jurusan}`;
+        console.log(lengkap);
+
+        function coba(str,...args){
+            let cb = '';
+            str.forEach((str,i)=> {
+                cb += `${str}${args[i] || ''}`
+            })
+            return cb;
+        }
+
+    </script>
+</body>
+</html>

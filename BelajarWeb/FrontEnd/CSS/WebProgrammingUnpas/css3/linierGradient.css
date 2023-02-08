@@ -1,0 +1,41 @@
+/*linier gradient adalah tehknik untuk menambahkan warna gradasi pada elemen yang kita punya
+    -linier-gradient
+    -radial-gradient
+
+        LINIER-GRADIENT
+        Bukan properti dari css3 melainkan value untuk background image
+
+        sintaks sederhana
+        background-image : linier-gradient(<warna awal>,<warna akhir>]
+        -dan didalam background saja juga bisa
+        background : linier-gradient(<warna1>,<warna2>]
+        -multiple color
+        background : linier-gradient(<warna1>,<warna2>,...,<warna paling akhir>]
+
+        background : linier-gradient(<sudut> | <arah>,<warna1>,<warna2>];
+
+        -value dari nilai arah
+            -to top
+            -to bottom
+            -to left
+            -to right
+            -to left top
+            -to right top
+            -to left bottom
+            -to right bottom
+*/
+
+.jangs{
+    width : 300px;
+    height : 300px;
+    margin : 80px auto;
+    /*90deg berfungsi sebagai mengatur sudut arah*/
+    background-image : linear-gradient(90deg,black,blue)
+}
+
+.jange{
+    width : 300px;
+    height : 300px;
+    margin : 50px auto;
+    background : linear-gradient(to bottom left,green,blue);
+}

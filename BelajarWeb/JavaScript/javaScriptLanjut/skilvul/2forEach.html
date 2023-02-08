@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+                    //FOR EACH()
+        //-digunakan untuk melakukan iterasi dalam mengakses elemen array dengan 3 parameter callback sebagai berikut
+            //-value yaitu isi dari tiap element yang diproses
+            //-index(optional) yaitu nomor index tiap elemen
+            //-array(optional) yaitu array itu sendiri
+            array.forEach((value,index,array)=>{
+            //kode program
+        })
+
+        let colors = ['blue','green','red','yellow'];
+        colors.forEach(data =>{
+            console.log(data)
+        });
+
+        let warna = ['merah','kuning','hijau','biru'];
+        warna.forEach((nama,urutan) =>{
+            if( urutan % 2 == 0){
+                console.log(`data ${nama} ini di index ${urutan}`)
+            }else{
+                console.log(`dan data ${nama} ini di index ${urutan} ganjil`)
+            }
+        })
+
+
+    </script>
+</body>
+</html>

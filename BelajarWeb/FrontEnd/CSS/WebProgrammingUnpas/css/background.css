@@ -1,0 +1,48 @@
+/* BACKGROUND */
+/*reccomend background untuk website "subtlepatterns" */
+/*
+    -background-color
+        -mengatur warna pada background
+    -background-image
+        -mengatur gambar yang akan digunakan pada background
+    -background-position
+        -mengatur posisi gambar pada background
+            -top left
+            -top center
+            -top right
+            -center left
+            -center center
+            -center right
+            -bottom left
+            -bottom right
+            -bottom center;
+            -x% y%
+            -x-pos y-pos
+    -background-repeat
+        -mengatur jenis pengulangan gambar pada background
+            -repeat-y
+            -repeat-x
+            -no-repeat
+*/
+
+body {
+  background-color: lightblue;
+  background-image: url(../html/1.jpeg);
+  background-repeat: repeat-x;
+}
+
+h1 {
+  color: blue;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 50px;
+}
+
+p {
+  font-size: 30px;
+  color: greenyellow;
+}
+
+p::selection {
+  color: blue;
+}

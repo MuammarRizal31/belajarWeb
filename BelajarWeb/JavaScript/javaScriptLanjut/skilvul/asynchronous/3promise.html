@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        KONSEP PROMISE HADIR UNTUK MEMECAHKAN MASALAH YANG BERTELE TELE DENGAN CALLBACK/CALLBACK HELL
+
+            //KONSEP PROMISE
+        Promise susuai namanya yaitu janji.seperti ketika kita berjanji,jika apa yang kita janjikan bisa dilakukan maka kita harus melakukannya,jika janjinya ada halangan maka kita tidak bisa
+        melakukan nya atau jika janji tersebut belum pada waktunya kita juga harus menunggunya..
+
+            CONTOH SEPERTI : KITA BERJANJI DIBIOSKOP DENGAN TEMAN PADA MALAM MINGGU
+        
+            -PENDING/TERTUNDA        = JIKA KITA BELUM MELEWATI BATAS WAKTU YANG DILAKSANAKAN DAN BELUM MENGETAHUI JANJI TERSEBUT BISA DI DITEPATI ATAU TIDAK
+            -FULLFLIED/TERPENUHI     = JIKA JANJI BERHASIL DIPENUHI SEBELUM BATAS WAKTU YANG DITENTUKAN
+            -REJECTED/GAGAL          = JIKA JANJI GAGAL DITEPATI KARENA SUATU HAL DAN KITA MELAKUKAN RENCANA LAIN
+            -SETTLED / TERSELESAIKAN = JIKA SEMUA JANJI SUDAH SELESAI TERPENUHI KITA SUDAH BEBAS MELAKUKAN HAL LAINNYA
+
+            //3 STATUS PROMISE DIJAVASCRIPT
+        ANALOGI DARI SEBUAH PROMISE DIJAVASCRIPT ITU SAMA SEPERTI KITA SAAT MENGAMBIL SUATU DATA BAIK ITU DARI DATABASE MAUPUN REQUEST API.AKAN ADA 3 KONDISI YAITU DATA SEDANG DIPROSES,DATA BERHASIL
+        DIDAPATKAN,ATAU DATA GAGAL DIDAPATKAN
+
+        PADA PROMISE ANALOGI DIATAS BISA DIARTIKAN SEPERTI :
+        1.pending,jika data diproses
+        2.fullfilled,jika data telah berhasil didapatkan.
+        3.rejected,jika data gagal didapatkan.
+
+        |STATE      |PENDING        |FULLFILLED |REJECTED   |
+        |result     |undefined      |value      |error      |
+
+        contoh dari promise dibawah ini
+        */
+
+        let newPromise = new Promise((resolve,reject) => {
+            if(true){
+                //apa yang akan dilakukan jika promise fullfilled
+                resolve("Berhasil");
+            }else{
+                //apa yang akan dilakukan jika promise rejected
+                reject("Gagal");
+            }
+        })
+/*      KITA BISA MEMBUAT SENDIRI APA YANG AKAN DILAKUKAN PADA SEBUAH PROMISE.DIDALAM PROMISE ADA 2 KEYWORD YAITU resolve() dan reject()
+        -resolve(),jika proses berhasil atau fullfilled
+        -reject(),jika proses gagal atau rejected
+*/
+
+            //CONTOH PENGGUNAAN PROMISE FULLFILLED
+        //untuk fullfilled hanya bisa dieksekusi jika kita kondisi berhasil pada saat kita melakukan async.kita set condition menjadi true untuk simulasi fullfilled
+        const condition = true;
+        let newPromise2 = new Promise((resolve,reject) => {
+            if (condition){
+                //apa yang akan dilakukan jika promise 'fullfilled'
+                resolve("BERHASIL");
+            }else{
+                //apa yang akan dilakukan jika promise 'rejected'
+                reject(new Error("Error gagal"));
+            }
+        })
+        //untuk bisa mengeksekusi promise yang sudah dibuat kita bisa memanggil promise tersebut menggunakan .then();
+        newPromise2.then((result) => {console.log(result)});
+
+        //selain itu kita juga bisa memanggil .then() lebih dari satu kali ketika dibutuhin seperti contoh dibawah:
+        let newPromise3 = new Promise((resolve,reject) => {
+            if (condition){
+                //apa yang akan dilakukan jika promise 'fullfilled'
+                resolve("BERHASIL");
+            }else{
+                //apa yang akan dilakukan jika promise 'rejected'
+                reject(new Error("Error gagal"));
+            }
+        })
+        newPromise3.then(result => {
+            return result;
+        }).then((result2) => {
+            console.log(result2 + "!!")
+        })
+
+            //CONTOH PENGGUNAAN PROMISE REJECTED
+        //untuk rejected hanya bisa dieksekusi jika kita mengalami error pada saat kita melakukan proses asynchronous.kita set condition menjadi false untuk simulasi rejected
+
+        const condition2 = false;
+        let newPromise4 = new Promise((resolve,reject) => {
+            if(condition2){
+                //apa yang akan dijalankan jika promise 'fullfilled'
+                resolve('BERHASIL...INI DARI CONTOH REJECTED')
+            }else{
+                reject(new Error("Error gagal"));
+            }
+        })
+        newPromise4.then((result)=> {
+            console.log(result);
+        }).catch((error)=> {
+            console.log(error.message);
+        })
+        //untuk bisa mengantisipasi jika terjadi error kita bisa menambahkan .catch() pada promise.sehingga,kita bisa memberi tahu pengguna jika terjadi suatu error
+
+        //SELAIN .then() dan .catch() dalam promise kita juga memiliki .finnaly() dalam promise javascript.
+
+        //.finally() adalah fungsi callback yang pasti tereksekusi dalam kondisi apapun(fullfilled ataupun rejected).
+        const condition3 = true;
+        let newPromise5 = new Promise((resolve,reject) => {
+            if(condition3){
+                //apa yang akan dilakukan jika promise 'fullfilled'
+                resolve("Berhasil...INI DARI FINALLY");
+            }else{
+                //apa yang akan dilakukan jika promise 'rejected'
+                reject(new Error("GAGAL....INI DARI FINALLY"))
+            }
+        })
+
+        newPromise.then((result) => {
+            console.log(result);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+        .finally(() => {
+            console.log("FINALLY TETAP TERPANGGIL DALAM KONDISI FULLFILLED ATAUPUN REJECTED")
+        })
+    </script>
+</body>
+</html>

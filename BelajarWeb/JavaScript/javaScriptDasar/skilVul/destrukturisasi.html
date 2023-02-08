@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Dustrukturisasi adalah cara untuk membongkar isi dari array atau object dan menyimpan nya didalam variabel
+    //sebelum ES6,Cara untuk menyimpan nilai dari masing masing element dari sebuah array ke dalam variable adalah sebagai berikut
+    let buah = ['apel','mangga','jeruk']
+    let buah1 = buah[0];
+    let buah2 = buah[1];
+    let buah3 = buah[2];
+    //selain tidak efisien karena harus menulis assignment untuk tiap variable,kita juga haru menghitung nilai yang kita ingin ambil itu ada di index berapa
+    
+    let buahBuahan = ['mangga','apel','rambutan','jeruk']
+    let [buahA, ,buahB,buahC] = buahBuahan; //apel tidak ada
+    console.log(buahC)
+
+    //kalian juga bisa memilih element mana saja yang tidak ingin di simpan didalam variabe dengan menggunakan "Koma kosong" atau tidak menyebutkan element tersebut saat destrukturisasi
+    
+    //kalian ingin menukar nilai dari dua variable(atau lebih) dengan lebih cepat dan tanpa menggunakan variable tambahan ? bisa pakai destrukturisasi array
+    let a = 10;
+    let b = 15;
+    let tukar;
+    console.log("Nilai A : "+a,",Nilai B : "+b)
+    tukar = a;
+    a = b;
+    b = tukar;
+    console.log("nilai A: "+a,"Nilai B :"+b);
+    //pakai destrukturisasi array
+    let c = 10;
+    let d = 15;
+    [c,d] = [d,c]
+    console.log(c,d)
+    
+        //DUSTRUKTURISASI OBJECT
+    //sama seperti destrukturisasi array,sebelum ES6,kita harus menulis assignment satu per satu untuk tiap nilai dalam object yang kita ingin bongkar
+    let jange = {
+        nama: "Muammar Rizal",
+        umur: 20,
+        pendidikan: "S1 INFORMATIKA UNIVERSITAS INDRAPRASTA"
+    }
+
+    let namaLengkap = jange.nama;
+    let umurSekarang = jange.umur;
+    let sarjana = jange.pendidikan;
+    console.log(`Nama saya ${namaLengkap} dan umur saya ${umurSekarang} dan pendidikan saya ${sarjana}}`)
+    
+        //menggunakan object dustrukturisasi
+    let jangeLagi = {
+        nama: "Jangs",
+        lahir: "Jakarta",
+        lulus: true,
+    }
+    //cara dibawah bekerja kalo nama variable baru untuk destrukturisasi itu sama dengan nama properti pada object yang akan di destrukturisasi ya
+    let {nama,lahirDi,lulus} = jangeLagi;
+    console.log(nama)
+    console.log(lahirDi)
+    
+    //tapi kalo ingin nama variable nya beda dari nama properti bisa menambahkan titidak dua setelah nama properti nya
+    let jangeNich = {
+        nama: "Ngee",
+        tglLahir : "31-03-2002"
+    }
+    let {nama:namaPanggil,tglLahir:Lahir} = jangeNich;
+    console.log(namaPanggil);
+    console.log(Lahir);
+
+        //DESTRUKTURISASI OBJEK BERTINGKAT
+    //jika objek nya bertingkat(ada objeek didalam objek) apa tetap bisa didestrukturisasikan? BISA DONG BESTIE
+
+    //contoh
+    let murid = {
+        kelas: "R54",
+        nama: ["jangs","jange","rizal"],
+        prestasi: {
+            olahraga: "juara1",
+            akademik: "Juara 2"
+        }
+    }
+
+    let{ prestasi:{olahraga:renang,akademik:peringkat}} = murid;
+    console.log(peringkat)
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Color/warna{
+    Primary     : biru
+    Secondary   : abu abu
+    Success     : hijau
+    Danger      : merah
+    Warning     : kuning
+    info        : biru muda
+    dark        : hitam
+}
+

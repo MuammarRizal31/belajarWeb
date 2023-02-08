@@ -1,0 +1,22 @@
+images{
+    documentasi agar gambarnya responsif(gambar tidak lebih besar dari element parent nya)
+}
+
+image responsif{
+    gambar di bootstraps dibuat responsif dengan .img-fluid ini berlaku max-width: 1OO% dan height: auto
+
+    - .img-fluid        untuk membuat gambar menjadi full kepada parent nya
+    - .img-thumbnail    untuk memberi border kepada gambarnya dan membuat gambar nya penuh pada parent nya
+    - .float-start      untuk membuat gambar berada dikiri
+    - .float-end        untuk membuat gambar berada dikanan
+    - .rounded          untuk membuat gambar ada sudut tumput 
+
+
+    penggunaan display untuk bisa menggerakkan gambarnya
+    - .d-block
+
+    ms-auto untuk membuat element nya berada diujung
+
+    mx-auto untuk membuat element nya berada ditengah
+    
+}   

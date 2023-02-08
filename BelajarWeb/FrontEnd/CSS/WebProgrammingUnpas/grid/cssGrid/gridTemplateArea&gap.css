@@ -1,0 +1,103 @@
+/*  -GRID-TEMPLATE-AREA 
+        -MENDEFINISIKAN GRID TEMPLATE MENGGUNAKAN NAMA DARI AREA YANG DITULIS PADA PROPERTI GRID-AREA
+
+    -GRID-TEMPLATE
+        -shorthand untuk mendefinisikan grid-template-rows,grid-template-column,dan grid-template-areas dalam satu deklarasi
+    grid-template:<grid-template-rows>,<grid-template-areas> / <grid-template-column>
+
+    -row-gap: untuk memberi jarak berdasarkan baris nya
+    column-gap: untuk memberi jarak berdasarkan column nya
+    gap: untuk memberi jarak untuk keduanya,ini shorthand nya
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+}
+.container{
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 50px 200px 10px;
+    grid-template-areas: 
+    "header header header"
+    "navbar content content"
+    "navbar content content"
+    "footer footer footer"
+    ;
+}
+
+.item{
+    background-color: #eaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 100px; */
+    width: 100%;
+    box-sizing: border-box;
+}
+.satu{
+    grid-area: header;
+    background-color: blue;
+}
+.dua{
+    grid-area: navbar;
+    background-color:blueviolet;
+}
+.tiga{
+    grid-area: content;
+    background-color:burlywood;
+}
+.empat{
+    grid-area: footer;
+    background-color:olive;
+}
+
+/* GRID TEMPLATE */
+.container2{
+    width: 60%;
+    margin: 20px auto;
+    display: grid;
+    /* grid-template-rows: [baris1-mulai] 50px
+    [baris1-akhir baris1-akhir] 
+    100px [baris2-akhir] ;
+    grid-template-columns: 1fr 2fr 3fr;             <---SHORTHAND NYA DIBAWAH INI
+    grid-template-areas: 
+    "header header header"
+    "footer footer footer"
+    ; */
+
+    /* grid-template: 50px 100px / 1fr 2fr 1fr; //Ini untuk shorthand rows dan column */
+
+    grid-template: 
+    [baris1]'header header header' 50px
+    [baris2]'footer footer footer' 100px / 1fr 2fr 1fr
+    ;   /*Dan ini untuk shorthand areas,column,dan rows*/
+        /*dan untuk yang ada didalam array itu optional boleh dipake untuk nama boleh tidak*/
+}
+.item2{
+    background-color: blue;
+    padding: 20px;
+}
+.item2:nth-child(even){
+    background-color: salmon;
+}
+
+/* responsive breakpoints */
+@media screen and (max-width: 457px){
+    .container{
+        grid-template-rows: 30px 20px 300px auto;
+        grid-template-areas: 
+        "header header header"
+        "navbar navbar navbar"
+        "content content content"
+        "footer footer footer"
+        ;
+    }
+}

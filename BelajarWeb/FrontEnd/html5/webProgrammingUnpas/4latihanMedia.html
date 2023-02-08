@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: arial;
+      }
+      .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* background-color: rgba(0, 0, 0, 0.3); */
+        background-image: linear-gradient(to right, rgba(255, 24, 66, 0.3), rgba(224, 12, 210, 0.3));
+        color: rgba(232, 232, 232, 0.3);
+        font-size: 3em;
+        position: relative;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .video-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Hello rizal</h1>
+      <video src="video/Menari - 46012.mp4" autoplay muted loop class="video-bg" width="400"></video>
+    </div>
+  </body>
+</html>

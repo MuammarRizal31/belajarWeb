@@ -1,0 +1,58 @@
+/* Div adalah display default nya block,maka bisa kita atur tinggi dan panjang*/
+
+/* WIDTH DAN HEIGHT
+    -PX
+    -%
+    -IN ,CM,MM,PT,PC
+*/
+/*OVERFLOW (text yang keluar dari tempat nya]
+    -VISIBLE
+    -AUTO
+    -HIDDEN
+    -SCROOL
+*/
+
+*{
+    padding :0px;
+    margin :0px;
+}
+.h1{
+    background-color:blue;
+    width : 443px;
+    height :auto;
+}
+
+.h1 h1{ 
+    text-align : center;
+    width : 100%;
+    background-color : green;
+}
+
+.jangs{
+    overflow :hidden;
+    width : 500px;
+    height : 200px;
+    background-color : red;
+}
+
+.jangs1{
+    overflow : scroll;
+    width : 250px;
+    height : 200px;
+    background-color :aqua;
+}
+
+.jangs2{
+    overflow : auto;
+    width : 300px;
+    height : 100px;
+    background-color :chartreuse;
+}
+
+.jangs3{
+    overflow :visible;
+    width : 200px;
+    height :100px;
+    background :blue;
+}
+

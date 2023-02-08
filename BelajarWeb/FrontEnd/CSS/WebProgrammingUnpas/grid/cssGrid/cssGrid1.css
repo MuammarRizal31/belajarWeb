@@ -1,0 +1,107 @@
+/* CSS GRID
+    -"MODUL CSS *BARU* UNTUK MENDEFINISIKAN SISTEM LAYOUT BERBENTUK GRID DALAM 2 DIMENSI(BARIS DAN KOLOM}
+
+    CSS TERMINOLOGY 
+    -GRID CONTAINER {pembungkus nya}
+    -GRID ITEM      {element element yang berada 1 level di dalam grid container}
+    -GRID LINE      {grid horizontal {kolom} atau vertikal {baris} yang memisahkan grid menjadi beberapa bagian dan ditandai dengan angka}
+    -GRID CELL      {perpotongan / pertemuan antara baris dan kolom didalam grid}
+    -GRID AREA      {kumpulan lebih dari satu grid cell yang membentuk kotak}
+    -GRID TRACK     {ukuran / jarak antara 2 grid line,bisa horizontal {kolom} atau vertikal{baris}
+    -GRID GAP       {jarak antar grid / cell}
+
+    properti pada container nya
+    -grid-template-columns  -justify-items
+    -grid-template-rows     -align-items
+    -grid-auto-column       -place-items
+    -grid-auto-rows         -justify-content
+    -grid-auto-flow         -align-content
+    -grid-template-areas    -place-content
+    -grid-template
+    -grid-column-gap
+    -grid-row-gap
+    -grid-gap
+    -grid-
+
+    properti yang bisa dikasih items nya
+    -grid-column-start      
+    -grid-column-end
+    -grid-row-start
+    -grid-row-end
+    -grid-column
+    -grid-row
+    -grid-area
+    -justify-self
+    -align-self
+    -place-self
+*/
+*{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    box-sizing: border-box;
+    width: 70%;
+    border: 5px solid black;
+    padding: 3px;
+    font-weight: bold;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas: "header header"
+                         "aside main"
+                         "nav main"
+                         "footer footer";
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1.3fr;
+}
+
+header{
+    grid-area: header;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside{
+    background-color: salmon;
+    line-height: 200px;
+    grid-area: aside;
+}
+
+nav{
+    background-color: green;
+    line-height: 200px;
+    grid-area: nav;
+}
+
+main{
+    /* width: 60%; */
+    /* float: right; */
+    background-color: yellowgreen;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+/* main::after{
+    content:'';
+    display: block;
+    clear: both;
+} */
+
+footer{
+    background-color: brown;
+    height: 50px;
+    line-height: 50px;
+    clear: both;
+    grid-area: footer;
+}

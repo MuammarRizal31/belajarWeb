@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+/*
+    OPERATR ARITMATIKA
+    OPERATOR                ||          KETERANGAN
+    +                       ||          PERTAMBAHAN
+    -                       ||          PENGURANGAN
+    *                       ||          PERKALIAN
+    **                      ||          PANGKAT
+    /                       ||          PEMBAGIAN
+    %                       ||          SISA BAGI
+*/
+
+let result = 1 + 2;
+document.writeln('1 + 2 = '+result)
+let asliResult = result;
+
+document.writeln('<br>nilai result adalah : ' +asliResult)
+
+asliResult = asliResult * 2;
+document.writeln('<br>Hasil dari perkalian result : ' +asliResult);
+
+asliResult = asliResult - 2;
+document.writeln("<br> hasil dari pengurangan result : " +asliResult)
+//dan seterusnya
+
+//operator augmented assignments
+/*
+OPERATOR MATEMATIKA                 ||          OPERATOR AUGMENTED ASSIGNMENTS
+RESULT = RESULT + 11                ||          RESULT+= 11
+RESULT = RESULT - 11                ||          RESULT-= 11
+RESULT = RESULT * 11                ||          RESULT*= 11
+RESULT = RESULT / 11                ||          RESULT/= 11
+RESULT = RESULT ** 11               ||          RESULT**= 11
+RESULT = RESULT % 11                ||          RESULT%= 11
+*/
+
+let mtk = 15;
+document.writeln(mtk); //15
+document.writeln("<br>")
+
+mtk += 5;
+document.writeln(mtk); //20;
+document.writeln("<br>")
+
+mtk *= 5;
+document.writeln(mtk); // 100;
+document.writeln("<br>")
+
+mtk /= 2;
+document.writeln(mtk); //50;
+document.writeln("<br>")
+
+mtk **= 2;
+document.writeln(mtk) //2500;
+document.writeln("<br>")
+
+mtk %= 2;
+document.writeln(mtk); //0;
+document.writeln("<br>");
+
+//OPERATOR UNARY
+/*
+OPERATOR            ||           KETERANGAN
+    +               ||        MENANDAKAN POSITIF
+    -               ||        MENANDAKAN NEGATIF
+    ++              ||        INCREMENT,MENAIKKAN 1 ANGKA
+    --              ||        INCREMENT,MENURUNKAN 1 ANGKA
+*/
+
+let unary = 1;
+unary++;
+document.writeln('<br>'+unary) //2
+
+unary--;
+document.writeln('<br>'+unary) //1
+
+unary = -unary;
+document.writeln("<br>"+unary); //merubah menjadi negatif
+    </script>
+</body>
+</html>

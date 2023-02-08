@@ -1,0 +1,24 @@
+apache adalah web server untuk menjalankan PHP dan mySQL adalah database server untuk menjalankan mySql
+
+jika ada warna hijau dan ada nilai PID dan Port...maka artinya server sudah berjalan.tinggla kita pakai saja
+
+APA ITU PID DAN PORT ?
+	-pid adalah process ID,merupakan nomor proses yang dipakai pada taks manager
+	-port adalah nomoer port yang akan dipakai untuk mengakses server
+
+nomor port ini perlu diperhatikan,karena bisa jadi nomer port tersebut sudah dipakai oleh service lain
+biasanya apache akan menggunakan nomer port 80,443 dan mysql akan menggunakan nomer port 3306
+
+untuk melihat service apasaja ang berjalan pada nomer port tertentu,silahkan klik menu netstart.
+dari menu ini,kita bisa memantau nomer port mana saja yang sudah terpakai.sehingga nanti kalau kita mengalami port bentrok,kita bisa ganti dengan nomer port yang belum terpakai
+
+SELENGKAPNYA SILAHKAN LIAT PETANI KODE https://www.petanikode.com/php-xampp-windows/
+
+server apache gagal dijalankan karena nomer portnya sudah terpakai atau bentrok.
+yang perlu kamu lakukan untuk mengatasi masalah ini adalah
+	1.mematikan service yang berjalan di port tersebut;
+	2.atau mengganti nomer port default dari apache
+
+jika ingin mengganti nomer port default dari apache,caranya klik tombol config di sebelah tombol admin di apache
+
+kemudian ubah listen 80,menjadi nomer port yang lain misalnya listen 8080 maka nomer port apache akan menjadi 8080

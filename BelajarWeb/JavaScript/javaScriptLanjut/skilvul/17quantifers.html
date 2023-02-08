@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //QUANTIFERS DIGUNAKAN UNTUK MENGIDENTIFIKASI JUMLAH KARAKTER
+        /*
+            x*      :Karakter yang diikuti dengan * dibolehkan tidak tampil sama sekalia atau boleh tampil satu kali dan seterusnya
+            x+      :Karakter yang diikuti dengan + harus minimal tampil 1 kali dan seterusnya
+            x?      :katakter yang diikuti dengan ? sifatnya menjadi optional,diperbolehkan tidak tampil sama sekali atau boleh tampil hanya satu kali
+            x{n}    :karakter yang diikuti dengan {n} (n adalah integer positif) dibolehkan muncul sebanyak minimal n kali
+            x{n,}   :karakter yang diikuti dengan {n,} (n adalah integer positif) dibolehkan minimal tanpa n kali dan seterusnya
+            x{n,m}  :karakter yang diikuti dengan {n,m} (n & m adalah integer positif dan m>n) dibolehkan minimal tampil n kali dan maksimal m kali
+
+            quantifiers bersifat greedy.jika ada quantifiers roa{3,7} lalu dilakukan string matching dengan pola yang mendekati seperti "roaaar","roaaaaar" dan "roaaaaaaaaaar"
+            maka hasil yang didapat adalah karakter a yang kuantifiersnya terbesar yaitu "roaaaaaaaar".untuk membuatnya mnejadi non greedy,kita bisa menggunakan karakter (?)
+        */
+
+            //CONTOH DARI X*
+        console.log("contoh dari x*");
+        const regex = /roa*r/gi;
+        const word = "Ror";
+        const word2 = "Roaaarrr";
+        const word3 = "Roaaaaaaaarrrr"
+        console.log(word.match(regex)); //hasil adalah array ["Ror"];
+        console.log(word2.match(regex)); //hasil adalah array ["Roaaarrr"];
+        console.log(word3.match(regex)); // hasil adalah array ["Roaaaaaaaaaaarrrr"];
+        //contoh diatas...karakter *,boleh tidak tampil sama sekali atau lebih dari 1 kali
+
+            //CONTOH DARI X+
+        console.log("Contoh dari x+");
+        const regex2 = /roa+r/gi;
+        const wordd = "Raararr"
+        console.log(wordd.match(regex2)); //hasilnya adalah ["roaar"];
+        //contoh diatas...akan mengembalikan nilai null karena karakter o harus ada minimal 1 kali
+        
+        const wordd2 = "Roaaar"
+        console.log(wordd2.match(regex2)); //hasilnya adalah ["Roaaarr"];
+        //contoh diatas...akan mengembalikan nilai Roaarradwadaw karena semua nilai ada
+
+        
+            //CONTOH DARI X?
+        console.log("Contoh dari x?")
+        const regex3 = /roa?r/gi;
+        const worddd = "ror";
+        console.log(worddd.match(regex3)); //hasilnya adalah null
+
+        const worddd2 = "Roar";
+        console.log(worddd2.match(/roa?r/gi)); //hasilnya adalah ["Roar"];
+
+        const worddd3 = "Roaaarrr";
+        console.log(worddd3.match(/roa?r/gi)); //hasilnya adalah null                                
+        //dari contoh diatas kita bisa melihat perbedaan antara karakter * dan ?...yaitu karakter (?) hanya diperbolehkan maksimal 1 karakter yang sama.jika lebih maka dianggap null;
+
+            //contoh pengguaan x{n};
+        console.log("Contoh dari {n}");
+        const regex4 = /roa{2}/gi;
+        const wordddd = "Roaaaaaaar" //a nya 7;
+        console.log(wordddd.match(regex4)); //hasilnya a nya akan ditampilkan sebanyak 2x ["Roaa"];
+
+        const regex5 = /roa{5}/gi;
+        const wordddd2 = "Roaaaaaaar" // a nya tujuh
+        console.log(worddd.match(regex5));// hasilnya a nya akan ditampilkan sebanyak 5x ["Roaaaaa"]   
+        //contoh diatas akan mengambil karakter a sebanyak 5 karakter;
+
+            //contoh penggunaan{n,1};
+        console.log("Contoh dari {n,}")
+        const regex6 = /roa{1,}/gi;
+        const worddddd = "Roaaaaar";
+        console.log(wordddd.match(regex6)); //hasilnya akan ["Roaaaaar"];
+
+        const regexx6 = /roa{2,}/gi;
+        const word12 = "Roar";
+        console.log(word12.match(regexx6)); //hasilnya akan null...karena a tidak terdapat 2/lebih
+        //contoh diatas akan mengambil karakter a minimal 1 dan seterusnya
+
+            //contoh penguaan{n,m};
+        console.log("Contoh dari {n,m");
+        const regex7 = /roa{1,2}/gi;
+        const word7 = "Roaaaaaaar";                                     
+        console.log(word7.match(regex7)); //hasilnya akan["Roaa"]...
+        //contoh diatas akan mengambil karakter a minimal sebanyak 1 kali dan maksimal 2
+        
+            //LATIHAN
+        /*
+        1.Buatlah format quantifiers untuk bisa match dengan string gooaaaaal.
+        Buatlah sebuah variabel bernama text yang berisi data string gooaaaaal.
+
+        2.Buatlah variabel quantifierRegex dan assign format quantifiers menggunakan x{n} pada karakter o dan a untuk mencari string gooaaaaal ke dalam variabel tersebut.
+
+        3.Buatlah sebuah variabel bernama result. Lakukan pencarian dari pola regex quantifierRegex untuk string yang ditampung di dalam variabel text sebelumnya.
+        Gunakan method .test() yang mengembalikan nilai true jika string yang kamu cari ditemukan dan akan mengembalikan nilai false jika tidak ditemukan.
+
+        4.Lakukan console.log() pada variabel result. Cek pada tab Console untuk melihat data.
+        */
+
+        const text ="gooaaaaal";
+        const quantifierRegex = /go{2}a{5}l/gi;
+        const result = quantifierRegex.test(text);
+        console.log(result);
+    </script>
+</body>
+</html>

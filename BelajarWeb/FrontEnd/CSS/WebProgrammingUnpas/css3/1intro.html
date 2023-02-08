@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="1intro.css">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            padding: 50px;
+        }
+        
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    position: relative;
+    display: none;
+}
+
+.menu-toggle span{
+    height: 3px;
+    width: 28px;
+    border-radius: 5px;
+    background-color: black;
+    transition: 1s;
+}
+
+.menu-toggle input{
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    width: 31px;
+    height: 25px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px,-1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+}
+
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="menu-toggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

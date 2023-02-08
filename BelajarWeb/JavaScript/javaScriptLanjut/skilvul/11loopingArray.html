@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //LOOPING ARRAY MULTIDIMENSI
+    //array multidimensi ternyata sama dengan array satu dimensi yang membutuhkan nomor index untuk mengakses tiap element nya
+
+
+    let arr = [
+        ["baju",12],
+        ["celana",13],
+        ["sempak",5]
+    ]
+    //menggunakan for
+    for (let i=0;i<arr.length; i++){
+        for(let j=0;j<arr[i].length; j++){
+            console.log(arr[i][j]);
+        }
+    }
+
+    console.log("Menggunakan for each")
+    //menggunakan forEach()
+    let arr2 = [
+        ["baju",12],
+        ["celana",13],
+        ["sempak",5]
+    ]
+    arr2.forEach(kolom =>{
+        kolom.forEach(baris =>{
+            console.log(baris);
+        });
+    });
+
+    //menggunakan .MAP
+    console.log("Menggunakan MAP")
+    let arr3 = [
+        ["Jange",19],
+        ["jangs",11],
+        ["Muammar","Rizal"]
+    ]
+
+    arr3.map((item,index)=>{
+        console.log(`baris ${index+1} adalah ${item}`)
+        item.map((baris,index)=>{
+            console.log(`array ke ${index} adalah ${item}`);
+        })
+    })
+
+
+    //mengetahui stock
+    let inventory = [
+        ["Kaos polos",21],
+        ["swetter",33],
+        ["denim",19]
+    ]
+
+    let jange = inventory.forEach((item,index) => {
+        item.forEach((barang,nomor) => {
+            let hasil = 100 - item[1];
+            console.log(`Hasil dari stock dari 100 dikurangi ${item[1]} adalah : ${hasil}`)
+        });
+    });
+
+
+    //latihan 
+    let buah = [
+        ["mangga",15],
+        ["Apel",9],
+        ["salak",5]
+    ]
+
+    buah.forEach(item => {
+        let sisa = 50 - item[1]
+        item.push(sisa);
+    });
+
+    console.table(buah);
+    </script>
+</body>
+</html>

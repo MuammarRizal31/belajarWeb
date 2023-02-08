@@ -1,0 +1,29 @@
+h1{
+    text-align:center;
+}
+.border-radius{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.box{
+    height: 51px;
+    width: 51px;
+    border-radius: 15px;
+    background:blueviolet;
+}
+.box2{
+    margin-left: 15px;
+    height: 51px;
+    width: 51px;
+    border-radius: 51%;
+    background:black;
+}
+
+.box3{
+    height: 51px;
+    width: 51px;
+    border-radius: 51%;
+    background:purple;
+}

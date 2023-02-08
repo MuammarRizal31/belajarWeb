@@ -1,0 +1,48 @@
+Variable Dalam SASS
+Sass memungkinkan kita untuk membuat variable untuk menyimpan sebuah nilai,nilai yang tersimpan dapat berupa nilai properti,angka,teks,ukuran elemen,url gambar ,dsb
+
+pembuatan variable di SASS menggunakan simbol dolar($) kemudian diikuti nama variable nya
+
+PERBEDAAN MENGGUNAKAN CSS DAN SASS
+    KEKURANGAN VARIABLE PADA CSS
+        -KEMUNGKINAN BROWSER BELUM SUPPORT
+    
+    PENGGUNAAN
+        CSS
+            :root{
+                --text-color: #e12312;
+            }
+            p{
+                color: var(--text-color);
+            }
+        
+        SASS
+            $text-color;
+            p{
+                color: $text-color;
+            }
+
+SASS MEMILIKI SCOPE,SEPERTI BAHASA PEMROGRAMAN LAIN
+    -kalau scope lokal dia bisa diakses oleh lingkup nya sendiri
+    -kalau scope global dia bisa diakses oleh siapapun
+
+    contoh
+    -scope lokal
+        p{
+            $text-color: green;
+            color: $text-color;
+        }
+
+    -scope global
+        $text-color: blue;
+        p{
+            color: $text-color;
+        }
+
+cara membuat variable lokal menjadi global
+    -tambahkan diakhir elemen !global
+
+    contoh
+        body{
+            $bg-color: #123123 !global;
+        }

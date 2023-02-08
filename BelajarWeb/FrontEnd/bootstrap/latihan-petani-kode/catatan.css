@@ -1,0 +1,105 @@
+/* 
+    <meta http-equiv="refresh" content="5;url="http://example.com/" />
+    -tag ini berfungsi menyuruh browser melakukan redirect ke halaman example.com
+
+        VIEWPORT
+    viewport adalah area web yang terlihat oleh user
+    dengan menggunakan tag <meta name='viewport'>
+        -kita bisa mengatur viewport sesuai kebutuhan kita
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+        -width untuk mengatur lebar halaman,jika memberikan nilai device-width maka lebar akan mengikuti ukuran lebar dari perangkat
+        -inital-scale adalah variable untuk mengatur sekala[zoom] dari halaman web
+
+    
+    mengapa bootstrap membutuhkan tag meta viewport ?
+    -bootstrap adalah framework mengutamakan tampilan untuk mobile,artinya halaman web harus responsif
+
+    RINGKASAN : JADI MENGGUNAKAN TAG META VIEWPORT BERFUNGSI UNTUK MENGATUR ULANG UKURAN DAN SKALA [ZOOM] WEB.TAG INI DIPERLUKAN UNTUK MEMBUAT HALAMAN WEB MENJADI RESPONSIF
+
+
+            //MEMAHAMI SISTEM GRID UNTUK MEMBUAT LAYOUT
+    bagian terpenting yang harus dipahami pada bootstrap adalah sistem grid
+
+
+    Sistem grid adalah sistem yang digunakan bootstrap untuk mengatur tata letak[layout] sistem ini terdiri dari 12 kolom dan 6 breakpoints
+    satu baris penuh panjang nya adalah 12,jika kolom dibagi menjadi 2 panjangnya akan menjadi 6
+    jika dibagi lagi,maka panjang kolomnya akan semakin kecil,hinggal paling kecil adalah 1.ini artinya,kolom grid hanya bisa dibagi sampai 12
+
+            //MEMAHAMI GRID BREAKPOINT /RESPONSIF
+    breakpoint adalah ukuran lebar yang menentukan tampilan responsif terhadap ukuran viewport perangkat tertentu
+    niai default breakpoints adalah none.ukuran ini adalah ukuran yang paling kecil,yakni sekitar 576px
+
+        -handphone protait [ <576px ]
+            -extra small  /     -none
+
+        -phone landscape dan tablet potret [ >=576px ]
+            -small      /       -sm
+
+        -tablet landscape dan laptop/notebook [ >=768px ]
+            -medium     /       -md
+
+        -laptop dan dekstop [ >= 992px ]
+            -large      /       -lg
+
+        -dekstop    [ >=12OOpx ]
+            -extra large    /   -xl
+
+        -tv         [ >=14OOpx ]
+            -extra extra large  /   -xxl
+    
+    ini adalah ukuran breakpoints sesuai dengan ukuran layar perangka
+
+
+            //CLASS CONTAINER
+    container adalah fondasi dasar dari blok layout.Container berfungsi untuk membungkus blok didalam nya,sehingga terlihat rapi terhadap ukuran layar
+
+    container juga memiliki breakpoint
+        -container
+        -container-sm
+        -container-md
+        -container-lg
+        -container-xl
+        -container-xxl
+        -container-fluid
+    ukuran container akan 1OO% pada breakpoint tertentu,misalnya jika kita ingin menggunakan class container-md maka lebar container nya akan 1OO% pada layar extra-small dan small
+
+    tag header tidak menggunakan container,sekilas terlihat seperti menggunakan class container-fluid
+    namun sebenarnya berbeda
+    class container-fluid adalah class kontainer yang ukuran nya 1OO% disemua layar
+
+
+
+        //class row dan col
+    class row dan col merupakan class untuk membuat baris dan kolom
+    kedua kelas inilah yang kita gunakan untuk membuat grid
+
+    class row berfungsi untuk membuat baris,class ini menggunakan flex,namun breakpoints tidak berlaku untuk ini
+        -
+    class col berfungsi untuk membuat kolom.class ini dibungkus oleh class row agar menjadi sebuah grid
+    class col memiliki ukuran dan breakpoint.ukuran paling panjang adalah 12 dan ukuran paling kecil adalah 1   
+        -col-1
+        -col-2
+        -col-3
+        -col-4
+        -col-5
+        -col-md-12
+
+
+
+        //CLASS GUTTER / gap
+    Gutter adalah jarak antar kolom.Class glutter ditulis bersamaan dengan class row
+
+    fotmat penulisannya
+        -g...g untuk dari atas kebawah dan kiri kekanan
+        -gx...gx untuk dari kiri kekanan
+        -gy...gy untuk dari atas kebawah
+
+    glutter memiliki ukuran dari O sampai 5
+        -g-[breakpoint]-[ukuran]
+        -gx-[breakpoint]-[ukuran]
+        -gy-[brakpoint]-[ukuran]
+        
+
+
+ */ 

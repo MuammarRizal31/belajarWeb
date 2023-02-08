@@ -1,0 +1,49 @@
+/*untuk menggunakan properti CSS position kita perlu memakai properti position dan value yang digunakan ada 4
+    -static
+    -relative
+    -absolute
+    -fixed
+    dan nilai default dari sebuah elemen adalah static
+*/
+/*
+-static adalah nilai default dari tiap tiap elemen ketika tidak diberi properti position
+-menggunakan position selain static (non static] akan membuat sebuah elemen menjadi seolah olah berbeda dimensi dari elemen lainnya
+-elemen yang diberi position selain static dapat menggunakan properti top,left,bottom dan right untuk mengatur position nya
+*/
+
+/*RELATIVE*/
+/*JADI YANG DIMAKSUD DENGAN RELATIVE ADALAH UNTUK MEMAJUKAN DIMENSI MUDAHNYA KETIKA KITA GESER SEBUAH ELEMEN MAKA ELEMEN YANG LAIN TIDAK AKAN TERGANGGU/BERGERAK
+-ketika kita menggerakkan elemen dengan position relative (menggunakan properti top right left bottom)ruang yang ditempati oleh elemen tersebut masih ada
+-ketika kita menggerakkan elemen dengan posisi relative ,elemen akan bergerak relative terhadap posisi semulanya 
+-jika kita memberi properti top :0 left:0; maka elemen tidak berubah posisinya 
+*/
+.dua{
+    position : relative;
+    top : 51px;
+    left : 15px;
+}
+
+
+/*ABSOLUTE*/
+/*INI SEPERTI PROPERTI FLOAT KETIKA MEMAKAI ABSOLUTE MAKA ELEMEN YANG SEBELUMNYA DIANGGAP TIDAK ADA
+-KETIKA KITA MENGGERAKKAN ELEMEN DENGAN PROPERTI POSISI ABSOLUTE (MENGGUNAKAN PROPERTI top,left,right dan bottom)ruang yang ditempati oleh elemen tersebut dianggap tidak ada
+-ketika kita menggerakkan elemen dengan properti posisi absolute,elemen akan bergerak relative terhadap posisi dari parrentnya {dari yang awalnya/ibu}
+    selama element parent nya berada diposisi yang sama /non static
+*/
+/*ini untuk html positionabsolutefixed*/
+.two{
+    position : absolute;
+    top :0px;
+    /*dan kalau kita taro di right dia akan ada disudut kanan atas*/
+    right :0px;
+}
+
+/*FIXED*/
+/*PRILAKU DARI PROPERTI POSITION FIXED ADALAH KETIKA KITA MENGGERAKKAN ITEM TERSEBUT DENGAN(TOP LEFT BOTTOM RIGHT] MAKA DIA AKAN BERGERAK RELATIF MENGIKUTI WINDOW BROWSER NYA
+/*DIA TIDAK AKAN MEMPEDULIKAN ELEMENT PARRENT NYA MESKIPUN PARENT NYA NON STATIC */
+/*KETIKA KITA SCROL HALAMAN NYA,MAKA DIA AKAN TERKUNCI DITEMPAT NYA/ATAU MENGIKUTI KITA KETIKA SCROLL*/
+.fixed{
+    position : fixed;
+    width : 100%;
+    height : 51px;
+}

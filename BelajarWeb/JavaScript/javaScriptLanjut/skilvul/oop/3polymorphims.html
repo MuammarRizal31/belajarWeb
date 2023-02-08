@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //POLYMORPSHIMS
+        /*
+        pada child class,selain memwarisi semua sifat dari parent nya,child class juga bisa memiliki kemampuan yang berbeda dengan parent nya
+        -dengan kata lain child class memiliki metode yang sama dengan parent nya namun bisa jadi berbeda output dengan sibling(saudara) atau parentnya(orang tua)
+        HAL INI DISEBUT DENGAN POLYMORPSHIMS
+
+                             |HEWAN|
+                                |
+                                /\
+                               /  \
+                        |KUCING|   |ANJING|
+                            |         |
+                            |         |
+                        |ANGGORA|  |PUDEL|
+
+        -KUCING ADALAH CHILD HEWAN
+        -ANJING ADALAH CHILD HEWAN
+        -ANGGORA ADALAH CHILD KUCING
+        -ANGGORA ADALAH CUCU HEWAN
+
+        contoh gambar diatas menjelaskan bahwa,child class adalah bagian dari parent class.tetapi parent class bukanlah bagian dari child class.
+        walapunpun kucing dan anjing adalah child class dari hewan tetapi dia memiliki karakteristik yang berbeda
+        */ 
+       
+        class Hewan{
+            constructor(nama){
+                this.nama = nama;
+            }
+            suara(){
+                console.log("Ini adalah hewan");
+            }
+        }
+
+        class kucing extends Hewan{
+            constructor(nama){
+                super(nama);
+            }
+        }
+
+        let kucing2 = new kucing("kucing");
+        kucing2.suara(); //output : ini adalah suara hewan
+
+        //objek yang dibuat dari class kucing,dapat menggunakan menggunakan method suara() yang dimiliki oleh class hewan
+        //kamu perlu membuat method pada child class dengan nama yang sama pada parent class tetapi isinya berbeda,cara seperti ini disebut dengan overriding
+
+        class Kucing2 extends Hewan{
+            constructor(nama){
+                super(nama);
+            }
+            //overriding
+            suara(){
+                console.log("Miawwww");
+            }
+        }
+
+        const kucing3 = new Kucing2("kucing");
+        kucing3.suara(); //output : miawwwww;
+
+        //dari kode diatas didalam class kucing2 dibuat kembali method suara() dengan nama yang sama tetapi isinya berbeda.sehingga ketika method itu dipanggil,maka menghasilkan output miaww
+
+        //LATIHAN
+        /*
+1.Buatlah class bernama Harimau yang merupakan turunan dari class Hewan.
+
+2.Pada class Harimau lakukan overriding pada method makan() yang akan mengembalikan teks string `${this.nama} makan daging`.
+
+3.Di luar blok kode class Harimau, buatlah instance objek bernama harimauSumatra dari class Harimau dengan argumen string Harimau Sumatra.
+Lakukan console.log() pada method makan() yang dimiliki oleh objek harimauSumatra. Cek tab Console untuk melihat data.
+
+        */
+
+        class Hewan {
+            constructor(nama) {
+                this.nama = nama;
+            }
+
+            makan() {
+                return "Hewan sedang makan";
+            }
+            }
+
+            // Buat kode kamu di bawah ini
+            class Harimau extends Hewan{
+            constructor(nama){
+                super(nama);
+            }
+            makan(){
+                return `${this.nama} makan daging`;
+            }
+            }
+            const harimauSumatra = new Harimau("Harimau Sumatra");
+            console.log(harimauSumatra.makan());
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+1.Sebelum dikenal dengan bootstraps seperti sekarang awalnya bernama ?
+    -blueprint twitter
+
+2.Siapa yang membuat bootstraps dan menjadikan nya project open source ?
+    -Mark otto dan jacob thorton
+
+3.apa yang dimaksud dengan wireframe ?
+    -Sketsa dasar dari sebuah product digital baik itu website ataupun aplikasi mobile yang dilakukan sebelum membuat UI design secara menyeluruh
+
+
+{
+    yang didapat ketika belajar ini di skilvul
+        -mampu memahami dan menerapkan penggunaan breakpoints
+        -mampu memahami dan menerapkan penggunaan container
+        -mampu memahami dan menerapkan penggunaan grid
+        -mampu memahami dan menerapkan penggunaan column
+        -mampu memahami dan menerapkan penggunaan gutter
+
+    topik
+        -breakpoints
+        -container
+        -grid
+        -column
+        -gutter
+
+
+            (CONTAINER / BREAKPOINTS)
+    breakpoints / responsif
+        - x-small           (none)  <  576px
+        - small             (sm)    >= 576px
+        - medium            (md)    >= 768px
+        - large             (lg)    >= 992px
+        - extra large       (xl)    >= 12OOpx
+        - extra extra large (xxl)   >= 14OOpx
+
+    container
+        -container              (8O%)
+        -container-fluid        (1OO%)
+        -container-breakpoints  (sm-lg-md-xl)
+
+    1.Untuk membuat sebuah jarak didalam sebuah page dimana ia memiliki padding kanan dan kiri kita dapat menggunakan kelas ?
+        -container
+    2.apakah container sudah memiliki responsif ?
+        -ya
+
+            (COLUMN GRID)
+    ini untuk memposisikan row nya dari atas kebawah
+        - .align-items start
+        - .align-items center
+        - .align-items end
+
+    ini untuk memposisikan item nya
+        - .align-self-start
+        - .align-self-center
+        - .align-self-end
+
+            (ALIGN SELF)
+        -align self digunakan untuk child element nya bukan di parent elemen nya,dia hanya mengatur 1 element saja
+
+    1.ada berapa colom pada grid system di bootstraps ?
+        -12 colom
+
+                    (GUTTERS)
+            -gutters adalah kolom content/gap
+            gap nilai default nya pada bootstraps adalah 1.5rem(24px)
+        -gx untuk horizontal gutter (kiri kekanan)
+        -gy untuk vertikal gutter (atas kebawah)
+
+    1.bagaimana caranya mengubah jarak kolom menjadi O ?
+        -g-O
+    2.memberikan gap horizontal sebanyak 5x
+        -gx-5
+
+}
+
+
+{
+
+    INTRODUCTION
+        Learning Objectives
+            -mampu memahami update terbaru dari bootstraps 5
+            -mampu memahami dan menggunakan typography pada bootstraps
+            -mampu memahami dan menggunakan image
+            -mampu memahami dan menggunakan table
+            -mampu memahami dan menggunakan caption pada image
+        
+        topics
+            -reboot (default css yang ada didalam bootstraps)
+            -typography
+            -images
+            -tables
+            -features
+
+        1.REBOOT (Default css yang ada didalam bootstraps 5)
+        -box sizing nya sudah jadi global
+        -font-size default nya 16px
+        -margin top nya sudah tidak ada lagi ketika menggunakan li
+}

@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: rgb(139, 58, 139);
+    color: rgb(238, 166, 238);
+}
+
+nav .logo{
+    text-decoration: underline;
+    letter-spacing: 3px;
+}
+
+nav ul{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(238, 166, 238);
+    font-size: .8em;
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    /* display: none; */
+    position: relative;
+    display: none;
+}
+
+.menu-toggle input{
+    position: absolute;
+    opacity: .5;
+    height: 28px;
+    width: 40px;
+    top: -3px;
+    left: -6px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-toggle span{
+    height: 3px;
+    width: 28px;
+    background-color: #eaea;
+    display: block;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0; /*untuk mengatur poros nya,atau titik dimana dia akan diputar,karena defaultnya dia ada di tengah*/
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%; /*untuk mengatur poros nya,atau titik dimana dia akan diputar,karena defaultnya dia ada di tengah*/
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg);
+    background-color: white;
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px,1px); /*-1px pertama nilai jarak samping,nilai 1px nilai atas*/
+    background-color: white;
+}
+
+
+
+/* responsive atau breakpoints */
+
+/* UKURAN TABLET */
+@media screen and (max-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* UKURAN MOBILE */
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+
+    nav ul{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(139, 58, 139);
+        justify-content: space-evenly;
+        z-index: -1;
+        width: 80vh;
+        transform: translateX(100%);
+        transition: 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

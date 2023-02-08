@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //  REDUCE()
+        /*
+        Melakukan operasi metematika (penambahan,perkalian,penjumlahan,pengurangan) pada element array atau sekedar mengubah struktur data array.tak dapat di hindari saat mengembakan suatu aplikasi.pada dasarnya ada kebutuhan tampilan UI (USER INTERFACE)
+        yang ternyata tidak sejalan dengan data yang di dapatkan
+
+        sebagai contoh terdapat baris table subtotal pada desain,namun data yang kita dapat dari server (API) tidak ada data sub total,sehingga kamu sebagai web developer dituntut untuk memanfaatkan data yang ada dan memodifikasi data yang diterima
+
+        Lalu data yang kita dapatkan dari server(API) adalah sebagai berikut dimana tidak ada data nilai subtotal sehingga kamu harus memanipulasi data yang ada
+
+        MENGGUNAKAN REDUCE()
+        Callback function pada reduce memiliki 5 parameter yang dapat digunakan sesuai kebutuhan
+        1.TOTAL yaitu awal(initial value) atau akumulasi dari perhitungan sebelumnya
+        2.VALUE yaitu isi dari tiap elemen yang diproses
+        3.INDEX(optional) yaitu nomor index tiap element
+        4.ARRAY(OPTIONAL) yaitu array itu sendiri
+        5.INITIAL VALUE(optional) yaitu nilai awal yang akan di passed sebagai initial value di poin 1.dapat diisi apa saja(nomor,teks,array atau object)
+        */
+
+        //contoh sederhana...kita ingin menjumlahkan tiap elemen yang terdapat pada array tersebut dengan mnggunakan FOREACH()
+        let angka = [1,2,3,4,5]
+        let hasil = 0;
+        
+        //MENGGUNAKAN FOREACH()
+        angka.forEach((input) => hasil = hasil += input);
+        console.log('hasil dari data 1 : ',hasil);
+
+        //MENGGUNAKAN REDUCE()
+        let hasil2 = angka.reduce((data,total) => total + data);
+        console.log('hasil dari data 2 : ',hasil2);
+
+        //MENGGUNAKAN INITIAL VALUE PADA REDUCE()
+        let angka3 = [1,2,3,4,5]
+        let hasil3 = angka3.reduce((datanya,nomernya) =>{
+            return datanya += nomernya;
+        },5);
+        console.log(hasil3);
+
+        //MENGUBAH STRUKTUR DATA DENGAN REDUCE()
+        //selain itu penggunaan reduce() tidak hanya digunakan untuk operasi matematika,tapi juga dapat merubah struktur data yang kamu terima menjadi struktur data yang kamu butuhkan,sebagai contoh
+        let fruits = ['jambu','sawo','rambutan','mangga','apel','pisan','salak'];
+
+        let fruitsList = fruits.reduce((list,fruit) => {
+            if (list[fruit]){ //memeriksa apakah buah tersebut sudah ada dalam objek atau belum
+                list[fruit] = list[fruit] + 1 //jika ada,nilai nya + 1
+            }else {
+                list[fruit] = 1; // jika belum ada nilai nya 1
+            }   
+            return list; //mengembalikan objek
+        },{}); // initial valuenya adalah objek
+        console.log(fruitsList)
+
+        //menghitung nilai rata rata
+        let nilai = [95,65];
+        let jumlah = nilai.reduce((total,item) =>{
+            return total+item;
+        });
+
+        const jumlahNilai = jumlah / nilai.length;
+        console.log(jumlahNilai);
+    </script>
+</body>
+</html>

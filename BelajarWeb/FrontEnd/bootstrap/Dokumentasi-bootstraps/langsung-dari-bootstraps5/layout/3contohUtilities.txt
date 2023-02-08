@@ -1,0 +1,7 @@
+margin-padding{
+    gunakan margin dan padding untuk mengontrol elemen dan komponen diberi jarak dan ukuran
+    default dari margin dan padding adalah 1rem(16px)
+    -me untuk margin right
+    -ms untuk margin left
+    -m  untuk kedua yang diatas
+}

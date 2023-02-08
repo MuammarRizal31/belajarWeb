@@ -1,0 +1,35 @@
+/*clear 
+befungsi menghentikan /membersihkan float
+    -clear
+        -left
+        -right
+        -both
+
+cara menghentikan /membersihkan float
+-menggunakan properti overflow
+-menggunakan div kosong
+-menggunakan tehknik makro clearfik
+*/
+
+.kepala{
+    width : 811px;
+    margin : auto;
+    padding : 5px;
+    border : 1px solid black;
+    
+}
+
+img,.ngee{
+    height : 311px;
+    width : 311px;
+    float : left;
+    margin : 15px;
+}
+img ,.ja{
+    height : 311px;
+    width : 311px;
+    float : right;
+}
+.clear{
+    clear : both;   
+}

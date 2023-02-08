@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #e31b13;
+  --text-color: blue;
+  --secondary-color: blue;
+}
+
+body {
+  background-color: var(--text-color);
+}
+
+.container {
+  background-color: #f4f1de;
+}
+.container .header p {
+  color: #f12341;
+}
+
+.contoh-map p {
+  color: green;
+  font-size: 3em;
+}/*# sourceMappingURL=variable.css.map */

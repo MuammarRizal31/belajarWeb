@@ -1,0 +1,149 @@
+html, body{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 1000px; 
+}
+
+/* LATIHAN 1 */
+.container-1{
+    width:800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.kolom-utama{
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-satu{
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-dua{
+    flex: 1;
+    order: 2;
+}
+/* AKHIR DARI LATIHAN 1 */
+
+/* LATIHAN 2 */
+.container-dua{
+    max-width: 800px;
+    margin: 50px auto;
+    
+}
+
+.layanan{
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.layanan.satu{
+    background-color: rgb(147, 147, 255);
+}
+
+.layanan.dua{
+    background-color: rgb(236, 115, 226);
+}
+
+.layanan.tiga{
+    background-color: rgb(129, 189, 212);
+}
+
+.container-tiga{
+    width:800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+
+.thumbnail{
+    width: 50%;
+}
+
+/* LATIHAN EMPAT */
+.container-empat{
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+}
+
+.card{
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    background-color: #eee;
+    overflow: hidden;
+    margin: 10px;
+    flex: 1;
+}
+
+.card.besar{
+    transform: scale(1.3);
+}
+
+.card .header{
+    height: 150px;
+    background-color: #666;
+}
+
+.card .content{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* latihan 5 */
+.container-lima{
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    margin:50px auto;
+    display: flex;
+}
+
+.container-lima .kotak{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.kotak span{
+    margin: auto;
+}
+
+/* RESPONSIVE */
+/* untuk membuat di device hp agar lebih kecil */
+ @media(min-width: 600px) { /*maksudnya adalah jika minimal width nya sudah dibawah 600ox maka dia akan mengeksekusi dibawah */
+    .container-dua{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layanan{
+        width: 30%;
+    }
+
+    .thumbnail{
+        width: 25%;
+    }
+}

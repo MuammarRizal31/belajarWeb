@@ -1,0 +1,43 @@
+/* CSS UNIT */
+/* html{
+    <!--ini untuk contoh yang box jange h1-->
+    font-size: 90px;
+}*/
+
+.jange{
+    font-size: 30px;
+    margin: 50px auto;
+    border: 3px solid black;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+}
+
+.jange h1{
+    font-size: 1rem;
+}
+
+.jange p{
+    font-size: 2em;
+}
+
+.contohCH{
+    border: 3px solid black;
+    margin: 50px auto;
+    width: 600px;
+    height: 600px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.contohCH{
+    width: 60ch;
+    font-size: 15px;
+}
+
+.contohVH{
+    background-color: salmon;
+    height: 100vh;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        Object prototyping
+        konsep dalam javascript dapat dipahami dalam kehidupan sehari hari seperti sebuah barang yang memiliki properti
+
+        didalam Object.prototype javascript engine menyediakan banyak sekali function atau build-in properti seperti toString(),valueOf() dan masih banyak lagi.
+
+        setiap function atau build in properti sudah memiliki fungsi dasar yang sering dipakai,lalu kita bisa menambahkan properti baru ke dalam objek jika dibutuhkan.namun,kita tidak bisa
+        menambahkan properti dari objek secara langsung
+
+        */
+
+        console.log(Object.prototype);
+
+            //MENAMBAHKAN OBJEK PROTOTYPING
+        //MENDEKLARASIKAN FUNGSI BARU
+        function NamaObject(input1,input2){
+            this.namaProperti1 = input1;
+            this.namaProperti2 = input2;
+        }
+
+            //MENAMBAHKAN PROPERTI SECARA LANGSUNG MENGGUNAKAN PROTOTYPING
+        NamaObject.prototype.namaProperti3 = "JxR";
+
+            //MELIHAT HASIL DATA
+        console.log(NamaObject.prototype.namaProperti3);
+
+            //CONTOH KASUS MENAMBAHKAN PROPERTI KEDALAM PERSON
+        function Person(nama,hobi,job,umur){
+            this.name = nama;
+            this.hobby = hobi;
+            this.pekerjaan = job;
+            this.age = umur;
+            this.sayHey = function() {          
+                return `Hello nama saya ${this.name} hobi saya ${this.hobby} saya seorang ${this.pekerjaan} dan umur saya ${this.age}`;
+            }
+        }
+        const manusia1 = new Person("Jange","Ngoding","Mahasiswa",22);
+        const manusia2 = new Person("Anisa","Main","Chef",21);
+        console.log(manusia1.sayHey());
+        console.log(manusia2.sayHey());
+
+            //MENAMBAHKAN METHOD/FUNCTION PROTOTYPING
+        //kita juga bisa menambahkan method untuk constructor yang telah kita buat.Sehingga method akan bisa digunakan untuk semua instance objek.
+        Person.prototype.makan = function(input){
+            let hasil = 0;
+            hasil += input;             
+            return `hello ${this.name} anda telah makan sebanyak ${hasil}`;
+        }
+        console.log(manusia1.makan(8));
+
+        //LATIHAN
+        /*
+1.Tambahkan method study() menggunakan prototype yang akan mengembalikan (gunakan return) string "I study at " + this.school pada objek Student di bawah method greeting().
+
+2.Di bawah kode instance objek myStudent, lakukan console.log() untuk memanggil data name, school, method greeting(), dan method study() dari instance objek myStudent.
+        */
+        function Student(name, grade, score) {
+            this.name = name;
+            this.grade = grade;
+            this.score = score;
+            }
+
+            Student.prototype.school = "Skilvul";
+            Student.prototype.greeting = function () {
+            return "Hello " + this.name;
+            };
+
+            // Buat kode kamu dibawah ini
+            let myStudent = new Student("Sarah", 20, 100);
+            Student.prototype.study = function() {
+            return `I study at ${this.school}`;
+            }
+            console.log(myStudent.name);
+            console.log(myStudent.school);
+            console.log(myStudent.greeting());
+            console.log(myStudent.study());
+    </script>
+</body>
+</html>

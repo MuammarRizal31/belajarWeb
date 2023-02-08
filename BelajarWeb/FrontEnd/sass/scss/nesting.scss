@@ -1,0 +1,61 @@
+.main {
+  background-color: salmon;
+
+  .main-heading {
+    font-size: 2em;
+  }
+
+  .main-paragraph {
+    font-size: 2em;
+  }
+}
+
+.main,
+.footer {
+  p,
+  h1 {
+    letter-spacing: 2px;
+  }
+}
+
+// &
+// parent selector...maksudnya adalah kita bisa menyelektor element paret pada saat kita sedang menesting
+.main {
+  transition: 1s;
+  .container & {
+    background-color: blue;
+  }
+  .main-heading {
+    font-size: 2em;
+  }
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+.main {
+  // simbol & ini akan mengacu kepada parent nya
+  & &-heading {
+    color: red;
+  }
+
+  & &-paragraph {
+    color: green;
+  }
+}
+
+.footer {
+  footer & {
+    background-color: brown;
+  }
+  & &-paragraph {
+    font-size: 2em;
+  }
+
+  
+
+  & .simbol {
+    font-size: 3em;
+  }
+}

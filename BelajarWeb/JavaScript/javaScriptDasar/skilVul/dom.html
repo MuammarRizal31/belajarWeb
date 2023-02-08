@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="jange">Hello jangs </h1>
+    <h1 class="jange">Hello jangs</h1>
+    <h2 id="jange">Hello brow</h2>
+    <h1 class="jange">hai</h1>
+
+    <input type="text" value="20" class="jange" id="nge">
+    <h1>jange</h1>
+    <h1>jangs</h1>
+    <h1>ijak</h1>
+
+    <script>
+//dengan adanya dom ini javascript diberi akses untuk membuat HTML menjadi dinamis seperti :
+//-mengubah element HTML pada halaman website
+//-mengubah attribute HTML pada halaman website
+//-mengubah css style pada halaman website
+//-menambah atau menghapus element maupun attribute HTML
+//-menambah HTML event (contoh: efek klik pada mouse,hover pada mouse,dan lainlain)pada halaman website
+//berinteraksi dengan semua HTML event di website
+
+//DI HTML DOM,semua element HTML dari sebuah website dianggap object dan sama seperti object pada javascript pada umumnya,object element HTML di HTML dom juga mempunyai properti dan method atau yang lebih dikenal sebagai DOM PROPERTY dan DOM method
+//untuk mengakses element diatas kita perlu menuliskan code seperti berikut
+const a = document.getElementsByClassName("jange")[0].value;
+console.log("Value diatas adalah "+a)
+        //penjelasan dari code diatas adalah 
+    //-document adalah akar dari semua object di sebuah website.jadi untuk mengakses element HTML apapun di website,selalu dimulai dengan object document ini
+    //-getElementsByClassName merupakan method dari object document;
+    //-value merupakan properti dari object element HTML yang dikembalikan dari object getElementsByClassName yaitu input
+
+//GET ELEMENT BY ID
+    //-untuk mengakses element HTML berdasarkan id nya
+const ambilId = document.getElementById("nge");
+
+//GET ELEMENTS BY CLASS NAME
+    //-untuk mengakses element HTML berdasarkan Class nya
+const ambilClass = document.getElementsByClassName("jange")[0];// fungsi array pada terakhir adalah untuk mengambil beberapa class didalam element nya
+
+//GET ELEMENTS BY TAG NAME  
+    //-untuk mengakses element HTML berdasarkan tag name nya
+const semuaTag = document.getElementsByTagName("h1");
+console.log(semuaTag[2]);
+
+//QUERY SELECTOR ALL(cssSelector)
+    //-Untuk mengakses element HTML Berdasarkan selector nya
+    const ambilSelector = document.querySelectorAll("#jange")[0]; //harus menggunakan array
+console.log(ambilSelector);
+ambilSelector.style.backgroundColor= "salmon";
+    </script>
+</body>
+</html>

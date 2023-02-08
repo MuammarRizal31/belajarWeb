@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //FIND()
+        /*
+          MEMBERIKAN NILAI BALIK BERUPA NILAI TUNGGAL (SINGLE VALUE) DARI ELEMENT PERTAMA YANG DITEMUKAN JIKA MEMENUHI SUATU KONDISI PADA RETURN STATEMENT
+
+          CALLBACK PADA FIND MEMILIKI 3 PARAMETER YAITU
+          1.VALUE YAITU ISI DARI TIAP ELEMENT YANG DIPROSES
+          2.INDEX (OPTIONAL) YAITU NOMOR INDEX TIAP ELEMENT
+          3.ARRAY (OPTIONAL) YAITU ARRAY ITU SENDIRI
+
+          MUNGKIN TERLIHAT SAMA SEPERTI .FILTER NAMUN FILTER MEMBERIKAN HASIL DALAM BENTUK ARRAY SEDANGKAN FIND HANYA MENGEMBALIKAN 1 NILAI(SINGLE VALUE)
+        */
+
+        let people = [{
+            nama: "Jange",
+            umur: 22
+        },{
+            nama: "jangs",
+            umur: 21
+        }]
+
+        let cariJange = people.filter( item => item.name ="Jange");
+        console.log(cariJange); //Bentuk array
+
+        let cariJangs = people.find( item => item.name ="Jangs");
+        console.log(cariJangs); //Bentuk object
+
+        let angka = [1,2,3,4,5,6,7]
+        let cariAngka = angka.filter( item => item > 4);
+        console.log(cariAngka) //hasil array;
+
+        let cariAngka2 = angka.find( item => item > 4);
+        console.log(cariAngka2) //hasil object mengembalikan 1 value
+
+        //dari contoh diatas kita dapat simpulan bahwa find lebih baik digunakan jika kita ingin menampilkan 1 nilai
+
+
+        let nama = ["Jange","topet","jangs","rizal","muammar"]
+        let cariNama = nama.find(item => {
+            return item >= "m" && item <= "r";
+        })
+        console.log(cariNama);
+
+            //FIND INDEX()
+        //FIND INDEX YANG DIGUNAKAN UNTUK MENDAPATKAN NOMOR INDEX DARI ELEMENT YANG DICARI
+        /*
+
+        FIND INDEX MEMBERIKAN NILAI BERUPA NOMOR INDEX DARI ELEMENT PERTAMA YANG DITEMUKAN JIKA MEMENUHI KONDISI PADA RETURN STATEMENT,ATAU -1 JIKA TIDAK DITEMUKAN
+        CALLBACK FUNCTION PADA .findIndex() memiliki parameter yang dapat digunakan sesuai kebutuhan:
+        1.value yaitu isi dari tiap element yang diproses
+        2.index(optional) yaitu nomor index tiap element
+        3.array(optional) yaitu array itu sendiri
+
+        findIndex() hampir mirip seperti .indexOf() yang digunakan untuk mendapatkan nomor index dari elemen pada sebuah array yang dicari. Akan tetapi .findIndex() dapat melakukan pencarian berdasarkan kondisi yang diinginkan.
+        */
+
+        let hewan = ["gajah","jerapah","Hunta","Harimau"];
+        let hewan2 = hewan.indexOf("unta");
+        console.log(hewan2);
+
+        let hewan3 = hewan.findIndex(item => item[0] === "H");
+        console.log(hewan3);
+
+        //mencari nilai yang dibagi 5/10 menjadi 0
+        const nomer = [11,12,13,14,15,16,17,17,18,19,22];
+        let cariNomer = nomer.findIndex(item => {
+            return item % 10 === 0 || item % 5 === 0; //ada di index ke empat
+        })
+        console.log(cariNomer);
+    </script>
+</body>
+</html>

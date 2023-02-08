@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="jangs"></h1>
+    <button id="jange">Click</button>
+    <script>
+        //function
+        function myFunction(){
+            return 'Hello';
+        }
+        myFunction();
+
+        function hello(){
+            return 'hello';
+        }
+
+        document.getElementById("jangs").innerHTML = hello();
+
+        //object
+        const person = {
+            firstName : "Jange",
+            lastName : "Rizal"
+        };
+        alert(person.lastName);
+
+        const person2 = {
+            firstName: "Jange",
+            umur: 21
+        }
+
+        alert(person2.firstName+" Umur "+person2.umur);
+        const jange = document.getElementById('jange');
+        
+    </script>
+</body>
+</html>

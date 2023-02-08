@@ -1,0 +1,130 @@
+/* 
+    -justify-items
+        -center
+        -start
+        -end
+        -stretch
+        
+    -align-items
+        -center
+        -start
+        -end
+        -stretch
+        
+    -place-items
+        -place-items: center;
+        -place-items: center end;
+
+    -justify-content
+        -center
+        -start
+        -end
+        -stretch
+        -space-around
+        -space-between
+        -space-evenly
+
+    -align-content
+        -center
+        -start
+        -end
+        -stretch
+        -space-around
+        -space-between
+        -space-evenly
+
+    -place-content
+        -place-items: center;
+        -place-items: center end;
+
+
+    Justify-items: untuk mensejajarkan grid-items pada sumbu horizontal/baris
+
+    Align-items: untuk mensejajarkan grid-items pada sumbu vertikal
+
+    Place-items: sebuah sorthand untuk menulis justify-items dan align-items dalam satu deklarasi
+        -urutan nya align items dahulu baru justify items
+
+    Justify-content: Mengatur posisi seluruh grid container pada sumbu horizontal
+        -ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran container nya,biasanya ketika grid items nya menggunakan ukuran fixed[px]
+    
+    Align-content: Sama seperti justify-content,tapi untuk sumbu vertikal
+
+    Place-content: sebuah sorthand untuk menulis align-content dan justify-content
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+    /* JUSTIFY ITEMS */
+.container{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(130px,3);
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    /* justify-items: stretch; */   /*  ELEMENT NYA AKAN MEMENUHI PARENT NYA INI NILAI DEFAULTNYA*/
+    /* justify-items: center; */    /*  AKAN MEMBUAT ELEMENT NYA BERADA DITENGAH TENGAH     */
+    /* justify-items: start; */     /*  LEBARNYA AKAN SESUAI DENGAN CONTENT NYA SAJA        */
+    /* justify-items: end; */       /*  AKAN MEMBUAT ELEMENT NYA BERADA DI TENGAH TENGAH    */
+}
+.items{
+    background-color: salmon;
+    color: white;
+    border: 3px solid black;
+    height: 100px;
+}
+
+.items.i1,
+.items.i4,
+.items.i7{
+    width: 130px;
+}
+.items.i2,
+.items.i5,
+.items.i8{
+    width: 80px;
+}
+.items.i3,
+.items.i6,
+.items.i9{
+    width: 170px;
+}
+/* ALIGN ITEMS */
+.container2{
+width: 80%;
+margin: auto;
+display: grid;
+grid-template-rows: repeat(130px,3);
+grid-template-columns: repeat(3,1fr);
+gap: 5px;
+/* align-items: stretch; */   /*  ELEMENT NYA AKAN MEMENUHI PARENT NYA INI NILAI DEFAULTNYA*/
+/* align-items: center; */    /*  AKAN MEMBUAT ELEMENT NYA BERADA DITENGAH TENGAH     */
+/* align-items: start; */     /*  LEBARNYA AKAN SESUAI DENGAN CONTENT NYA SAJA        */
+/* align-items: end; */       /*  AKAN MEMBUAT ELEMENT NYA BERADA DI TENGAH TENGAH    */
+}
+.items2{
+background-color: salmon;
+color: white;
+border: 3px solid black;
+height: 100px;
+}
+
+.items2.ii1,
+.items2.ii4,
+.items2.ii7{
+height: 130px;
+}
+.items2.ii2,
+.items2.ii5,
+.items2.ii8{
+height: 80px;
+}
+.items2.ii3,
+.items2.ii6,
+.items2.ii9{
+height: 170px;
+}

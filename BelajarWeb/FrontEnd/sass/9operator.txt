@@ -1,0 +1,44 @@
+SASS mendukung penggunaan operator aritmatika dasar seperti + - * /
+
+operator digunakan untuk melakukan perhitungan.biasanya untuk menentukan ukuran elemen pada layout
+
+List pada SASS
+list seperti arrray yang berisi sekumpulan nilai atau data
+
+contoh list
+    $color: red yellow blue teal orange;
+
+perhatikan $color adalah variable yang berisi list dari nama nama warna
+lalu untuk menggunakan list pada selector kita bisa pakai direktif @each untuk melakukan perulangan
+
+contoh
+    $colors: red yellow blue teal orange;
+
+    @each $color in %colors{
+        .bg-#{color}{
+            background: $color;
+        }
+    }
+
+hasilnya   
+    .bg-red{
+        background: red;
+    }
+    
+    .bg-blue{
+        background: blue;
+    }
+
+    .bg-yellow{
+        background: yellow;
+    }
+
+    .bg-teal{
+        background: teal;
+    }
+
+    .bg-orange{
+        background: orange;
+    }
+    
+coba perhatikan penggunaan variable dibagian selektor dan nilai properti

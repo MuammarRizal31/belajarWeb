@@ -1,0 +1,3 @@
+nesting adalah bagaimana cara kita menuliskan syntax CSS secara bersarang
+Nesting merupakan fitur SASS yang memungkinkan kita untuk menulis selektor didalam selektor(bersarang)
+

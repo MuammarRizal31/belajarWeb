@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //OBJECT SHOTHAND DI VARIABLE
+    //object shorthand divariable sebenernya kebalikan dari destrukturisasi objek,jika destrukturisasi objek menyimpan nilai properti objek di variable,maka object shorthand menyimpan nilai variable diproperti objek
+
+    //jika ada beberapa variable yang bilainya ingin dijadikan sebagai properti sebuah object maka cara mendlekarasikan objel tersebut sebagai berikut
+    let suaraKucing = "meow";
+    let suaraAnjing = "gukguk"
+
+    let suaraHewan = {
+        suaraKucing: suaraKucing,
+        anjingSuara: suaraAnjing
+    };
+    console.log(suaraHewan)
+    console.log(suaraHewan.anjingSuara)
+    
+    //ada cara lebih singkat ketika menuliskan objek diatas,yaitu dengan menggunakan objek shorthand,aturan utama ketika menggunakan cara objek shorthand adalah nama variable dan nama properti di objek yang bersangkutan harus sama
+
+    let anjing = "hewan";
+    let apel = "buah";
+    let macam = {
+        anjing,
+        apel
+    }
+    console.log(macam)
+    console.log(macam.anjing)
+
+        //OBJECT SHORTHAND DIPARAMETER FUNGSI
+    //object shorthand bisa juga digunakan untuk mengambil parameter dari sebuah fungsi dan dijadikan sebagai nilai properti diobjek yang di deklarasikan didaam fungsi tersebut
+
+    //sama sperti divariable,object shorthand hanya bisa digunakan apabila nama parameter pada fungsi dsama dengan nama properti dari objeck yang bersangkutan.
+    
+    //pada javascript es5(tanpa objek shorthand)
+    function membuatBiodata (nama,umur,kelamin){
+        return {
+            namaAnda: nama,
+            umurAnda: umur,
+            kelaminAnda : kelamin
+        };
+    };
+    console.log(membuatBiodata('jange',20,'Laki laki'))
+    let namanya = new membuatBiodata('jangse',20,'Laki')
+    console.log(namanya)
+
+    //dengan menggunakan object shortnad maka akan menjadi seperti ini
+    let biodata = (nama,umur,jenisKel) => {
+        return {nama,umur,jenisKel};
+    }
+    console.log(biodata('sitta andarining',20,'perempuan'))
+
+    //method di object
+    let operasiMatematika = {
+        nama: "penjumlahan",
+        operasi: function (angka1,angka2){
+            let hasil = angka2 + angka1;
+            return `bilangan ${this.nama} hasil dari pertambahan ${angka1} ditambah ${angka2} adalah ${hasil}`
+        }
+    }
+    console.log(operasiMatematika.operasi(2,8));
+
+    //namun dengan object shothand,objek diatas bisa ditulis dengan cara berikut:
+    let operasiMatematika2 = {
+        nama: "Perkalian",
+        operasi(angka1,angka2){
+            let hasil = angka1 * angka2;
+            return `bilangan ${this.nama} ${angka1} dan ${angka2} adalah : ${hasil}`
+        }
+    }
+    console.log(operasiMatematika2.operasi(2,5));
+
+    //perhatikan oerbedaan cara mendlekarasikan method operasi dikedua contoh diatas.dengan cara object shorthand,kita tidak perlu lagi menulis nama properti secara spesifik selama nama fungsi sama dengan nama properti di objek yang bersangk
+    </script>
+</body>
+</html>

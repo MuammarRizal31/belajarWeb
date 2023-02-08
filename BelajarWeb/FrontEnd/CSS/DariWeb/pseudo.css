@@ -1,0 +1,41 @@
+h1:hover{
+    /*hover digunakan untuk memberikan style pada element ketika kursor kalian melewati suatu element.*/
+    background:red;
+    color:blue;
+}
+p:nth-child(2){
+    background-color:pink;
+}
+/*BERIKUT INI ADALAH TABEL YANG MENJELASKAN TENTANG KESELURUHAN PSEUDO-ELEMENT
+-> ::before untuk menyisipkan suatu konten sebelum element
+-> ::after untuk menyisipkan suatu konten setelah element dari selector
+-> ::selection memberikan style pada bagian element yang di select oleh pengguna
+-> ::first-letter untukk memberikan style pada huruf pertama pada element dari selector
+-> ::first-line untuk memberikan style pada baris pertama pada element dari selector
+*/
+a::before{
+    /*a::before*/
+    content:"Link - "
+}
+.ko h1::selection{
+    /* h1::selection*/
+    color :blue;
+    background:yellow;
+}
+
+/*tidak semua properti css dapat digunakan dengan :: first-letter..beberapa yang bisa digunakan adalah :
+-font
+-color
+-background
+-margin
+-padding
+-border
+-text-decoration
+-line-height
+-float
+*/
+
+.jangs::first-letter{
+    font-size:50px;
+    color:red;
+}

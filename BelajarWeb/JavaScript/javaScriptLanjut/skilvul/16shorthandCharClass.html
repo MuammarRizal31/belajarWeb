@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+            shorthand charakter classes pada umumnya digunakan untuk membedakan huruf dan angka namun bisa juga dipakai untuk membedakan karakter lainnya (karakter spesial)
+
+            -  .     : digunakan untuk menggantikan karakter apapun
+            - \d     : digunakan untuk mencocokan semua angka.Karakter special ini sama dengan [0-9]
+            - \D     : digunakan untuk mencocokan salain angka.karakter special ini sama dengan ^[0-9]
+            - \w     : digunakan untuk mencocokan semua huruf dan angka termasuk dengan garis bawah...karakter special ini sama dengan [A-Za-z0-9_]
+            - \W     : digunakan untuk mencocokan karakter selain huruf angka dan underscore.karakter special ini sama dengan [^A-Za-z0-9_]
+            - \s     : digunakan untuk mencocokan semua white space karakter,termasuk didalam spasi dan tab
+            - \S     : digunakan untuk mencocokan karakter selain spasi dan tab
+            - \      : untuk mengindikasikan karakter huruf yang diikuti selain karakter seperti ? [] () \/ | $ ^ * . + , baik diawal ditengah maupun diakhir sebuah kata
+        */
+
+        //contoh penggunaan .
+            //menggantikan karakter apapun
+        let negara = "Indonesia";
+        let n = /.o/gi;
+        console.log(negara.match(n)); //do
+
+        //contoh penggunaan \d
+            //mencocokan semua angka
+        let uang = "19 Laptop gua harganya $51.111 rb";
+        let u = /\d/gi;
+        console.log(uang.match(u)); //hasilnya angka semua
+
+        //contoh penggunaan \D
+        let uang2 = "saya memiliki uang sebanyak 93.2131rb";
+        let u2 = /\D/gi;
+        console.log(uang2.match(u2)); //mengambil string semua memecahkan menjadi array 1
+
+        //contoh penggunaan \w
+        let uang3 = "U@ng saya banyak sekali sampai rp $511.23123 jt"
+        let u3 = /\w/gi;
+        console.log(uang3.match(u3)); //mengambil selain karakter special
+
+        //contoh penggunaan \W
+        let uang4 ="U@ng saya banyak sekali sampai rp $21312.231232rp";
+        let u4 = /\W/gi;
+        console.log(uang4.match(u4)); //mengambil karakter special
+
+        //contoh penggunaan \s
+        let uang5 = "Itu uang saya";
+        let u5 = /\s/gi;
+        console.log(uang5.match(u5)); //mengambil spasi nya
+
+        //contoh pengguaan \S
+        let uang6 = "uang saya banyak";
+        let u6 = /\S/gi;
+        console.log(uang6.match(u6)); //mengambil huruf selain spasi
+
+        //contoh penggunaan \
+        let uang7 = "halo?";
+        let u7 = /halo\?/gi;
+        console.log(uang7.match(u7)); //menghasilkan ["halo?"] karena akan mencocokan karakter special yang ada pada word   
+
+
+        //LATIHAN
+        const word = 'Saya sangat menginginkan PS5 dari 2 bulan yang lalu';
+        const regex = /\W\d/gi; 
+        console.log(word.match(regex));
+    </script>
+</body>
+</html>

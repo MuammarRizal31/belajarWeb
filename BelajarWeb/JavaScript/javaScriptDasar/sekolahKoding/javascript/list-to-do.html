@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 900px;
+            height: 250px;
+            margin: 0 auto;
+            background-color:cyan;
+            text-align:center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Todo</h1>
+        <h3>Mau bikin apa ? </h3>
+        <form action="#">
+            <input type="text" id="newText">
+            <button onclick="panggil()">add</button>
+        </form>
+    </div>
+
+    <ul id="to-do" style="padding: 25px;">
+
+    </ul>
+
+    <script>
+        function panggil(){
+            //FITUR TODO;
+            // 1. MENAMBAHKAN
+            // 2. CORET KALAU SUDAH SELESAI
+            // 3. MENGHAPUS
+
+            //ambil nilai dari text nya
+            const ambil = document.getElementById("newText");
+            console.log(ambil.value) //ingat jika kita ingin mengambil nilai nya harus menggunakan properti value
+
+            //tambahkan list baru kedalam ul
+            const too = document.getElementById("to-do");
+            const todo = document.createElement("li");
+            const masukan = document.createTextNode(ambil.value);
+            todo.append(masukan);
+            too.append(todo);
+
+            
+            //kosongkan fieldnya
+        }
+    </script>
+</body>
+</html>

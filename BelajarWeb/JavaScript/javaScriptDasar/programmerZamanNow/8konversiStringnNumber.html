@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+//konversi string dan number
+//-saat membuat aplikasi,kadang kita input dari pengguna selalu dalam bentuk string
+//-sedangkan kita ingin mengelola datanya dalam bentuk number
+//-maka sangat disarankan untuk melakukan konversi tipe data
+/*function               ||      keterangan
+    parseInt(string)             mengkonversi dari string ke number(bilangan bulat) 
+    parseFloat(string)           mengkonversi dari string ke number(bilangan pecahan)
+    Number(string)               mengkonversi dari string ke number(bilangan bulat atau pecahan)
+    number.toString()            mengkonversi dari number ke string
+*/
+
+
+const nilai1 = "1";
+const nilai2  = 1;
+const hasil = nilai1 + nilai2;
+document.writeln(`<p>${hasil}</p>`) //hasil akan 11
+
+//contoh dari function diatas
+document.writeln(`<p> ${parseInt('2.5')}`);
+document.writeln(`<p> ${parseFloat('2.21')}`);
+document.writeln(`<p> ${Number('2.212')}`);
+
+const nilaa = 1;
+const nilaaa = 2;
+const jange = nilaaa.toString() + nilaa.toString();
+document.writeln(`<p>${jange}</p>`);
+
+    </script>
+</body>
+</html>

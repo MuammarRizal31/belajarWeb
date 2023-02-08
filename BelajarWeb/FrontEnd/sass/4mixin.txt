@@ -1,0 +1,8 @@
+Mixin adalah kumpulan style yang dapat kita gunakan berulang-ulang
+mixin mirip seperti prosedur pada bahasa pemrograman,mixin memungkinkan kita menggunakan ulang beberapa grup deklarasi CSS
+
+pembuatan mixins dapat dilakukan dengan menuliskan @mixin lalu untuk menggunakan kita pakai @include
+
+@mixin & @include
+    -@mixin kita gunakan ketika kita membuat mixin nya
+    -@include kita gunakan ketika kita ingin memanggil mixin nya

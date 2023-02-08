@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        margin: auto;
+        width: 80%;
+        border: 3px solid black;
+        display: flex;
+        flex-direction: column;
+      }
+      ul {
+        margin: 35px auto;
+        width: 80%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      li img {
+        width: 250px;
+        height: 200px;
+      }
+      img {
+        transition: 1s;
+        width: 100%;
+      }
+      .toggle {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        border-radius: 25px;
+      }
+      .kelas-1 {
+        transform-origin: 0 0;
+        transform: rotate(28deg);
+      }
+      .kelas-2 {
+        transform-origin: 0 100%;
+        transform: rotate(-28deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/img-4.jpg" alt="" class="img-4" />
+      <ul>
+        <li class="img-1">
+          <img src="img/img-1.jpg" alt="" />
+        </li>
+        <li class="img-2">
+          <img src="img/img-2.jpg" alt="" />
+        </li>
+        <li class="img-3">
+          <img src="img/img-3.jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+
+    <div class="toggle">
+      <span class="kelas-1"></span>
+
+      <span class="kelas-2"></span>
+    </div>
+
+    <script>
+      const img1 = document.querySelector(".img-1");
+      const img2 = document.querySelector(".img-2");
+      const img3 = document.querySelector(".img-3");
+      const img4 = document.querySelector(".img-4");
+
+      img1.addEventListener("click", () => {
+        img4.setAttribute("src", "img/img-1.jpg");
+      });
+
+      img2.addEventListener("click", function () {
+        img4.setAttribute("src", "img/img-2.jpg");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+body{
+    margin: 0;
+}
+.contoh{
+    background-color: salmon;
+    height: 100vh;
+}
+
+.contoh2{
+    margin-top: 50px;
+    background-color: red;
+    width: 50vw;
+    height: 10 0px;
+}

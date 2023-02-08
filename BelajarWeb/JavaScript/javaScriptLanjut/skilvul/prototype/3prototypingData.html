@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        DATA TYPE PROTOTYPING
+        Setiap tipe data di javascript memiliki properti bawaan nya masing masing berupa properti dan method
+
+        berikut adalah hasil dari prototyping tipe data string jika dilakukan console.log(String.prototype)
+        */
+       console.log(String.prototype)
+
+       //CARA MENAMBAHKAN PROTOTYPE PADA YANG LAIN
+       String.prototype.tambahString = input => {
+        return `jange` + input;
+       }
+
+       let jange = " ni brow";
+       console.log(jange.tambahString(jange));
+
+       //AGAR DAPAT MEMAHAMI DENGAN BAIK MARI PERHATIKAN KODE BERIKUT
+       //TIPE DATA STRING MEMILIKI PROTOTYPE METHOD REPEAT() SEKARANG KITA AKAN MEMBUAT METHOD BARU DENGAN MENGGUNAKAN METOD REPEAT();
+
+       String.prototype.mengulangString = function(n) {
+        return this.repeat(n);
+       }
+
+       let jangss = "Hello world";
+       console.log("Jange ".mengulangString(3));
+       console.log(jange.mengulangString(2));
+
+       //JIKA DI CEK KEMBALI DENGAN MELAKUKAN CONSOLE.LOG() PADA PROTOTYPE STRING.MAKA HASILNYA METHOD YANG KITA TAMBAHAKAN SUDAH TERDAFTAR PADA PROTOTYPE TIPE DATA STRING
+       console.log(String.prototype)
+
+       //latihan
+       /*
+1.Buatlah method baru pada tipe data string bernamatambahKata() yang memiliki parameter str dan mengembalikan method concat() di dalamnya.
+Contoh output dari method yang akan dibuat:
+console.log("Belajar ".tambahKata("coding"));
+// Output "Belajar coding"
+Contoh penggunaan method concat():
+let string1 = "Hello ";
+let string2 = "world!";
+let result = string1.concat(string2);
+console.log(result) // Output: Hello world!
+
+2.Panggil method yang sudah kamu buat yang menggabungkan string "Belajar" dan "coding" seperti ini:
+console.log('Belajar '.tambahKata("coding"));
+       */
+       String.prototype.tambahKata = function(str){
+            return this.concat(str);
+        }
+        console.log('Belajar '.tambahKata('coding'))
+    </script>
+</body>
+</html>

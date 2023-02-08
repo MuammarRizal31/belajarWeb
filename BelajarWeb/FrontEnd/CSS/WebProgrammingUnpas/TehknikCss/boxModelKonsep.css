@@ -1,0 +1,47 @@
+/*KONSEP DASAR BOX MODEL 
+    -SETIAP ELEMEN DIHALAMAN YANG BERADA DIDALAM SEBUAH BOX(KOTAK]
+    -KITA BISA MENGATUR UKURAN DAN POSISI KOTAK TERSEBUT
+    -KITA BISA MEMBUAT WARNA/GAMBAR SEBAGAI BACKGROUND KOTAK TERSEBUT
+*/
+
+/* 
+    CSS BOX MODEL MENDEFINISIKAN KOTAK YANG DIHASILKAN OLEH SEBUAH ELEMENT,LALU MENAMILKANNYA SESUAI DENGAN FORMAT VISUAL NYA
+    CSS BOX MODEL TERDIRI DARI 4 KOMPONEN
+    -MARGIN ADALAH AREA TRANSFARAN DISEKITAR LUAR KOTAK
+    -BORDER ADALAH BATAS DISEKELILINGI KONTEN DAN PADDING
+    -PADDING ADALAH AREA TRANSFARAN DIDALAM KOTAK (ANTARA CONTENT DAN BORDER]
+    -CONTENT ADALAH KONTEN SEBENARNYA DIDALAM BOX ,BISA BERUPA TEXT ATAU GAMBAR 
+*/
+
+.satu{
+    width : 211px;
+    height: 211px;
+    background-color : blue;
+    margin-left : 51px;
+    margin-bottom : 11px;
+    margin-top : 21px;
+}
+    /*OVER LAPPING MARGIN */
+.dua{
+    width : 111px;
+    height : 111px;
+    background-color : red;
+    margin-top : 9px;/*tidak akan terjadi apa apa,karena pada sebelumnya nilai nya lebih besar,kalau mau timpa harus lebih besar NILAI nya (lebih besar]*/
+    margin-left: auto;
+    margin-right : auto;    
+}
+    /*OVER LOPPING VERTIKAN */
+    /*tidak sama seperti yang tadi kalau ini hasilnya akan ditambah */
+.tiga{
+    width:51px;
+    height : 51px;
+    background-color : green;
+    margin-top : -31px;
+}
+    /*NEGATIVE MARGIN CONTOH NYA YANG KETIGA*/
+    /*hasilnya akan nimbrung bareng margin 2*/
+
+    /*MARGIN AUTO CONTOH DI MARGIN 2*/
+    /*INI AKAN MEMBUAT MARGIN NYA DITENGAH TENGAH,HARUS MAKAI MARGIN LEFT DAN RIGHT YAH */
+
+    /*margin shordhand */

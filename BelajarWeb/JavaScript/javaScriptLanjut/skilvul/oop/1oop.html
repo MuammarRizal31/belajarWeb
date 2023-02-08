@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        secara umum tipe data dibagi menjadi 2,yaitu tipe data primitive dan tipe data non primitive
+        -1.tipe data primitive adalah tipe data yang hanya dipakai untuk menyimpan data seperti : byte,short,int,long,double,char dan boolean
+        -2.tipe data non primitive adalah tipe data yang dipakai untuk menyimpan data,tetapi juga mempunyai metode bawaan(build in method) untuk dilakukan modifikasidan operasi oleh
+        programmer,seperti:String,array,class dan object
+
+        APA ITU OOP?
+        -oop adalah suatu paradigma atau konsep didunia pemrograman yang berorientasi pada object biasanya object memiliki 2 komponen,yaitu ciri ciri dari object tersebut(properti) dan kemampuan
+        yang dapat dilakukan oleh object tersebut(method)
+
+        OOP memiliki 4 pilir utuma yaitu:
+        1.inheritance
+        2.Polymorphism
+        3.encapsulation
+        4.abstraction
+
+        CATATAN: JAVASCRIPT TIDAK SEPENUHNYA MENDUKUNG KONSEP OOP,TAPI KAMU AKAN MEMPELAJARI PEMAHAMAN DASAR DARI PARADIGMA OOP
+        
+
+        //CLASS
+        penulisan class hadir pada javascript ES6,Dengan adanya fitur class,kamu dapat membuat object yang merupakan instance(perwujudan) dari sebuah class
+        atau bisa dibilang kamu akan membuat cetakannya terlebih dahulu sebelum kamu membuat object nya
+
+        contoh dibawah
+        */
+
+        //ini contoh object biasa
+        let hewan = {
+            nama: "Andriano",
+            jenisKelamin: "LakiLaki",
+            tidur: function(nama,jenisKelamin){
+                return `Hey ${nama} jenis kelamin kamu apa : ${jenisKelamin}`;
+            }
+        }
+
+        class Hewan{
+            constructor(nama,jurusan){
+                this.nama = nama;
+                this.jurusan = jurusan;
+            }
+
+            //method (sebuah function didalam class)
+            tidur=() => {
+                return `Hallo ${this.nama} selamat tidur ${this.jurusan}`;
+            }
+        }
+
+        let panggilHewan = new Hewan("Jeki","informatika");
+        let panggilHewan2 = new Hewan("Bleki","Ilmu sosial");
+        console.log(panggilHewan.tidur());
+        console.log(panggilHewan2.tidur());
+
+        //LATIHAN
+        /*
+1.Buatlah sebuah class bernama Orang.
+
+2.Buatlah constructor yang memiliki parameter berupa properti yaitu nama dan umur.
+Di dalam constructor, assign parameter nama ke dalam variabel nama dengan keyword this di depan variabelnya.
+Lalu assign parameter umur ke dalam variabel umur dengan keyword this di depan variabelnya.
+
+3.Buatlah method bernama bekerja di luar blok kode constructor yang mengembalikan data string `${this.nama} sedang bekerja seperti biasa`.
+
+4.Di luar blok kode class, buatlah sebuah objek bernama user1 sebagai instance dari class Orang.
+Isi argumen parameter nama dengan data string "auzan" dan argumen parameter umur dengan data number 8.
+
+5.Lakukan console.log() pada method bekerja() melalui objek user1 yang telah dibuat sebelumnya. Cek pada tab Console untuk melihat data.
+        */
+    class Orang{
+    constructor(nama,umur){
+        this.nama = nama;
+        this.umur = umur;
+    }
+
+    bekerja = () => {
+        return `${this.nama} sedang bekerja seperti biasa`
+    }
+}
+
+const user1 = new Orang("auzan",8);
+console.log(user1.bekerja());
+    </script>
+</body>
+</html>

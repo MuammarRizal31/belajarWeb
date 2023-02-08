@@ -1,0 +1,42 @@
+/*fontface berguna untuk mengelola font pada css
+    font harus ada disistem operasi client/user
+    
+    layanan font
+    -font.google.com
+    -fontsquirell.com
+    -fontspring.com
+    -webtype.com
+    -typotheque.com
+    -dll    
+
+    dan font paling bagus untuk web adalah woff
+        kenapa woff?karena
+        -web open file format
+        -dikembangkan mozila
+        -dibuat khusus untuk web
+        -diload lebih cepat daripada jenis font yang lain 
+        -merupakan kompresi dari tipee TTF/OFF
+        
+*/
+h1{
+    font-family: 'edu qld beginner',cursive;
+}
+
+@font-face{
+    font-family :'jange';
+    src : url('fonts/KaushanScript-Regular.otf') format('truetype');
+}
+h2{
+    font-family :'jange','arial';
+}
+
+/*sitaks lengkap
+    @font-face{
+        font-family :'namaFontBaru';
+        src: url('lokasi/file/fontBaru.eot');
+        src: url('lokasi/file/fontBaru.eot?#iefix') format('embedded-opentype'),
+             url('lokasi/file/fontBaru.woff2') format('woff2'),
+             url('lokasi/file/fontBaru.woff') format('woff'),
+             url('lokasi/file/fontBaru.ttf') format('truetype'),
+             url('lokasi/file/fontBaru.svg#svgFontName') format('svg');
+*/

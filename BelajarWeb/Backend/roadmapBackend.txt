@@ -1,0 +1,91 @@
+		--	ROADMAP BACKEND DEVELOPER	--		
+1.Harus mengerti dasar FRONT-END
+(website belajar udemy,codeacademy,solo learn]
+2.Pilih satu bahasa pemrograman back-end
+	konsep konsep programming dasar
+		-basic programming
+		-paradigma progamming
+			1.procedural
+			2.OOP(objectOrientedProgamming]
+			3.Functional
+3.Database
+4.Buat project sederhana
+	-to-do list
+	-CRUD(create,read,update,Delete]
+	-Login dan registration System
+5.PILIH FRAMEWORK
+6.Pelajari package manager
+7.buat project berikut
+	-CMS / BLOG system
+	-online shop/shopping cart
+	-Youtube/netflix clone
+	-restaurant web app / online order
+	-booking app(movie,shuttle]
+	-e-commerce/marketplace
+	-bikin package
+8,aplication,database,server
+	-database
+	pelajari konsep didalam database
+		konsep konsep didatabase
+		-database design
+			-normalization,ERD
+		-SQL language
+			-DDL,DML,DCL
+		-ORM(OBJECT RELATIONAL MAPPING]
+		-Index dan transaction
+		-ACID(ATOMICITY,CONSISTENCY,ISOLATION,DURABILITY]
+	-Server
+	harus pelajari dulu server yang biasa digunakan(NGINX,APACHE,MICROSOFT IIS]
+	-Hosting providers mulai dari(Heroku,github,firebase,vercel,netlify]
+	-cloud service provider(Google cloud,aws,microsoft azure,alibaba cloud]
+9.satu hal penting yang harus dipelajari sebagai backend
+APLICATION PROGRAMMING INTERFACE(API]
+-REST:API
+-JSON
+	Konsep konsep API
+	-REST API
+		-recommend belajar di roy fielding
+		-https://www.ics.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+	-JSON(Javascript object notation
+	-Authentication
+		-basic auth
+		-token auth
+		-OAuth
+		-JWT(JSON WEB TOKEN]
+	-DOKUMENTASI API
+11.Project API
+	-Akses ke public API
+		-cuaca,peta,film,covid,dll.
+	-Buat server API
+		-implementasikan CRUD,User role dan authentication
+
+MATERI LEBIH LANJUT
+-Konsep programming lanjutan
+	-Algortima,struktur data
+	-software development methodologies
+		-waterfall
+		-rapid aplication development
+		-agile
+	-design pattern dan principles
+		-SOLID,DRY,YAGNI
+	-Architectural pattern
+		-Monolithic,microservice,SOA,serverless
+-WEB SECURITY
+	-Hasting dan encryption
+	-HTTPS
+	-SSL(SECURE SOCKETS LAYER]
+	-CORS(CROSS-origin resource sharing]
+	-Content security policy (CSP]
+-Testing
+	-Integration Testing
+	-Unit testing
+	-Functional testing
+-CI/CD Pipeline
+bagaimana melakukan continue integration continue development/deployepment
+-GraphQL
+-Search engines
+-Message broker
+-Containerazation dan virtualization
+-Web socket
+-Scalability
+Keep learning...

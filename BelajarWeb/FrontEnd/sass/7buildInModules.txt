@@ -1,0 +1,20 @@
+BUILD IN FUNCTION / MODULES
+fungsi fungsi bawaan SASS
+    -COLOR
+        > Adjust
+        > complement
+        > darken
+        > lighten
+        > saturate
+        > desaturate
+        > grayscale
+        > mix
+        > fade-in
+        > fade-out
+        
+    -LIST
+    -MAP
+    -MATH
+    -META
+    -SELECTOR
+    -STRING

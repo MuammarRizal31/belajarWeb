@@ -1,0 +1,41 @@
+// PERBEDAAN VARIABLE CSS DAN SCSS
+// kekurangan pakai ini adalah kemungkinan browser belum support
+
+// css variables
+:root {
+  --primary-color: #e31b13;
+  --text-color: blue;
+  --secondary-color: blue;
+}
+
+body {
+  background-color: var(--text-color);
+}
+
+// variable sass
+$danger-color: #f4f1de;
+$h1-danger: brown;
+$p-danger: #f12341;
+
+.container {
+  background-color: $danger-color;
+  .header {
+    p {
+      color: $p-danger;
+    }
+  }
+}
+
+// contoh map pada sass,ini sama seperti array...ada key ada value
+$alert: (
+  "danger": red,
+  "warning": yellow,
+  "success": green,
+);
+
+.contoh-map {
+  p {
+    color: map-get($alert, "success");
+    font-size: 3em;
+  }
+}

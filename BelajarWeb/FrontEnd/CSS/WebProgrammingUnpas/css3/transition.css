@@ -1,0 +1,197 @@
+/*transition adalah properti yang memungkin kan kita mengubah nilai properti secara halus
+    -transition : [properti] <durasi> [fungsi] [delay];
+        properti dari transition
+            -all
+            -<nama properti>
+            -none
+    -animatable properti/tidak semua properti bisa kita animasikan
+        -background-color       -top left bottom right
+        -background-position    -margin padding
+        -background-size        -width height
+        -border                 -opacity
+        -color                  -transform
+        -filter                 -word-spacing
+        -font-size              -letter-spacing
+        -line-height            
+
+    -fungsi transisi/timing function
+        -ease           -linear
+        -ease-in        -cubic-bezier(w,x,y,z]
+        -ease-out
+        -ease-in-out
+    
+    -fungsi delay
+        -untuk menunggu sebelum transisinya berjalan
+*/
+
+p{
+    margin :0%;
+    padding : 0%;
+    line-height : 99px;
+    color :black;
+    font-weight :bold;
+    text-align:center;
+}
+
+.ease{
+    width : 99%;
+    margin : auto;
+    border : 5px solid black;
+}
+
+
+.ease1{
+    width : 99px;
+    height : 99px;
+    background-color :red;
+    transition : 1s ease-out; 
+}
+
+.ease:hover .ease1{
+    transform : rotate(1111deg);
+    margin-left : 95%;
+    background-color : red;
+}
+
+.ease-in{
+    width : 99%;
+    height : 99px;
+    margin : 51px auto;
+    border : 5px solid black;
+}
+
+.ease-in1{
+    width : 99px;
+    height : 99px;
+    background-color : green;
+    transition : 1s ease-in;
+}
+
+.ease-in:hover .ease-in1{
+    transform : rotate(1111deg);
+    background-color : blue;
+    margin-left : 95%;
+}
+
+.ease-out{
+    width : 99%;
+    height : 99px;
+    border : 5px solid black;
+    margin : 51px auto;
+}
+
+.ease-out1{
+    width : 99px;
+    height : 99px;
+    background-color : yellow;
+    transition : 1s ease-out;
+}
+
+.ease-out:hover .ease-out1{
+    transform : rotate(1111deg);
+    background-color : brown;
+    margin-left : 95%;
+}
+
+.linear{
+    width : 99%;
+    height : 99px;
+    border : 5px solid black;
+}
+
+.linear1{
+    width : 99px;
+    background-color :blue;
+    height : 99px;
+    transition : 1s linear;
+}
+
+.linear:hover .linear1{
+    margin-left : 95%;
+    background-color :aqua;
+    transform : rotate(1111deg);
+}
+
+.cubic-bezier{
+    width : 71%;
+    height : 99px;
+    border :5px solid black;
+    margin : 51px auto;
+}
+
+.cubic-bezier1{
+    width : 99px;
+    height : 99px;
+    background-color :cyan;
+    transition : 3s cubic-bezier(0.14,-0.57, 0.78, 1.54);
+}
+
+.cubic-bezier:hover .cubic-bezier1{
+    transform : rotate(1111deg);
+    margin-left : 95%;
+    background-color :yellow;
+}
+
+
+.container{
+    margin : auto;
+    width : 90%;
+    height : 555px;
+    border : 5px solid black;
+    margin-top : 211px;
+    position : relative;
+}
+
+h1{
+    position : absolute;
+    top : -71px;
+    left : 600px;
+}
+
+.ea{
+    background-color :red;
+    width : 99px;
+    height :99px;
+    margin : 10px;
+    transition : 3s ease;
+}
+
+.in{
+    background-color :yellow;
+    width : 99px;
+    height :99px;
+    margin : 10px;
+    transition : 3s ease-in;
+}
+
+.out{
+    background-color :green;
+    width : 99px;
+    height :99px;
+    margin : 10px;
+    transition :3s ease-out;
+}
+
+.li{
+    background-color :black;
+    width : 99px;
+    height :99px;
+    margin : 10px;
+    transition : 3s linear;
+}
+
+/*2s dibelakang adalah angka delay */
+.cb{
+    background-color :teal;
+    width : 99px;
+    height :99px;
+    margin : 10px;
+    transition :3s cubic-bezier(0.14,-0.57, 0.78, 1.54) 2s;
+}
+
+.container:hover .nge{
+    background-color : blue;
+    margin-left :90%;
+    transform : rotate(1620deg);
+}
+

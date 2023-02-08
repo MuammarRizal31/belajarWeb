@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+        APA ITU PROTOTYPING PADA JAVASCRIPT ?
+        JAVASCRIPT ADALAH BAHASA PEMROGRAMAN YANG MEMILIKI FITUR PROTOTYPE.PROPERTI PROTOTYPE PADA JAVASCRIPT AWALNYA MENGGUNAKAN OBJEK KOSONG DAN DAPAT DITAMBAHKAN ANGGOTA KE DALAM NYA JIKA 
+        DIBUTUHKAN...JADI,SETIAP KITA MEMBUAT OBJEK ATAU FUNCTION,JAVASCRIPT AKAN MENAMBAHKAN PROPERTI PROTOTYPE SECARA OTOMATIS
+        */
+
+        //CONTOH SYNTAX MEMBUAT PROTOTYPE DALAM JAVASCRIPT
+        //mendeklarasikan function
+        function namaObject(){}
+
+        //menambahkan properti secara langsung menggunakan prototyping
+        namaObject.prototype.namaProperti ="isi properti"
+
+        //melihat prototype dari function
+        console.log(namaObject.prototype);
+
+        //melihat hasil data
+        console.log(namaObject.prototype.namaProperti);
+
+            //FUNCTION CONSTRUCTOR
+        //jika kita ingin membuat banyak object dari class maka kita bisa membuat instance dari class tersebut 
+
+        //MEMBUAT CONSTRUCTOR
+        function Person(nama,umur,lahir,job){
+            this.nama = nama;
+            this.umur = umur;
+            this.lahir = lahir;
+            this.pekerjaan = job;
+        }
+
+        //membuat instance
+        let ibuSaya = new Person("Hendrayati",63,"Jakarta","Ibu rumah tangga");
+        let bapaSaya = new Person("Asmat",64,"Djonggol","freelance");
+        console.log(ibuSaya.pekerjaan);
+        console.log(bapaSaya.lahir);
+        //Namun saat ini kita tidak bisa menambahkan data cunstructor secara langsung.perhatikan kode dibawah ini:
+        Person.negara="Indonesia";
+        console.log(bapaSaya.negara);
+        
+        //pada kode diatas,kita mencoba untuk menambahkan properti baru bernama negara dengan value indonesia.namun saat instance objek memanggil properti tersebut.kita mendapatkan nilai undefined
+
+        //LATIHAN
+        function Skilvul(nama,durasi){
+            this.nama = nama;
+            this.durasi = durasi;
+        }
+        Skilvul.price = 552;
+        
+        let jsIn = new Skilvul("Muammar rizal",611);
+        console.log(jsIn.nama);
+        console.log(jsIn.durasi);
+        console.log(jsIn.price);
+    </script>
+</body>
+</html>

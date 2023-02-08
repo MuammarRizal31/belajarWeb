@@ -1,0 +1,149 @@
+<!DOCTYPE html> <!--Untuk mendefinisikan bahwa ini adalah html 5-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELAJAR HTM 5</title>
+</head>
+<style>
+    header,nav,aside,main,footer{
+        border: 1px solid black;
+        margin: 5px;
+        padding: 5px;
+    }
+    main{
+        width: 60%;
+        float: left;
+    }
+    aside{
+        width: 30%;
+        float: left;
+    }
+    footer{
+        clear: left;
+        text-align: center;
+    }
+</style>
+<body>
+    <!--
+        BELAJAR INPUT BARU PADA HTML5 
+        -SEARCH | UNTUK MENCARI
+        -EMAIL  | UNTUK EMAIL
+        -URL    | UNTUK LINK dia harus memakai http/https didepan nya
+        -TEL    | UNTUK TELEPON
+        -NUMBER | UNTUK ANGKA
+        -RANGE,DATE,MONTH,WEEK,TIME,DATE-TIME,DATETIME-LOCAL,COLOR
+    -->
+    <div class="input">
+        <form action="script.js"> <!--ATRIBUTE ACTION BERFUNGSI UNTUK MENGIRIMKAN DATA FORM KETIKA FORM DISUBMIT-->
+            <ofl>
+                <li>
+                    <input type="password" name="mencari" placeholder="masukan password"> <!--PLACE HOLDER UNTUK MEMBUAT BAYANGAN/TULISAN-->
+                </li>
+                <li>
+                    <input type="email" name="email" placeholder="masukan email..." required> <!--required berfungsi untuk kolom yang wajib diisi-->
+                </li>
+                <li>
+                    <input type="range">
+                </li>
+                <li>
+                    <input type="date" min="1998-11-11" max="1999-12-12">
+                </li>
+                <li>
+                    <input type="color">
+                </li>
+                <li>
+                    <input type="submit" name="janges">
+                </li>
+            </ofl>
+        </form>
+    </div>
+    <header>    <!--HEADER UNTUK KEPALA-->
+        <h1>Belajar Programming</h1>
+        <h3>Bersama sekolah koding</h3>
+    </header>
+
+    <nav>       <!--NAV UNTUK NAVIGASI-->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>      <!--MAIN UNTUK CONTENT-->
+        <article>   <!--ARTICLE UNTUK ARTICLE-->
+            <figure>    <!--UNTUK MEMBUAT KONTENT TERSEDIRI SEPERTI GAMBAR KODE VIDIO DAN LAIN LAIN-->
+                <img src="../../WhatsApp Image 2022-08-06 at 11.40.09.jpeg" alt="foto saya sendiri" width="211px" height="211px">
+                <figcaption>    <!--UNTUK MEMBUAT TEXT BERADA DIBAWAH GAMBAR/MEMBERI CAPTION-->
+                    Gambar saya yang teramat ganteng
+                    <a href="https://sekolahkoding.com/kelas/belajar-html5/video/caption-pada-gambar#videoWrapper">Saya belajar dari sini</a>
+                </figcaption>
+            </figure>
+
+            <!--DIALOG UNTUK MEMBUAT POP UP ATAU ALERT ALERT YANG LAIN-->
+            <dialog open> <!--SATU ATRIBUTE UNTUK MEMBUAT DIA TERBUKA LANGSUNG-->
+                SAYA BELAJAR DARI SEKOLAH KODING <!--DIA AKAN BERADA DITENGAH CONTENT PARENT NYA-->
+            </dialog>
+
+            <!--UNTUK MENYEMBUNYIKAN CONTENT DAN KETIKA DI KLICK/HOVER BARU AKAN MUNCUL-->
+            <details open> <!--FUNGSI OPEN UNTUK LANGSUNG TERBUKA-->
+                <summary> <!--CONTENT YANG INGIN KITA TAMPILKAN PERTAMA-->
+                    INFO SEKOLAH KODING
+                </summary>
+                <p>Selamat datang</p> <!--ketika summary nya di klick dia akan muncul-->
+                <p>ada yang ingin ditanyakan ? </p>
+                <a href="#">Belajar dengan kami</a>
+                <ul>
+                    <li>Ada yang ingin dibantu ? </li>
+                    <li>Oh tidak</li>
+                </ul>
+            </details>
+
+            <section>   <!--SECTION UNTUK MEMBAGI BEBERAPA BAGIAN-->
+                <h2>Daftar pelajaran</h2>
+                <h3>HTML</h3>
+                <p>membuat struktur website dengan html</p>
+            </section>
+            
+            <section>   <!--SECTION UNTUK MEMBAGI BEBERAPA BAGIAN-->
+                <h3>CSS</h3>
+                <p>menghias website dengan css</p>
+            </section>
+                
+            <section>   <!--SECTION UNTUK MEMBAGI BEBERAPA BAGIAN-->
+                <h3>JAVASCRIPT</h3>
+                <p>Membuat website lebih interaktif</p>
+            </section>
+        </article>
+    </main>
+
+    <aside>     <!--ASIDE UNTUK MEMBUAT SIDE BAR/DISAMPING-->
+        <h3>DAFTAR ARTICLE</h3>
+        <a href="#">Intro HTML</a>
+        <a href="#">Mulai belajar website</a>
+        <a href="#">Berguru sampai negeri koding</a>
+    </aside>
+
+    <!-- CARA MEMASUKAN VIDEO -->
+    <div class="vidio">
+        <video width="151" height="151" controls poster="artur-stanulevich-jciLxE7pwOQ-unsplash.jpg">
+            <source src="Jam - 75632.mp4" type="video/mp4">
+            <source src="Jam - 75632.mp4" type="video/ogg">  <!-- UNTUK BERJAGA JAGA KETIKA YANG MP4 BROWSERNYA TIDAK DIDUKUNG -->
+            <source src="Jam - 75632.mp4" type="video/webm"> <!-- KETIKA PERTAMA BISA/BERHASIL MAKA YANG DIBAWAH NYA TIDAK AKAN DIJALANKAN-->
+            BROWSER ANDA TIDAK DIDUKUNG <!--INI KETIKA YANG MP4,OGG,WEBM TIDAK BISA DIAKSES-->
+        </video>
+    </div>
+
+    <!-- CARA MEMASUKAN AUDIO/MUSIC -->
+    <audio controls>
+        <source src="dada" type="audio/wavv">
+        BROWSER ANDA TIDAK DIDUKUNG
+    </audio>
+
+    <footer>    <!--FOOTER UNTUK FOOTER-->
+        <p>&copy; 2022 Muammar Rizal</p>
+    </footer>
+</body>
+</html>

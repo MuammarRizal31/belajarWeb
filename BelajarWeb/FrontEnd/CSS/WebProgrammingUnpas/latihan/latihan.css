@@ -1,0 +1,152 @@
+*{
+     margin : 0px;
+     padding : 0px;
+}
+
+body{
+    font : 16px/28px arial,sans-serif;
+    background-color : #eaeaea;
+    color : #333;
+    background-image :url(../../../../../oriental-tiles.png)
+}
+
+.container{
+    width : 960px;
+    margin : 80px auto;
+    border :5px solid black;
+    background-color: #fff;
+}
+
+
+.instagram{
+    padding-top : 15px;
+    width : 150px;
+    height : 150px;
+    background-image:url(image/jangs2.jpg);
+    background-repeat :no-repeat;
+    display : inline-block;
+
+    /*untuk menghilangkan text nya*/
+    text-indent : -9999px;
+    position : absolute;
+    top : 70px;
+}
+
+.header{
+    margin-top :20px;
+    padding : 20px;
+}
+
+.header .kepala{
+    font-size: 41px;
+    font-weight :700;
+}
+
+.header ul li{
+    list-style-type: none;
+    display : inline-block;
+    margin-top: 20px;
+}
+
+.header a{
+    text-decoration : none;
+    color : blue;
+    margin-right : 15px;
+    border : 3px solid black;
+    padding : 3px;
+
+}
+.header a:hover{
+    color : red;
+    background-color : skyblue;
+}
+
+.hero{
+    width : 960px;
+    height : 500px;
+    background-image :url(../jangs.jpg);
+    background-size :cover;
+
+    /*tanda - yang value kedua untuk kebawah dan - value pertama untuk kanan*/
+    background-position: -12 -100px;
+    border-top:3px solid lightskyblue;
+    border-bottom:3px solid green;
+}
+
+.main{
+    width :600px;
+    padding : 20px;
+    box-sizing :border-box;
+    float : left;
+
+}
+
+.main .penulis{
+    font-size : 11px;
+    margin-top :-5px;
+}
+
+.main .penulis a{
+    color : brown;
+    border : 1px solid black;
+}
+.main .penulis a:hover{
+    font-size : 31;
+    background-color : red;
+    color :aqua
+}
+
+.main p{
+    margin-bottom : 21px;
+    font-size : 14px;
+}
+
+.footer{
+    padding : 12px;
+    background-color : brown;
+}
+.footer .copy{
+    text-align : center;
+    font-size : 14px;
+    font-weight: bold;
+    color : white;
+}
+
+
+.sidebar{
+    width : 300px;
+    float : right;
+    padding : 20px;
+    position :absolute;
+    top : 15px;
+    right : 15px;
+}
+.sidebar h3{
+    color : #666;
+}
+.jange{
+    width : 70px;
+    height : 70px;
+    float : left;
+    padding-right : 10px;
+}
+
+.sidebar p{
+    font-size : 15px;
+    line-height : 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}

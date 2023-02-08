@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+        fungsi filter adalah untuk membuat sebuah array baru dengan memperhatikan kondisi tertentu pada setiap element dari array yang sudah ada
+        CALLBACK FUNCTION PADA .filter() memiliki 3 parameter yang dapat digunakan sesuai kebutuhan
+        1.value yaitu isi dari tiap element yang diproses
+        2.index(optional) yaitu nomor index tiap element
+        3.array(optional) yaitu array itu sendiri
+
+        penggunaan .filter() sangat cocok ketika kita ingin mendapatkan beberapa element dari variable array berdasarkan kondisi yang di inginkan
+        */
+
+        //contoh misalnya kita ingin menampilkan angka yang lebih dari 5
+        let nilai = [1,2,3,4,5];
+        let tampilkan = nilai.filter((value) => {
+            return value > 2;
+        });
+        console.log(tampilkan);
+
+        //apabila callback function yang kamu buat menggunakan arrow function,kita dapat menggunakan implicit return value(tidak menulis return,karena return sudah diwakilkan oleh simbol arrow function)
+
+        let fruits = ['jambu','jeruk','apel','mangga','stroberi','jeruk','lemon','apel'];
+        const apel = fruits.filter(item => {
+            return item === 'apel'; // hanya menampilkan appel;
+        })
+        console.log(apel);
+
+        //mencari nilai ganji genap
+        let angka = [1,2,3,4,5,6,7,8,9,12];
+        const genap = angka.filter(item =>{
+            return item % 2 === 0;
+        })
+        console.log(genap);
+
+        const ganjil = angka.filter(item =>{
+            return item % 2 !== 0;
+        })
+        console.log(ganjil);
+
+        let jange = [9,2,4,12,24,2,11,15];
+        const jange2 = jange.filter((item) => item > 11 )
+        console.log(jange2);
+
+
+        //mencari nilai genap dan ganjil 
+        let input = [29,12,22,31,23,42,123,2131,3122];
+        const output = input.filter((item) => {
+            if(item % 2 === 0){
+                console.log("genap : ",item);
+            }else if(item % 2 !== 0){
+                console.log("Ganjil : ",item);
+            }
+        })
+    </script>
+</body>
+</html>

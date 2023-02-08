@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+//TIPE DATA ARRAY
+//-Array adalalah tipe data yang berisikan kumpulan data
+//-array di javascript memiliki sifat dinamis,artinya datanya bisa bertambah dengan sendirinya saat kita memasukkan data ke dalam array
+
+//cara kerja array
+//-setiap data di array akan di simpan dalam posisi berurutan,dimana urutan pertama dimulai dari nomor 0
+//-setiap kita menambahkan data ke array,otomatis data akan di simpan diurutan terakhir
+//-urutan di array,kita sebut dengan index
+
+/*
+OPERASI DI ARRAY
+        OPERASI             ||          KETERANGAN
+    array.push(value)       ||      menambahkan data ke array
+    array.length            ||      untuk mendapatkan panjang array
+    array[index]            ||      mendapatkan data dari index
+    array[index]=value      ||      mengubah data di posisi index 
+    delete array[index]     ||      menghapus data di posisi index,namun index tidak bergeser
+*/
+
+// DAN PERLU DI INGAT
+//DATA DI DALAM ARRAY TIDAK ADA BARASAN HARUS DATA APA(BEBAS MEMASUKAN TIPE DATA APAPUN)
+//JADI KITA BISA MEMASUKKAN DATA APAPUN KEDALAM ARRAY
+//BAHKAN KITA JUGA BISA MEMASUKKAN ARRAY KE DALAM ARRAY JIKA KITA MAU
+
+const array = ['jange','rizal','topet']
+document.writeln(`<p>${array[1]}</p>`)
+
+//kode : menambahkan array
+const names =[]
+names.push('jange'); //menambahkan data satu persatu
+names.push('muammar','rizal')//menambahkan 2 data sekali gus
+console.log(names);
+console.table(names);
+
+//      :mengganti array;
+const names2 =[];
+names2.push('dia','aku','kamu');
+document.write(`<p>percintaan kita sebatas : ${names2}</p>`)
+names2[0] = 'ariel tatum'
+document.write(`<p>eh ${names2} gini ajadeh</p>`)
+console.table(names2);
+console.log(names2.length);
+
+//      :menghapus index array
+delete names2[0];
+console.table(names2);
+//masukin lagi
+names2 [0]="jange"
+console.table(names2);
+
+
+//      : ARRAY 3 DIMENSI ATAU ARRAY DI DALAM ARRAY
+const jangeaja = [];
+jangeaja.push('jange','lagi','dirumah','sendirian','tanpa','teman');
+document.writeln(`array jange aja : ${jangeaja}`);
+console.table(jangeaja);
+jangeaja.push(['jangelagi','didalam','array'])
+console.table(jangeaja)
+    </script>
+</body>
+</html>

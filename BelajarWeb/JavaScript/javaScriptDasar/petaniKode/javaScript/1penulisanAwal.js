@@ -1,0 +1,1 @@
+// atribut "onclick" adalah salah satu atribut event yang ada di HTML ,kode javascript bisa ditulis disemua atribut event

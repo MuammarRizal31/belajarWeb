@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="6style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        // const Mahasiswa = function(nama,umur){
+        //     this.nama = nama;
+        //     this.umur = umur;
+        // }
+
+        // const mahasiswa1 = new Mahasiswa('MuammarRizal',199);
+        // console.log(mahasiswa1);
+
+        // const Mahasiswa1 = function(){
+        //     this.nama = "jange";
+        //     this.umur = 99;
+        //     this.sayHello = function(){
+        //         return `hai ${this.nama} umur anda ${this.umur}`;
+        //     }
+        // }
+        // const mahasiswaSatu = new Mahasiswa1;
+
+        //arrow function
+        // const Mahasiswa = function() {
+        //     this.nama = "Jange";
+        //     this.umur = 99;
+        //     this.sayHello = () => {
+        //         return `Halo ${this.nama} kamu sudah berlari ${this.umur} putaran`;
+        //     }
+        // }
+
+        // const panggil = new Mahasiswa();
+
+        //object literal
+            // const mhs1 = {
+            //     nama: "Muammar rizal",
+            //     umur: 99,
+            //     sapa : function(){
+            //         return `hallo${this.nama}`;  //fungsi this disini akan mencari nama dileksikal scope
+            //     }
+            // }
+            // console.log(mhs1.sapa())
+
+            // const Mahasiswa = function(){
+            //     this.nama = "Jange";
+            //     this.umur = 5;
+            //     this.sayHello = function(){
+            //         return `hai ${this.nama}`;
+            //     }
+
+            //     setInterval(() =>{
+            //         console.log(this.umur++);
+            //     },500);
+            // }
+
+            // const mhss = new Mahasiswa();
+            // console.log(mhss)
+
+
+            //contoh nyata menggunakan arrow function
+            
+            const box = document.getElementsByClassName("box")[0];
+            box.addEventListener('click',function(){
+                let satu = 'size';
+                let dua = "caption";
+
+                if (this.classList.contains(satu)){
+                    [satu,dua] = [dua,satu];
+                }
+                // box.classList.toggle('size');
+                this.classList.toggle(satu);
+                setTimeout(() => {
+                    this.classList.toggle(dua);
+                }, 600);
+            })
+    </script>
+</body>
+</html>

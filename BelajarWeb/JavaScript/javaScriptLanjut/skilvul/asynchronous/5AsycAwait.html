@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*
+                ASYNC / AWAIT
+        Jadi sebenernya async/await dan promise itu sama saja,namun hanya berbeda dari syntax dan penggunaan nya
+        
+        ada 2 kunci yang memiliki pengertian sebagai berikut
+        -async,mengubah function synchronous menjadi asyncrhonous
+        -await,menunda eksekusi hingga proses asyncrhonous selesai.
+
+        sebuah async function bisa tidak berisi await sama sekali atau lebih dari satu await,keyword await hanya bisa digunakan didalam async function,jika digunakan diluar async function maka akan
+        terjadi error
+        */
+
+                //ASYNC
+        async function testAsyncAwait() {
+            return "Fullfilled";
+        }
+        console.log(testAsyncAwait());
+
+        //menggunakan arrow function
+        const testAsyncAwait2 = async() => {
+            return "fullfilled";
+        }
+        console.log(testAsyncAwait2());
+
+        /*
+                AWAIT
+        await hanya digunakan dalam async function dan await adalah keyword dalam async yang digunakan untuk menunda hingga proses asynchronous selesai.
+        
+        contoh penggunaan nya dibawah ini
+        */
+       async function test() {
+        await "fullfull"
+       }
+       console.log(test());
+
+       //kita juga bisa memberikan error handling pada async/await...contoh lengkap penggunaan async/await:
+       //DEFINISIKAN DAHULU PROMISE YANG INGIN DIGUNAKAN
+       let condition = true;
+       let tesAsyncAwait = async(condition) => {
+        if(condition) {
+            return "Condition is fullfilled"
+        }else{
+            throw "Condition is rejected"
+        };
+       }
+
+       //membuat fungsi run menjadi asyncrhonous menggunakan async/await
+       const run = async(condition)=> {
+        try{
+            const message = await tesAsyncAwait(condition);
+            console.log(message); // output : condition is fullfilled
+            console.log("After condition is fullfilled") //output : after condition is fullfilled
+        }catch (error){
+            console.log(error);
+        }
+       };
+
+       run(true);
+/*dari kode diatas kita dapat melihat bahwa run adalah sebuah fungsi async dan await dipanggil bersamaan dengan fungsi tesAsyncAwait(condition).await pada funcsi ini artinya,console.log pada 
+message dan after condition is fullfilled tidak akan dijalankan(tunda) hingga proses tesAsyncAwait(condition) selesai dijalankan
+*/
+
+//BERIKUT INI CONTOH PERBANDINGAN JIKA PROGRAM SEBELUMNYA DIBUAT MENGGUNAKAN PROMISE : 
+console.log("INI PROMISE")
+let condition3 = true;
+let tesPromise = new Promise((resolve,reject) => {
+    if(condition3){
+        resolve("Condition is fullfilled!");
+    }else {
+        reject(new Error("condition is rejected!"));
+    }
+});
+tesPromise
+.then(result => {
+    console.log(result); //Condition is fulllfilled!
+    console.log("After condition is fullfilled"); //after condition is fullfilled
+})
+.catch(error => {
+    console.log(error);
+})
+    </script>
+</body>
+</html>

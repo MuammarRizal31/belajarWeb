@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+//object bawaan dari javascript disebut juga built in object
+//object math hanya bisa digunakan untuk tipe data number tidak bisa digunakan untuk tipe data big int
+
+            //ADA DELAPAN PROPERTI OBJECT MATH YAITU
+        //-Math.E           //bilangan Euler
+        //-Math.LN2         //Log 2
+        //-Math.LN10        //Logn 10
+        //-Math.LOG2E       //Log e basis 2
+        //-Math.LOG10E      //log e basis 10
+        //-Math.PI          //Pi
+        //-Math.SQRT1_2     //Akar kuadrat dari 0.5
+        //-Math.SQRT2       //akar kuadrat dari 2
+
+            //      Math.round(x)
+//untuk membulatkan angka desimal x menjadi bilangan bulat.pembulatan ke atas bila angka dibelakang koma lebih besar atau sama dengan lima
+let bilangan5 = 19.5;
+console.log(Math.round(bilangan5)); // hasil 20;
+
+            //      Math.random();
+//digunakan untuk menampilkan angka secara acak antara 0 hingga 1 (0 termasuk.1 tidak)
+console.log(Math.random());
+
+            //      Math.sqrt(x)
+//Biasanya properti properti ini digunakan untuk operasi bilangan matematika yang lebih kompleks
+let result = Math.sqrt(9);
+console.log(result)
+
+
+        //      Math.abs(x)
+//digunakan untuk mengubah angka x menjadi bilangan negatif menjadi positif
+let bilangan = -10.5;
+console.log(Math.abs(bilangan))// output positif 10.5
+
+        //      Math.pow(x,y)
+//digunakan untuk menghitung hasil dari x pangkat y
+let bilangan2 = 3;
+let pangkat = 2;
+console.log(Math.pow(bilangan2,pangkat)); // output akan 9
+
+        //      Math.sqrt(x)
+//digunakan untuk menghitung hasil kuadrat dari x
+let bilangan3 = 64;
+console.log(Math.sqrt(bilangan3)); //8
+
+        //      Math.cbrt(x);
+//digunakan untuk menghitung akar pangkat 3
+let bilangan4 = 8;
+console.log(Math.cbrt(bilangan4)); //2
+
+        //      Math.floor(x);
+//digunakan untuk membulatkan angka desimal kebawah
+let bilangan6 = 8.9;
+let bilangan7 = 8.4;    //hasil akan sama sama delapan
+console.log(Math.floor(bilangan6));     
+console.log(Math.floor(bilangan7));     
+
+        //      Math.ceil
+//digunakan untuk membulatkan angka desimal keatas;
+let bilangan8 = 8.2;
+let bilangan9 = 8.9;        //hasil akan sama sama sembilan
+console.log(Math.ceil(bilangan8))
+console.log(Math.ceil(bilangan9))
+
+        //      Math.max(x,y,z)
+//digunakan untuk mencari angka terbesar diantara parameter
+let x,y,z;
+x = 1;
+y = 71;
+z = 100;
+console.log(Math.max(x,y,z)) // hasil 100
+
+        //      Math.min(x,y,z)
+//digunakan untuk mencari angka terkecil diantara parameter
+console.log(Math.min(x,y,z)); // hasil 1
+
+
+    </script>
+</body>
+</html>

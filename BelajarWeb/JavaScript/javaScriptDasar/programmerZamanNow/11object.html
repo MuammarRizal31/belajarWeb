@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //TIPE DATA OBJECT
+//-TIPE DATA OBJECT ADALAH TIPE DATA YANG MIRIP DENGAN TIPE DATA ARRAY
+//-YANG MEMBEDAKAN ADALAH INDEX PADA TIPE DATA OBJECT BISA MENGGUNAKAN STRING
+//-INDEX DIOBJECT BIASANYA DISEBUT ATTRIBUTE ATAU PROPERTI,BUKAN INDEX
+
+        //ASSOSCIATIVE ARRAY
+//-dibahasa pemrograman lain selain PHP,kita bisa menggunakan index selain number,misal string
+//-fitur ini biasanya disebut associative array atau hash
+//-dijavascript associative array tidak didukung
+//-jika data array tersebut menjadi object,dan ini bisa berbahaya,karena beberapa operasi diarray mungkin bisa berubah hasilnya
+
+    //KODE MEMBUAT : OBJECT
+    const person ={};
+    
+    //MENGUBAH PROPERTI OBJECT
+    const orang= {};
+    orang["nama"] = "Muammar rizal";
+    orang["lahir"] = "jakarta";
+    orang["umur"] = 21;
+    console.table(orang);
+
+    //MENGHAPUS
+    delete orang["nama"];
+    console.table(orang);
+    console.log(orang.length);
+
+    //MEMBUAT OBJECT DENGAN PROPERTI
+    const orang2 = {
+        "nama lengkap": "jange",
+        lahir : 2002,
+        negara: "indonesia"
+    };
+
+    console.table(orang2);
+    </script>
+</body>
+</html>
