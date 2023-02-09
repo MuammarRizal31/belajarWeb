@@ -1,0 +1,35 @@
+Alasan sebuah module system itu dibuat
+1.Reusability
+    -Modul bisa digunakan kembali oleh bagian program lain,atau bisa menjadi package untuk app lain
+
+2.Isolation
+    -satu modul mengerjakan hanya hal yang spesifik saja
+
+3.Organization
+    -memudahkan pengelolaan aplikasi secara keseluruhan
+
+
+no modules(sebelum ada module)
+    > Harus membuat fungsi pembungkus /wrapper function
+    > Agar memiliki scope,sehingga tidak ada global variable
+    > tetap muncul function wrapper yang bisa diakses secara global
+    > kurang reusable
+    > masalah pengelolaan dependency
+
+IIFE(perubahan update yang kedua)
+    > tidak perlu membuat nama function
+    > tidak perlu menjalankan function
+    > tidak ada function yang bisa diakses secara global
+    > harus ditulis di setiap module
+    > masih bukan module system
+
+COMMON JS(Perubahan ketiga)
+    > menggunakan keyword module.exports dan require(import)
+    > diterapkan didalam node JS
+    > butuh module bundler jika ingin dijalankan dibrowser
+
+ES6 module(saat ini)
+    > Menggunakan keyword exports dan import
+    > asinkronus
+    > tidak butuh module bundler jika ingin dijalankan di browser
+    > tambahkan type="module" saat pemanggilan script

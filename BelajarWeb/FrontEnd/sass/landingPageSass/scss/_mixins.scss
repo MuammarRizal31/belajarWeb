@@ -1,0 +1,20 @@
+@mixin button-nav {
+  border: 1px solid transparent;
+  padding: 5px 20px;
+  background-color: $main-color;
+  border-radius: 25px;
+  transition: 1s ease;
+  color: white;
+  &:hover {
+    background-color: lightblue;
+  }
+
+  @media screen and (max-width: 992px) {
+    text-align: center;
+    .navbar-brand {
+      a {
+        display: none;
+      }
+    }
+  }
+}

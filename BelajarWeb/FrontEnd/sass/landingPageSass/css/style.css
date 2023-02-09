@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav .container {
+  font-size: 0.9em;
+  margin-top: 3em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+nav .container img {
+  width: 30px;
+  height: 30px;
+}
+nav .container ul li {
+  margin-left: 25px;
+}
+
+.button {
+  border: 1px solid transparent;
+  padding: 5px 20px;
+  background-color: #0d6fa9;
+  border-radius: 25px;
+  transition: 1s ease;
+  color: white;
+}
+.button:hover {
+  background-color: lightblue;
+}
+@media screen and (max-width: 992px) {
+  .button {
+    text-align: center;
+  }
+  .button .navbar-brand a {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

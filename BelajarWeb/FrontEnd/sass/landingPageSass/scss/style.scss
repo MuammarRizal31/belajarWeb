@@ -1,0 +1,29 @@
+@import "fonts";
+@import "mixins";
+@import "variables";
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  .container {
+    font-size: 0.9em;
+    margin-top: 3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    ul {
+      li {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+.button {
+  @include button-nav;
+}

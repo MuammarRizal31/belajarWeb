@@ -1,4 +1,9 @@
-/* PSEUDO CLASS adalah kelas semu yang dimiliki sebuah elemen HTML,yang membuat kita dapat mendefinisikan style pada keaddaan tertentu dari elemen tersebut */
+/* PSEUDO CLASS adalah kelas semu yang dimiliki sebuah elemen HTML,yang membuat kita dapat mendefinisikan style pada keaddaan tertentu dari elemen tersebut 
+
+dalam versi CSS1 DAN CSS2 pseudo element ditulis menggunaakan 1 tanda titik dua seperti pseudo class
+
+namun dalam CSS3,pseudo element ditulis menggunaakn 2 tanda titik dua.perubahan ini dibuat untuk menekankan perbedaan antara pseudo class dengan pseudo element
+*/
 
 /*  -:link
         -style default pada sebuah link(a yang memiliki href)
